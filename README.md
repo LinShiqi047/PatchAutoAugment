@@ -1,5 +1,5 @@
-# PatchAutoAugment
-Learning the optimal augmentation policies for different regions of an image and achieve the joint optimal on the whole image
+# Patch AutoAugment
+Learning the optimal augmentation policies for different regions of an image and achieving the joint optimal on the whole image.
 
 ## Introduction
 The paper can be found [here](https://arxiv.org/abs/2103.11099). The code is coming soon.
