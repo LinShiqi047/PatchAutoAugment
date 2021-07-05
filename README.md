@@ -1,103 +1,87 @@
-# Patch AutoAugment
-Learning the optimal augmentation policies for different regions of an image and achieving the joint optimal on the whole image.
+# High-resolution networks (HRNets) for Image classification
+
+## News
+- [2020/03/13] Our paper is accepted by TPAMI: [Deep High-Resolution Representation Learning for Visual Recognition](https://arxiv.org/pdf/1908.07919.pdf).
+
+- Per request, we provide two small HRNet models. #parameters and GFLOPs are similar to ResNet18. The segmentation resutls using the two small models are also available at https://github.com/HRNet/HRNet-Semantic-Segmentation.
+
+- TensoFlow implemenation available at https://github.com/yuanyuanli85/tf-hrnet. Thanks [VictorLi](https://github.com/yuanyuanli85)!
+
+- ONNX export enabled after fixing issues. Thanks [Baowen Bao](https://github.com/BowenBao)!
 
 ## Introduction
-Patch AutoAugment implementation in PyTorch.
-The paper can be found [here](https://arxiv.org/abs/2103.11099). The code is coming soon.
+This is the official code of [high-resolution representations for ImageNet classification](https://arxiv.org/abs/1904.04514). 
+We augment the HRNet with a classification head shown in the figure below. First, the four-resolution feature maps are fed into a bottleneck and the number of output channels are increased to 128, 256, 512, and 1024, respectively. Then, we downsample the high-resolution representations by a 2-strided 3x3 convolution outputting 256 channels and add them to the representations of the second-high-resolution representations. This process is repeated two times to get 1024 channels over the small resolution. Last, we transform 1024 channels to 2048 channels through a 1x1 convolution, followed by a global average pooling operation. The output 2048-dimensional representation is fed into the classifier.
 
-<img src=https://github.com/LinShiqi047/PatchAutoAugment/blob/main/figure/imagelevel_v.s_patchlevel.jpg width=600 height=350 />
-<img src=https://github.com/LinShiqi047/PatchAutoAugment/blob/main/figure/framework.jpg />
+![](figures/cls-hrnet.png)
 
-## Preparation
+## ImageNet pretrained models
+HRNetV2 ImageNet pretrained models are now available!
+
+| model |#Params | GFLOPs |top-1 error| top-5 error| Link |
+| :--: | :--: | :--: | :--: | :--: | :--: |
+| HRNet-W18-C-Small-v1 | 13.2M | 1.49 | 27.7% | 9.3% |[OneDrive](https://1drv.ms/u/s!Aus8VCZ_C_33gRv2PI1vjJyn2g7G?e=i8Rdzx)/[BaiduYun(Access Code:v3sw)](https://pan.baidu.com/s/1snP_gTz50pJp2g07anVIEA)
+| HRNet-W18-C-Small-v2 | 15.6M | 2.42 | 24.9% | 7.6% |[OneDrive](https://1drv.ms/u/s!Aus8VCZ_C_33gRmfdPR79WBS61Qn?e=HVZUi8)/[BaiduYun(Access Code:bnc9)](https://pan.baidu.com/s/1tbL45sOS4mXNGgyS4YCQww)
+| HRNet-W18-C | 21.3M | 3.99 | 23.2% | 6.6% |[OneDrive](https://1drv.ms/u/s!Aus8VCZ_C_33cMkPimlmClRvmpw)/[BaiduYun(Access Code:r5xn)](https://pan.baidu.com/s/1Px_g1E2BLVRkKC5t-b-R5Q)|
+| HRNet-W30-C | 37.7M | 7.55 | 21.8% | 5.8% |[OneDrive](https://1drv.ms/u/s!Aus8VCZ_C_33cQoACCEfrzcSaVI)/[BaiduYun(Access Code:ajc1)](https://pan.baidu.com/s/1yEz7hKaJT-H7eHLteAotbQ)|
+| HRNet-W32-C | 41.2M | 8.31 | 21.5% | 5.8% |[OneDrive](https://1drv.ms/u/s!Aus8VCZ_C_33dYBMemi9xOUFR0w)/[BaiduYun(Access Code:itc1)](https://pan.baidu.com/s/1xn92PSCg5KtXkKcnnLOycw)||
+| HRNet-W40-C | 57.6M | 11.8 | 21.1% | 5.5% |[OneDrive](https://1drv.ms/u/s!Aus8VCZ_C_33ck0gvo5jfoWBOPo)/[BaiduYun(Access Code:i58x)](https://pan.baidu.com/s/1DD3WKxgLM1jawR87WdAtsw)|
+| HRNet-W44-C | 67.1M | 13.9 | 21.1% | 5.6% |[OneDrive](https://1drv.ms/u/s!Aus8VCZ_C_33czZQ0woUb980gRs)/[BaiduYun(Access Code:3imd)](https://pan.baidu.com/s/1F679dvz9iJ8aFAp6YKr9Rw)|
+| HRNet-W48-C | 77.5M | 16.1 | 20.7% | 5.5% |[OneDrive](https://1drv.ms/u/s!Aus8VCZ_C_33dKvqI6pBZlifgJk)/[BaiduYun(Access Code:68g2)](https://pan.baidu.com/s/13b8srQn8ARF9zHsaxvpRWA)|
+| HRNet-W64-C | 128.1M | 26.9 | 20.5% | 5.4% |[OneDrive](https://1drv.ms/u/s!Aus8VCZ_C_33gQbJsUPTIj3rQu99)/[BaiduYun(Access Code:6kw4)](https://pan.baidu.com/s/16ycW99VAYat3fHjgKpUXvQ)|
+
+
+## Quick start
 ### Install
-This project is run on GPU (NVIDIA 2TX 2080Ti).
-We conduct experiments under python 3.8, pytorch 1.6.0, cuda 10.1 and cudnn7. 
-You can download [dockerfile](https://github.com/LinShiqi047/PatchAutoAugment/blob/main/Dockerfile).
-We use [Kornia](https://github.com/kornia/kornia), a differentiable computer vision library that can be used to accelerate augmentation operations on tensors.
-We are jointly exploring the more convenient invocation of PatchAutoAugment, and the library is coming soon.
+1. Install PyTorch=0.4.1 following the [official instructions](https://pytorch.org/)
+2. git clone https://github.com/HRNet/HRNet-Image-Classification
+3. Install dependencies: pip install -r requirements.txt
 
 ### Data preparation
-Here, we take CIFAR and fine-grained datasets [CUB-200-2011](http://www.vision.caltech.edu/visipedia/CUB-200-2011.html), [Stanford dog](http://vision.stanford.edu/aditya86/ImageNetDogs/) to illustrate how to use our PatchAutoAugment.
+You can follow the Pytorch implementation:
+https://github.com/pytorch/examples/tree/master/imagenet
 
-## Example
-First, import PAA module.
-```
-  from model.PAA import *   
-  from model.A2Cmodel import ActorCritic
-```
-Then, 
-```
-if args.aug == 'PAA':
-        model_a2c = ActorCritic(len(ops)).cuda()
-        optimizer_a2c = torch.optim.SGD(model_a2c.parameters(), hyper_params['lr_a2c'], 
-                                    momentum=0.9, nesterov=True,
-                                    weight_decay=1e-4)
-        scheduler_a2c = torch.optim.lr_scheduler.CosineAnnealingLR(optimizer_a2c, len(train_loader)* hyper_params['epochs'])
-```
-Thirdly, 
-```
-if args.aug == 'PAA':
-    losses_a2c = AverageMeter()
-    model_a2c.train()
+The data should be under ./data/imagenet/images/.
 
-    
-    for i, (input, target) in enumerate(train_loader):
-        target = target.cuda(non_blocking=True)
-        input = input.cuda(non_blocking=True)
+### Train and test
+Please specify the configuration file.
 
-        if args.aug == 'PAA':
-            # patch data augmentation
-            operations ,operation_logprob , operation_entropy , state_value = \
-                rl_choose_action(input, model_a2c)
-            input_aug = patch_auto_augment(input, operations, args.batch_size, epochs=hyper_params['epochs'], epoch=epoch)
+For example, train the HRNet-W18 on ImageNet with a batch size of 128 on 4 GPUs:
+````bash
+python tools/train.py --cfg experiments/cls_hrnet_w18_sgd_lr5e-2_wd1e-4_bs32_x100.yaml
+````
 
-            output = model(input_aug.detach())
-            loss = criterion(output, target)
+For example, test the HRNet-W18 on ImageNet on 4 GPUs:
+````bash
+python tools/valid.py --cfg experiments/cls_hrnet_w18_sgd_lr5e-2_wd1e-4_bs32_x100.yaml --testModel hrnetv2_w18_imagenet_pretrained.pth
+````
 
-            # PAA loss
-            reward = loss.detach()
-            loss_a2c = a2closs(operation_logprob, operation_entropy, state_value, reward)
+## Other applications of HRNet
+* [Human pose estimation](https://github.com/leoxiaobin/deep-high-resolution-net.pytorch)
+* [Semantic segmentation](https://github.com/HRNet/HRNet-Semantic-Segmentation)
+* [Object detection](https://github.com/HRNet/HRNet-Object-Detection)
+* [Facial landmark detection](https://github.com/HRNet/HRNet-Facial-Landmark-Detection)
 
-            # update PAA model
-            optimizer_a2c.zero_grad()
-            loss_a2c.backward()
-            optimizer_a2c.step()
-            scheduler_a2c.step()
-```
-### Example - CIFAR10
-For example, train Wide-ResNet-28-10, PyramidNet+ShakeDrop on CIFAR-10 
-```
-python /code/CIFAR/train.py --dataset cifar10 --model WRN --aug PAA
-python /code/CIFAR/train.py --dataset cifar10 --model SD --aug PAA --lr_a2c 0.0001
-```
-Some available options:
-- ```--dataset```: Training and testing dataset, support cifar10 | cifar100
-- ```--batch-size```: Batch size
-- ```--model```: Target training network, support Wide-ResNet-28-10 (WRN) | ShakeShake (SS) | PyramidNet+ShakeDrop (SD)
-- ```--SS_w_base```: ShakeShake (26 2x32d) | SS (26 2x96d) | SS (26 2x112d)
-- ```--aug```: Augmentation method, support baseline (base), Cutout (cutout), AutoAugment+Cutout (AA), AutoAugment (onlyAA), PatchAutoAugment (PAA)
-- ```--lr_a2c```: PAA learning rate, default = 1e-3
-
-### Example - Fine-grained dataset
-For example, train ResNet-50 (pretrained) on CUB-200-2011
-```
-python /code/CUB/tools/train.py --cfg /code/CUB/experiments/cls_res50.yaml --AUG PAA --N_GRID 4 --DATASET cub --IMAGE_SIZE 224 --EPOCHS 150 --BATCH_SIZE 32
-```
-Some available options:
-- ```--AUG```: Augmentation method, support baseline (base), AutoAugment (AA), PatchAutoAugment (PAA)
-- ```--N_GRID```: Number of patches, support 1 | 2 | 4 | 7 | 14.
-- ```--DATASET```: Training and testing dataset, CUB-200-2011 (cub) | Stanford Dogs (dog).
-- ```--IMAGE_SIZE```: Image size, support 224 | 448.
-- ```--EPOCHS```: Training epochs.
-- ```--BATCH_SIZE```: Batch size.
-
-## Cite Us
-Please cite us if you find this work helps.
-```
-@article{lin2021patch,
-  title={Patch AutoAugment},
-  author={Lin, Shiqi and Yu, Tao and Feng, Ruoyu and Chen, Zhibo},
-  journal={arXiv preprint arXiv:2103.11099},
-  year={2021}
+## Citation
+If you find this work or code is helpful in your research, please cite:
+````
+@inproceedings{SunXLW19,
+  title={Deep High-Resolution Representation Learning for Human Pose Estimation},
+  author={Ke Sun and Bin Xiao and Dong Liu and Jingdong Wang},
+  booktitle={CVPR},
+  year={2019}
 }
-```
+
+@article{WangSCJDZLMTWLX19,
+  title={Deep High-Resolution Representation Learning for Visual Recognition},
+  author={Jingdong Wang and Ke Sun and Tianheng Cheng and 
+          Borui Jiang and Chaorui Deng and Yang Zhao and Dong Liu and Yadong Mu and 
+          Mingkui Tan and Xinggang Wang and Wenyu Liu and Bin Xiao},
+  journal   = {TPAMI}
+  year={2019}
+}
+````
+
+## Reference
+[1] Deep High-Resolution Representation Learning for Visual Recognition. Jingdong Wang, Ke Sun, Tianheng Cheng, 
+    Borui Jiang, Chaorui Deng, Yang Zhao, Dong Liu, Yadong Mu, Mingkui Tan, Xinggang Wang, Wenyu Liu, Bin Xiao. Accepted by TPAMI.  [download](https://arxiv.org/pdf/1908.07919.pdf)
