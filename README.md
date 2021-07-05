@@ -17,11 +17,11 @@ You can download dockerfile.
 Here, we take CIFAR and fine-grained datasets [CUB-200-2011](http://www.vision.caltech.edu/visipedia/CUB-200-2011.html), [Stanford dog](http://vision.stanford.edu/aditya86/ImageNetDogs/) to illustrate how to use our PatchAutoAugment.
 
 ## Example
-'''  
+```
   from model.PAA import *   
   from model.A2Cmodel import ActorCritic
   
-'''
+```
 
 ## Cite Us
 Please cite us if you find this work helps.
