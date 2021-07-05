@@ -21,7 +21,6 @@ First, import PAA module.
 ```
   from model.PAA import *   
   from model.A2Cmodel import ActorCritic
-  
 ```
 Then, 
 ```
@@ -62,7 +61,15 @@ if args.aug == 'PAA':
             optimizer_a2c.step()
             scheduler_a2c.step()
 ```
-
+### Example - CIFAR10
+For example, train Wide-ResNet-28-10, PyramidNet+ShakeDrop on CIFAR-10 
+```
+python /code/CIFAR/train.py --dataset cifar10 --model WRN --aug PAA
+python /code/WRN_PAA/train_.py --dataset cifar10 --model SD --aug PAA --lr_a2c 0.0001
+```
+Some available options:
+- ```--dataset```: : Training and testing dataset, support cifar10 | cifar100
+- 
 
 ## Cite Us
 Please cite us if you find this work helps.
