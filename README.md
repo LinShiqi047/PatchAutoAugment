@@ -56,7 +56,7 @@ if args.aug == 'PAA':
             reward = loss.detach()
             loss_a2c = a2closs(operation_logprob, operation_entropy, state_value, reward)
 
-            
+            # update PAA model
             optimizer_a2c.zero_grad()
             loss_a2c.backward()
             optimizer_a2c.step()
