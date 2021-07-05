@@ -65,7 +65,7 @@ if args.aug == 'PAA':
 For example, train Wide-ResNet-28-10, PyramidNet+ShakeDrop on CIFAR-10 
 ```
 python /code/CIFAR/train.py --dataset cifar10 --model WRN --aug PAA
-python /code/WRN_PAA/train_.py --dataset cifar10 --model SD --aug PAA --lr_a2c 0.0001
+python /code/CIFAR/train.py --dataset cifar10 --model SD --aug PAA --lr_a2c 0.0001
 ```
 Some available options:
 - ```--dataset```: Training and testing dataset, support cifar10 | cifar100
