@@ -75,6 +75,19 @@ Some available options:
 - ```--aug```: Augmentation method, support baseline (base), Cutout (cutout), AutoAugment+Cutout (AA), AutoAugment (onlyAA), PatchAutoAugment (PAA)
 - ```--lr_a2c```: PAA learning rate, default = 1e-3
 
+### Example - Fine-grained dataset
+For example, train ResNet-50 (pretrained) on CUB-200-2011
+```
+python /code/CUB/tools/train.py --cfg /code/CUB/experiments/cls_res50.yaml --AUG PAA --N_GRID 4 --DATASET cub --IMAGE_SIZE 224 --EPOCHS 150 --BATCH_SIZE 32
+```
+Some available options:
+- ```--AUG```: Augmentation method, support baseline (base), AutoAugment (AA), PatchAutoAugment (PAA)
+- ```--N_GRID```: Number of patches, support 1 | 2 | 4 | 7 | 14.
+- ```--DATASET```: Training and testing dataset, CUB-200-2011 (cub) | Stanford Dogs (dog).
+- ```--IMAGE_SIZE```: Image size, support 224 | 448.
+- ```--EPOCHS```: Training epochs.
+- ```--BATCH_SIZE```: Batch size.
+
 ## Cite Us
 Please cite us if you find this work helps.
 ```
