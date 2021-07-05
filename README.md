@@ -68,8 +68,12 @@ python /code/CIFAR/train.py --dataset cifar10 --model WRN --aug PAA
 python /code/WRN_PAA/train_.py --dataset cifar10 --model SD --aug PAA --lr_a2c 0.0001
 ```
 Some available options:
-- ```--dataset```: : Training and testing dataset, support cifar10 | cifar100
-- 
+- ```--dataset```: Training and testing dataset, support cifar10 | cifar100
+- ```--batch-size```: Batch size
+- ```--model```: Target training network, support Wide-ResNet-28-10 (WRN) | ShakeShake (SS) | PyramidNet+ShakeDrop (SD)
+- ```--SS_w_base```: ShakeShake (26 2x32d) | SS (26 2x96d) | SS (26 2x112d)
+- ```--aug```: Augmentation method, support baseline (base), Cutout (cutout), AutoAugment+Cutout (AA), AutoAugment (onlyAA), PatchAutoAugment (PAA)
+- ```--lr_a2c```: PAA learning rate, default = 1e-3
 
 ## Cite Us
 Please cite us if you find this work helps.
