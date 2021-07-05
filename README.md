@@ -9,8 +9,16 @@ The paper can be found [here](https://arxiv.org/abs/2103.11099). The code is com
 <img src=https://github.com/LinShiqi047/PatchAutoAugment/blob/main/figure/framework.jpg />
 
 ## Preparation
+### Install
 This project is run on GPU (NVIDIA 2TX 2080Ti).
-We conduct experiments under python 3.8, pytorch 1.6.0, cuda 10.1 and cudnn7. You can download dockerfile.
+We conduct experiments under python 3.8, pytorch 1.6.0, cuda 10.1 and cudnn7. 
+You can download dockerfile.
+### Data preparation
+Here, we take CIFAR and fine-grained datasets [CUB-200-2011](http://www.vision.caltech.edu/visipedia/CUB-200-2011.html), [Stanford dog](http://vision.stanford.edu/aditya86/ImageNetDogs/) to illustrate how to use our PatchAutoAugment.
+
+## Example
+  from model.PAA import *   
+  from model.A2Cmodel import ActorCritic
 
 ## Cite Us
 Please cite us if you find this work helps.
