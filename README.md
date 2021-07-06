@@ -21,8 +21,8 @@ We are working with the official [Kornia](https://github.com/kornia/kornia) team
 ## Example
 First, import PAA module.
 ```
-  from augs.PAA import *   
-  from augs.A2Cmodel import ActorCritic
+from augs.PAA import *   
+from augs.A2Cmodel import ActorCritic
 ```
 Then, 
 ```
