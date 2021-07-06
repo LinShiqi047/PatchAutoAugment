@@ -13,8 +13,10 @@ The paper can be found [here](https://arxiv.org/abs/2103.11099). The code is com
 This project is run on GPU (NVIDIA 2TX 2080Ti).
 We conduct experiments under python 3.8, pytorch 1.6.0, cuda 10.1 and cudnn7. 
 You can download [dockerfile](https://github.com/LinShiqi047/PatchAutoAugment/blob/main/Dockerfile).
+
 We use [Kornia](https://github.com/kornia/kornia), a differentiable computer vision library that can be used to accelerate augmentation operations on tensors.
-We are jointly exploring the more convenient invocation of PatchAutoAugment, and the library is coming soon.
+
+We are working with the official [Kornia](https://github.com/kornia/kornia)team to integrate PAA into Kornia package. The Kornia-build-in PAA is coming soon.
 
 ## Example
 First, import PAA module.
