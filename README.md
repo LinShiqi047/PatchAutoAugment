@@ -3,7 +3,7 @@ Learning the optimal augmentation policies for different regions of an image and
 
 ## Introduction
 Patch AutoAugment implementation in PyTorch.
-The paper can be found [here](https://arxiv.org/abs/2103.11099). The code is coming soon.
+The paper can be found [here](https://arxiv.org/abs/2103.11099).
 
 <img src=https://github.com/LinShiqi047/PatchAutoAugment/blob/main/figure/imagelevel_v.s_patchlevel.jpg width=600 height=350 />
 <img src=https://github.com/LinShiqi047/PatchAutoAugment/blob/main/figure/framework.jpg />
