@@ -81,7 +81,7 @@ Some available options:
 ### Example - Fine-grained dataset
 For example, train ResNet-50 (pretrained) on CUB-200-2011
 ```
-python /code/CUB/tools/train.py --cfg /code/CUB/experiments/cls_res50.yaml --AUG PAA --N_GRID 4 --DATASET cub --IMAGE_SIZE 224 --EPOCHS 150 --BATCH_SIZE 32
+python /code/FRY_CUBDOG/tools/train.py --cfg /code/FRY_CUBDOG/experiments/cls_res50.yaml --AUG PAA --N_GRID 4 --DATASET dog --IMAGE_SIZE 224 --EPOCHS 150 --BATCH_SIZE 32
 ```
 Some available options:
 - ```--AUG```: Augmentation method, support baseline (base), AutoAugment (AA), PatchAutoAugment (PAA)
