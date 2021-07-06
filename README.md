@@ -103,6 +103,9 @@ python /code/Kornia_PAA/tools/train.py --cfg /code/DOG/experiments/cls_res50.yam
 
 The Kornia-build-in PAA is coming soon.
 
+## Future work
+At present, we use a relatively simple reinforcement learning algorithm Advantage Actor-Critic (A2C) to implement the policy search. In the future, we consider using  Asynchronous Advantage Actor-Critic (A3C) and Proximal Policy Optimization (PPO) algorithms to further improve performance. If you have any questions, please leave a message and discuss with us.
+
 ## Cite Us
 Please cite us if you find this work helps.
 ```
