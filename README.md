@@ -19,7 +19,7 @@ We use [Kornia](https://github.com/kornia/kornia), a differentiable computer vis
 We are working with the official [Kornia](https://github.com/kornia/kornia) team to integrate PAA into Kornia package. The Kornia-build-in PAA is coming soon.
 
 ### Data preparation
-Here, we take CIFAR and fine-grained datasets [CUB-200-2011](http://www.vision.caltech.edu/visipedia/CUB-200-2011.html), [Stanford dog](http://vision.stanford.edu/aditya86/ImageNetDogs/) to illustrate how to use our PatchAutoAugment.
+Here, we take CIFAR and fine-grained datasets [CUB-200-2011](http://www.vision.caltech.edu/visipedia/CUB-200-2011.html), [Stanford Dogs](http://vision.stanford.edu/aditya86/ImageNetDogs/) to illustrate how to use our PatchAutoAugment.
 
 ## Example
 First, import PAA module.
