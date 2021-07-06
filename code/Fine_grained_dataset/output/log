@@ -1,0 +1,894 @@
+Log Type: stdout
+Log Upload Time: Mon Jun 21 18:26:38 +0000 2021
+Log Length: 445352
+[INFO] GPU_ID
+1
+[INFO] NVIDIA_DEVICES
+--device=/dev/nvidiactl --device=/dev/nvidia-uvm --device=/dev/nvidia1
+Using default tag: latest
+latest: Pulling from user-images/paapaa_linshiqi047lsq
+23884877105a: Pulling fs layer
+bc38caa0f5b9: Pulling fs layer
+2910811b6c42: Pulling fs layer
+36505266dcc6: Pulling fs layer
+3472d01858ba: Pulling fs layer
+4a98b57681ff: Pulling fs layer
+3472d01858ba: Waiting
+f3b419d1e6d5: Pulling fs layer
+24f17fa5b23f: Pulling fs layer
+4a98b57681ff: Waiting
+24f17fa5b23f: Waiting
+2910811b6c42: Download complete
+bc38caa0f5b9: Verifying Checksum
+bc38caa0f5b9: Download complete
+36505266dcc6: Verifying Checksum
+36505266dcc6: Download complete
+3472d01858ba: Verifying Checksum
+3472d01858ba: Download complete
+f3b419d1e6d5: Verifying Checksum
+f3b419d1e6d5: Download complete
+23884877105a: Download complete
+24f17fa5b23f: Verifying Checksum
+24f17fa5b23f: Download complete
+23884877105a: Pull complete
+bc38caa0f5b9: Pull complete
+2910811b6c42: Pull complete
+36505266dcc6: Pull complete
+3472d01858ba: Pull complete
+4a98b57681ff: Download complete
+4a98b57681ff: Pull complete
+f3b419d1e6d5: Pull complete
+24f17fa5b23f: Pull complete
+Digest: sha256:d6c25e7f3c3eddc03134e4c4d73c886ae65bbfbf72b1dacfcef31f3df703f650
+Status: Downloaded newer image for 10.11.3.8:5000/user-images/paapaa_linshiqi047lsq:latest
+CONTAINER_PORTS=ssh:10047,;
+PAI_CONTAINER_SSH_PORT=10047
+model_mount:  -v /models/_19626d0503124d9794f30d0dcfc1836c/ResNet:/model/bitahub/ResNet:ro
+[{"datasetId":"CUBdataset","owner":"_39676b218e5645d2aadab7db002a8bfc","mountPath":"/data/linshiqi047lsq/CUBdataset","share":False,"token":""},{"datasetId":"stanforddog_lsq","owner":"_39676b218e5645d2aadab7db002a8bfc","mountPath":"/data/linshiqi047lsq/stanforddog_lsq","share":False,"token":""}]
+python3 /gpai/LN0100/cachemount/cache_mount.py [{"datasetId":"CUBdataset","owner":"_39676b218e5645d2aadab7db002a8bfc","mountPath":"/data/linshiqi047lsq/CUBdataset","share":False,"token":""},{"datasetId":"stanforddog_lsq","owner":"_39676b218e5645d2aadab7db002a8bfc","mountPath":"/data/linshiqi047lsq/stanforddog_lsq","share":False,"token":""}]
+data_set_mount:  -v /datasets/_39676b218e5645d2aadab7db002a8bfc/CUBdataset:/data/linshiqi047lsq/CUBdataset -v /datasets/_39676b218e5645d2aadab7db002a8bfc/stanforddog_lsq:/data/linshiqi047lsq/stanforddog_lsq
+codeDir:  --volume /ghome/_39676b218e5645d2aadab7db002a8bfc:/userhome_obsoleted:ro
+codeDir2: 
+/gpai/LN0100/_39676b218e5645d2aadab7db002a8bfc/kornia_paa_finegrained/2/kornia_paa_finegrained-1624256415795
+yarnCodeDir:  --volume /gpai/LN0100/_39676b218e5645d2aadab7db002a8bfc/kornia_paa_finegrained/2/kornia_paa_finegrained-1624256415795/code:/code
+output:  --volume /projects/_39676b218e5645d2aadab7db002a8bfc/kornia_paa_finegrained/outputs/2:/output
+creating /_39676b218e5645d2aadab7db002a8bfc/kornia_paa_finegrained-n7gwkp/tmp/application_1617177718723_37651-0-0-10.11.2.39-
+PAI_PORT_LIST__0=10.11.2.39,,,
+[INFO] ENV
+APP_ID=application_1617177718723_37651
+FRAMEWORK_NAME=kornia_paa_finegrained-n7gwkp
+HADOOP_USER_NAME=_39676b218e5645d2aadab7db002a8bfc
+HOME=/root
+HOSTNAME=39aba6cc168f
+LD_LIBRARY_PATH=/usr/local/nvidia/lib:/usr/local/nvidia/lib64
+NVIDIA_DRIVER_CAPABILITIES=compute,utility
+NVIDIA_VISIBLE_DEVICES=all
+OLDPWD=/workspace
+PAI_CONTAINER_HOST_IP=10.11.2.39
+PAI_CONTAINER_ID=container_e52_1617177718723_37651_01_000002
+PAI_CONTAINER_SSH_PORT=10047
+PAI_CURRENT_TASK_ROLE_CPU_COUNT=2
+PAI_CURRENT_TASK_ROLE_CURRENT_TASK_INDEX=0
+PAI_CURRENT_TASK_ROLE_GPU_COUNT=1
+PAI_CURRENT_TASK_ROLE_MEM_MB=16384
+PAI_CURRENT_TASK_ROLE_NAME=
+PAI_CURRENT_TASK_ROLE_SHM_MB=8192
+PAI_CURRENT_TASK_ROLE_TASK_COUNT=1
+PAI_JOB_NAME=kornia_paa_finegrained-n7gwkp
+PAI_JOB_TASK_COUNT=1
+PAI_JOB_TASK_ROLE_COUNT=1
+PAI_JOB_TASK_ROLE_LIST=
+PAI_KILL_ALL_ON_COMPLETED_TASK_NUM=
+PAI_PORT_LIST__0=10.11.2.39,,,
+PAI_PORT_MAP_10001=
+PAI_PORT_MAP_10002=
+PAI_PORT_MAP_10003=
+PAI_TASK_INDEX=0
+PAI_TASK_ROLE_0_HOST_LIST=10.11.2.39
+PAI_TASK_ROLE__HOST_LIST=10.11.2.39
+PAI_USER_NAME=_39676b218e5645d2aadab7db002a8bfc
+PAI_WORK_DIR=/code
+PATH=/opt/conda/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+PWD=/code
+SHLVL=1
+TERM=xterm
+USER_HOME=/userhome_obsoleted
+_=/usr/bin/printenv
+sed: can't read /etc/ssh/sshd_config: No such file or directory
+sed: can't read /etc/pam.d/sshd: No such file or directory
+[INFO] hdfs_ssh_folder is /_39676b218e5645d2aadab7db002a8bfc/kornia_paa_finegrained-n7gwkp/ssh/application_1617177718723_37651
+[INFO] task_role_no is 0
+[INFO] PAI_TASK_INDEX is 0
+[INFO] task_role_no:0 PAI_TASK_INDEX:0
+Execute upload key pair ...
+/pai_bootstrap.sh: line 178: ssh-keygen: command not found
+cp: cannot stat '/root/.ssh/*': No such file or directory
+chmod: cannot access '/_39676b218e5645d2aadab7db002a8bfc/kornia_paa_finegrained-n7gwkp/ssh/application_1617177718723_37651/.ssh/*': No such file or directory
+chmod: cannot access '/root/.ssh/application_1617177718723_37651': No such file or directory
+[INFO] start ssh service
+cat: /root/.ssh/application_1617177718723_37651.pub: No such file or directory
+ssh: unrecognized service
+[INFO] USER COMMAND START
+Looking in indexes: https://mirrors.ustc.edu.cn/pypi/web/simple
+Collecting tensorboardX
+  Downloading https://mirrors.bfsu.edu.cn/pypi/web/packages/07/84/46421bd3e0e89a92682b1a38b40efc22dafb6d8e3d947e4ceefd4a5fabc7/tensorboardX-2.2-py2.py3-none-any.whl (120 kB)
+ [?25l
+ [K     |██▊                             | 10 kB 26.9 MB/s eta 0:00:01
+ [K     |█████▍                          | 20 kB 1.3 MB/s eta 0:00:01
+ [K     |████████▏                       | 30 kB 2.0 MB/s eta 0:00:01
+ [K     |██████████▉                     | 40 kB 1.7 MB/s eta 0:00:01
+ [K     |█████████████▋                  | 51 kB 1.6 MB/s eta 0:00:01
+ [K     |████████████████▎               | 61 kB 2.0 MB/s eta 0:00:01
+ [K     |███████████████████             | 71 kB 1.9 MB/s eta 0:00:01
+ [K     |█████████████████████▊          | 81 kB 2.0 MB/s eta 0:00:01
+ [K     |████████████████████████▌       | 92 kB 2.2 MB/s eta 0:00:01
+ [K     |███████████████████████████▏    | 102 kB 2.2 MB/s eta 0:00:01
+ [K     |██████████████████████████████  | 112 kB 2.2 MB/s eta 0:00:01
+ [K     |████████████████████████████████| 120 kB 10 kB/s 
+ [?25hRequirement already satisfied: protobuf>=3.8.0 in /opt/conda/lib/python3.7/site-packages (from tensorboardX) (3.13.0)
+Requirement already satisfied: numpy in /opt/conda/lib/python3.7/site-packages (from tensorboardX) (1.18.5)
+Requirement already satisfied: setuptools in /opt/conda/lib/python3.7/site-packages (from protobuf>=3.8.0->tensorboardX) (46.4.0.post20200518)
+Requirement already satisfied: six>=1.9 in /opt/conda/lib/python3.7/site-packages (from protobuf>=3.8.0->tensorboardX) (1.14.0)
+Installing collected packages: tensorboardX
+Successfully installed tensorboardX-2.2
+ [33mWARNING: You are using pip version 20.2.3; however, version 21.1.2 is available.
+You should consider upgrading via the '/opt/conda/bin/python -m pip install --upgrade pip' command. [0m
+=> creating output
+=> creating output/cub/cls_res50
+=> creating log/cub/resnet50/cls_res50_2021-06-21-06-29
+Namespace(AUG='PAA', BATCH_SIZE=32, DATASET='dog', EPOCHS=150, IMAGE_SIZE=224, N_GRID=4, RLPROB=False, cfg='/code/FRY_CUBDOG/experiments/cls_res50.yaml', dataDir='', is_leinao=True, logDir='', modelDir='', testModel='')
+{'AUG': 'PAA',
+ 'AUTO_RESUME': False,
+ 'CUDNN': CfgNode({'BENCHMARK': True, 'DETERMINISTIC': False, 'ENABLED': True}),
+ 'DATASET': {'COLOR_RGB': False,
+             'DATASET': 'cub',
+             'DATA_FORMAT': 'jpg',
+             'FLIP': True,
+             'HYBRID_JOINTS_TYPE': '',
+             'NUM_JOINTS_HALF_BODY': 8,
+             'PROB_HALF_BODY': 0.0,
+             'ROOT': '/data/linshiqi047lsq/stanforddog_lsq',
+             'ROT_FACTOR': 0,
+             'SCALE_FACTOR': 1,
+             'SELECT_DATA': False,
+             'TEST_SET': 'val',
+             'TRAIN_SET': 'train'},
+ 'DATA_DIR': '',
+ 'DEBUG': {'DEBUG': False,
+           'SAVE_BATCH_IMAGES_GT': False,
+           'SAVE_BATCH_IMAGES_PRED': False,
+           'SAVE_HEATMAPS_GT': False,
+           'SAVE_HEATMAPS_PRED': False},
+ 'GPUS': (0,),
+ 'LOG_DIR': 'log/',
+ 'LOSS': {'TOPK': 8,
+          'USE_DIFFERENT_JOINTS_WEIGHT': False,
+          'USE_OHKM': False,
+          'USE_TARGET_WEIGHT': True},
+ 'LR_A2C': 0.001,
+ 'MODEL': {'EXTRA': CfgNode({}),
+           'HEATMAP_SIZE': [64, 64],
+           'IMAGE_SIZE': (224, 224),
+           'INIT_WEIGHTS': True,
+           'NAME': 'resnet50',
+           'NUM_CLASSES': 200,
+           'NUM_JOINTS': 17,
+           'PRETRAINED': '',
+           'SIGMA': 2,
+           'TAG_PER_JOINT': True,
+           'TARGET_TYPE': 'gaussian'},
+ 'N_GRID': 4,
+ 'OUTPUT_DIR': 'output/',
+ 'PIN_MEMORY': True,
+ 'PRETRAINED': True,
+ 'PRINT_FREQ': 40,
+ 'RANK': 0,
+ 'RLPROB': False,
+ 'TEST': {'BATCH_SIZE_PER_GPU': 32,
+          'BBOX_THRE': 1.0,
+          'COCO_BBOX_FILE': '',
+          'FLIP_TEST': False,
+          'IMAGE_THRE': 0.1,
+          'IN_VIS_THRE': 0.0,
+          'MODEL_FILE': '',
+          'NMS_THRE': 0.6,
+          'OKS_THRE': 0.5,
+          'POST_PROCESS': False,
+          'SHIFT_HEATMAP': False,
+          'SOFT_NMS': False,
+          'USE_GT_BBOX': False},
+ 'TRAIN': {'BATCH_SIZE_PER_GPU': 32,
+           'BEGIN_EPOCH': 0,
+           'CHECKPOINT': '',
+           'END_EPOCH': 150,
+           'GAMMA1': 0.99,
+           'GAMMA2': 0.0,
+           'LR': 0.001,
+           'LR_FACTOR': 0.1,
+           'LR_STEP': [30, 60, 90],
+           'MOMENTUM': 0.9,
+           'NESTEROV': True,
+           'OPTIMIZER': 'sgd',
+           'RESUME': False,
+           'SHUFFLE': True,
+           'WD': 0.0001},
+ 'WORKERS': 8}
+Total Parameters: 23,917,832
+----------------------------------------------------------------------------------------------------------------------------------
+Total Multiply Adds (For Convolution and Linear Layers only): 3.80682373046875 GFLOPs
+----------------------------------------------------------------------------------------------------------------------------------
+Number of Layers
+Conv2d : 53 layers   BatchNorm2d : 53 layers   ReLU : 49 layers   MaxPool2d : 1 layers   Bottleneck : 16 layers   AdaptiveAvgPool2d : 1 layers   Linear : 1 layers   
+COLOR_RGB: False
+DATASET: cub
+DATA_FORMAT: jpg
+FLIP: True
+HYBRID_JOINTS_TYPE: 
+NUM_JOINTS_HALF_BODY: 8
+PROB_HALF_BODY: 0.0
+ROOT: /data/linshiqi047lsq/stanforddog_lsq
+ROT_FACTOR: 0
+SCALE_FACTOR: 1
+SELECT_DATA: False
+TEST_SET: val
+TRAIN_SET: train
+/data/linshiqi047lsq/stanforddog_lsq
+/opt/conda/lib/python3.7/site-packages/torch/optim/lr_scheduler.py:123: UserWarning: Detected call of `lr_scheduler.step()` before `optimizer.step()`. In PyTorch 1.1.0 and later, you should call them in the opposite order: `optimizer.step()` before `lr_scheduler.step()`.  Failure to do this will result in PyTorch skipping the first value of the learning rate schedule. See more details at https://pytorch.org/docs/stable/optim.html#how-to-adjust-learning-rate
+  "https://pytorch.org/docs/stable/optim.html#how-to-adjust-learning-rate", UserWarning)
+[W TensorIterator.cpp:924] Warning: Mixed memory format inputs detected while calling the operator. The operator will output channels_last tensor even if some of the inputs are not in channels_last format. (function operator())
+Epoch: [0][0/372]	Time 5.813s (5.813s)	Speed 5.5 samples/s	Data 1.713s (1.713s)	Loss 5.35237 (5.35237)	Accuracy@1 0.000 (0.000)	Accuracy@5 0.000 (0.000)	Loss_A2C 28.25206 (28.25206)	
+Epoch: [0][40/372]	Time 0.246s (0.898s)	Speed 129.9 samples/s	Data 0.001s (0.042s)	Loss 5.36285 (5.37061)	Accuracy@1 0.000 (0.610)	Accuracy@5 0.000 (2.515)	Loss_A2C 28.49111 (28.30351)	
+Epoch: [0][80/372]	Time 0.245s (0.805s)	Speed 130.8 samples/s	Data 0.000s (0.022s)	Loss 5.39306 (5.37623)	Accuracy@1 3.125 (0.579)	Accuracy@5 3.125 (2.508)	Loss_A2C 28.42536 (28.33719)	
+Epoch: [0][120/372]	Time 0.245s (0.816s)	Speed 130.7 samples/s	Data 0.000s (0.015s)	Loss 5.30895 (5.37391)	Accuracy@1 3.125 (0.697)	Accuracy@5 6.250 (2.660)	Loss_A2C 28.03831 (28.30870)	
+Epoch: [0][160/372]	Time 0.245s (0.827s)	Speed 130.6 samples/s	Data 0.000s (0.011s)	Loss 5.43667 (5.37257)	Accuracy@1 0.000 (0.621)	Accuracy@5 0.000 (2.504)	Loss_A2C 28.85186 (28.30311)	
+Epoch: [0][200/372]	Time 0.245s (0.814s)	Speed 130.5 samples/s	Data 0.000s (0.009s)	Loss 5.40723 (5.37352)	Accuracy@1 0.000 (0.606)	Accuracy@5 3.125 (2.503)	Loss_A2C 28.63030 (28.31719)	
+Epoch: [0][240/372]	Time 0.246s (0.806s)	Speed 130.3 samples/s	Data 0.001s (0.008s)	Loss 5.28787 (5.37174)	Accuracy@1 0.000 (0.596)	Accuracy@5 9.375 (2.541)	Loss_A2C 27.34249 (28.29591)	
+Epoch: [0][280/372]	Time 1.056s (0.814s)	Speed 30.3 samples/s	Data 0.000s (0.007s)	Loss 5.44447 (5.37304)	Accuracy@1 0.000 (0.623)	Accuracy@5 0.000 (2.480)	Loss_A2C 28.54293 (28.30913)	
+Epoch: [0][320/372]	Time 0.877s (0.798s)	Speed 36.5 samples/s	Data 0.000s (0.006s)	Loss 5.32335 (5.37344)	Accuracy@1 3.125 (0.604)	Accuracy@5 3.125 (2.424)	Loss_A2C 27.44483 (28.30611)	
+Epoch: [0][360/372]	Time 0.793s (0.794s)	Speed 40.3 samples/s	Data 0.000s (0.006s)	Loss 5.35857 (5.37089)	Accuracy@1 3.125 (0.623)	Accuracy@5 3.125 (2.502)	Loss_A2C 28.15795 (28.28361)	
+Test: Time 0.212	Loss 5.3752	Error@1 99.079	Error@5 97.203	Accuracy@1 0.921	Accuracy@5 2.797	
+=> saving checkpoint to output/cub/cls_res50
+best prec is : 0.9207
+Epoch: [1][0/372]	Time 1.741s (1.741s)	Speed 18.4 samples/s	Data 1.126s (1.126s)	Loss 5.33566 (5.33566)	Accuracy@1 0.000 (0.000)	Accuracy@5 3.125 (3.125)	Loss_A2C 27.96232 (27.96232)	
+Epoch: [1][40/372]	Time 1.411s (0.758s)	Speed 22.7 samples/s	Data 0.000s (0.028s)	Loss 4.77996 (4.99854)	Accuracy@1 6.250 (3.887)	Accuracy@5 12.500 (11.357)	Loss_A2C -3.06026 (-1.64637)	
+Epoch: [1][80/372]	Time 0.245s (0.721s)	Speed 130.7 samples/s	Data 0.000s (0.014s)	Loss 4.09726 (4.71764)	Accuracy@1 31.250 (10.224)	Accuracy@5 56.250 (25.309)	Loss_A2C -3.01032 (-2.31068)	
+Epoch: [1][120/372]	Time 0.245s (0.742s)	Speed 130.6 samples/s	Data 0.000s (0.010s)	Loss 3.66536 (4.46163)	Accuracy@1 31.250 (17.304)	Accuracy@5 71.875 (38.171)	Loss_A2C -3.02458 (-2.53347)	
+Epoch: [1][160/372]	Time 1.504s (0.771s)	Speed 21.3 samples/s	Data 0.000s (0.007s)	Loss 3.60918 (4.22150)	Accuracy@1 28.125 (23.505)	Accuracy@5 65.625 (47.399)	Loss_A2C -2.47662 (-2.61515)	
+Epoch: [1][200/372]	Time 0.251s (0.819s)	Speed 127.3 samples/s	Data 0.000s (0.006s)	Loss 2.74494 (3.99193)	Accuracy@1 62.500 (28.716)	Accuracy@5 87.500 (54.555)	Loss_A2C -2.89333 (-2.66908)	
+Epoch: [1][240/372]	Time 0.245s (0.815s)	Speed 130.5 samples/s	Data 0.000s (0.005s)	Loss 2.30931 (3.77300)	Accuracy@1 62.500 (32.274)	Accuracy@5 90.625 (59.699)	Loss_A2C -2.67847 (-2.67571)	
+Epoch: [1][280/372]	Time 1.509s (0.820s)	Speed 21.2 samples/s	Data 0.000s (0.004s)	Loss 2.43012 (3.56646)	Accuracy@1 43.750 (35.821)	Accuracy@5 93.750 (64.101)	Loss_A2C -2.59920 (-2.66855)	
+Epoch: [1][320/372]	Time 1.063s (0.825s)	Speed 30.1 samples/s	Data 0.000s (0.004s)	Loss 2.13780 (3.38889)	Accuracy@1 68.750 (38.736)	Accuracy@5 90.625 (67.261)	Loss_A2C -2.72154 (-2.67567)	
+Epoch: [1][360/372]	Time 0.244s (0.823s)	Speed 130.9 samples/s	Data 0.000s (0.004s)	Loss 1.48284 (3.22589)	Accuracy@1 71.875 (41.465)	Accuracy@5 100.000 (69.893)	Loss_A2C -2.78887 (-2.68278)	
+Test: Time 0.136	Loss 1.1521	Error@1 22.145	Error@5 2.063	Accuracy@1 77.855	Accuracy@5 97.937	
+=> saving checkpoint to output/cub/cls_res50
+best prec is : 77.8555
+Epoch: [2][0/372]	Time 3.779s (3.779s)	Speed 8.5 samples/s	Data 1.446s (1.446s)	Loss 1.95072 (1.95072)	Accuracy@1 62.500 (62.500)	Accuracy@5 87.500 (87.500)	Loss_A2C -2.87473 (-2.87473)	
+Epoch: [2][40/372]	Time 1.387s (0.931s)	Speed 23.1 samples/s	Data 0.000s (0.036s)	Loss 2.04063 (1.75236)	Accuracy@1 68.750 (66.387)	Accuracy@5 90.625 (92.302)	Loss_A2C -2.93094 (-2.72449)	
+Epoch: [2][80/372]	Time 1.038s (0.847s)	Speed 30.8 samples/s	Data 0.000s (0.018s)	Loss 1.98398 (1.73722)	Accuracy@1 59.375 (67.593)	Accuracy@5 93.750 (92.477)	Loss_A2C -2.84447 (-2.72472)	
+Epoch: [2][120/372]	Time 0.245s (0.820s)	Speed 130.5 samples/s	Data 0.000s (0.012s)	Loss 1.35016 (1.73052)	Accuracy@1 68.750 (67.717)	Accuracy@5 96.875 (92.691)	Loss_A2C -2.64936 (-2.72068)	
+Epoch: [2][160/372]	Time 0.253s (0.842s)	Speed 126.4 samples/s	Data 0.000s (0.009s)	Loss 1.58299 (1.74744)	Accuracy@1 71.875 (67.217)	Accuracy@5 90.625 (92.450)	Loss_A2C -2.67715 (-2.72490)	
+Epoch: [2][200/372]	Time 0.250s (0.827s)	Speed 127.7 samples/s	Data 0.001s (0.008s)	Loss 1.48796 (1.74154)	Accuracy@1 84.375 (67.180)	Accuracy@5 93.750 (92.506)	Loss_A2C -2.57634 (-2.71358)	
+Epoch: [2][240/372]	Time 1.444s (0.841s)	Speed 22.2 samples/s	Data 0.000s (0.007s)	Loss 2.03439 (1.74522)	Accuracy@1 59.375 (67.025)	Accuracy@5 93.750 (92.531)	Loss_A2C -2.75380 (-2.71731)	
+Epoch: [2][280/372]	Time 1.196s (0.832s)	Speed 26.8 samples/s	Data 0.000s (0.006s)	Loss 1.92574 (1.73635)	Accuracy@1 56.250 (67.327)	Accuracy@5 90.625 (92.627)	Loss_A2C -2.83581 (-2.71331)	
+Epoch: [2][320/372]	Time 0.245s (0.840s)	Speed 130.3 samples/s	Data 0.000s (0.005s)	Loss 1.75150 (1.73982)	Accuracy@1 53.125 (67.299)	Accuracy@5 96.875 (92.650)	Loss_A2C -2.68716 (-2.71242)	
+Epoch: [2][360/372]	Time 1.109s (0.817s)	Speed 28.9 samples/s	Data 0.000s (0.005s)	Loss 1.96054 (1.73165)	Accuracy@1 59.375 (67.555)	Accuracy@5 81.250 (92.824)	Loss_A2C -2.87638 (-2.70841)	
+Test: Time 0.137	Loss 1.1569	Error@1 22.354	Error@5 2.179	Accuracy@1 77.646	Accuracy@5 97.821	
+=> saving checkpoint to output/cub/cls_res50
+best prec is : 77.8555
+Epoch: [3][0/372]	Time 4.013s (4.013s)	Speed 8.0 samples/s	Data 1.519s (1.519s)	Loss 2.27212 (2.27212)	Accuracy@1 53.125 (53.125)	Accuracy@5 84.375 (84.375)	Loss_A2C -2.85498 (-2.85498)	
+Epoch: [3][40/372]	Time 0.248s (0.747s)	Speed 129.1 samples/s	Data 0.000s (0.037s)	Loss 1.32401 (1.62815)	Accuracy@1 78.125 (69.207)	Accuracy@5 96.875 (93.216)	Loss_A2C -2.76747 (-2.65925)	
+Epoch: [3][80/372]	Time 1.115s (0.802s)	Speed 28.7 samples/s	Data 0.000s (0.019s)	Loss 1.73593 (1.60693)	Accuracy@1 53.125 (68.017)	Accuracy@5 87.500 (92.940)	Loss_A2C -2.83416 (-2.70452)	
+Epoch: [3][120/372]	Time 1.493s (0.811s)	Speed 21.4 samples/s	Data 0.000s (0.013s)	Loss 1.43728 (1.56658)	Accuracy@1 75.000 (67.949)	Accuracy@5 90.625 (93.130)	Loss_A2C -2.75525 (-2.73025)	
+Epoch: [3][160/372]	Time 0.248s (0.787s)	Speed 129.2 samples/s	Data 0.000s (0.010s)	Loss 0.98586 (1.51517)	Accuracy@1 81.250 (68.828)	Accuracy@5 100.000 (93.498)	Loss_A2C -2.83509 (-2.74297)	
+Epoch: [3][200/372]	Time 1.488s (0.775s)	Speed 21.5 samples/s	Data 0.000s (0.008s)	Loss 1.60209 (1.47870)	Accuracy@1 62.500 (69.232)	Accuracy@5 90.625 (93.719)	Loss_A2C -2.79243 (-2.74171)	
+Epoch: [3][240/372]	Time 1.511s (0.770s)	Speed 21.2 samples/s	Data 0.000s (0.007s)	Loss 1.58437 (1.44547)	Accuracy@1 65.625 (69.450)	Accuracy@5 84.375 (93.893)	Loss_A2C -2.70019 (-2.73393)	
+Epoch: [3][280/372]	Time 0.246s (0.790s)	Speed 130.2 samples/s	Data 0.000s (0.006s)	Loss 0.90146 (1.42390)	Accuracy@1 84.375 (69.640)	Accuracy@5 96.875 (93.928)	Loss_A2C -2.69608 (-2.72997)	
+Epoch: [3][320/372]	Time 1.398s (0.804s)	Speed 22.9 samples/s	Data 0.001s (0.005s)	Loss 1.16735 (1.39859)	Accuracy@1 78.125 (69.607)	Accuracy@5 96.875 (93.945)	Loss_A2C -2.72787 (-2.72526)	
+Epoch: [3][360/372]	Time 1.614s (0.806s)	Speed 19.8 samples/s	Data 0.000s (0.005s)	Loss 1.27885 (1.37441)	Accuracy@1 78.125 (69.953)	Accuracy@5 93.750 (93.871)	Loss_A2C -2.70101 (-2.72774)	
+Test: Time 0.137	Loss 0.6831	Error@1 17.529	Error@5 1.422	Accuracy@1 82.471	Accuracy@5 98.578	
+=> saving checkpoint to output/cub/cls_res50
+best prec is : 82.4709
+Epoch: [4][0/372]	Time 2.063s (2.063s)	Speed 15.5 samples/s	Data 1.383s (1.383s)	Loss 0.90089 (0.90089)	Accuracy@1 78.125 (78.125)	Accuracy@5 96.875 (96.875)	Loss_A2C -2.76225 (-2.76225)	
+Epoch: [4][40/372]	Time 1.207s (0.942s)	Speed 26.5 samples/s	Data 0.001s (0.034s)	Loss 1.16664 (1.07779)	Accuracy@1 71.875 (73.857)	Accuracy@5 96.875 (95.808)	Loss_A2C -2.88115 (-2.74021)	
+Epoch: [4][80/372]	Time 0.245s (0.933s)	Speed 130.5 samples/s	Data 0.000s (0.018s)	Loss 0.86512 (1.07551)	Accuracy@1 87.500 (75.039)	Accuracy@5 96.875 (95.370)	Loss_A2C -2.71375 (-2.75054)	
+Epoch: [4][120/372]	Time 0.246s (0.884s)	Speed 130.3 samples/s	Data 0.000s (0.012s)	Loss 0.66669 (1.05570)	Accuracy@1 90.625 (75.413)	Accuracy@5 100.000 (95.506)	Loss_A2C -2.70174 (-2.74026)	
+Epoch: [4][160/372]	Time 1.625s (0.851s)	Speed 19.7 samples/s	Data 0.000s (0.009s)	Loss 1.20893 (1.05652)	Accuracy@1 71.875 (75.718)	Accuracy@5 90.625 (95.264)	Loss_A2C -2.87679 (-2.73646)	
+Epoch: [4][200/372]	Time 0.245s (0.857s)	Speed 130.5 samples/s	Data 0.000s (0.007s)	Loss 1.01466 (1.06420)	Accuracy@1 78.125 (75.591)	Accuracy@5 93.750 (95.274)	Loss_A2C -2.76059 (-2.73643)	
+Epoch: [4][240/372]	Time 0.248s (0.848s)	Speed 128.8 samples/s	Data 0.000s (0.006s)	Loss 1.02316 (1.06297)	Accuracy@1 84.375 (75.532)	Accuracy@5 87.500 (95.228)	Loss_A2C -2.68851 (-2.73974)	
+Epoch: [4][280/372]	Time 1.290s (0.872s)	Speed 24.8 samples/s	Data 0.000s (0.005s)	Loss 1.10102 (1.07600)	Accuracy@1 68.750 (75.011)	Accuracy@5 96.875 (95.118)	Loss_A2C -2.78983 (-2.74505)	
+Epoch: [4][320/372]	Time 0.250s (0.849s)	Speed 127.9 samples/s	Data 0.000s (0.005s)	Loss 0.87075 (1.06960)	Accuracy@1 81.250 (74.990)	Accuracy@5 96.875 (95.220)	Loss_A2C -2.69855 (-2.74496)	
+Epoch: [4][360/372]	Time 0.882s (0.859s)	Speed 36.3 samples/s	Data 0.000s (0.004s)	Loss 1.38393 (1.07754)	Accuracy@1 68.750 (74.801)	Accuracy@5 90.625 (95.187)	Loss_A2C -2.69726 (-2.74918)	
+Test: Time 0.136	Loss 0.6765	Error@1 17.343	Error@5 1.399	Accuracy@1 82.657	Accuracy@5 98.601	
+=> saving checkpoint to output/cub/cls_res50
+best prec is : 82.6573
+Epoch: [5][0/372]	Time 3.561s (3.561s)	Speed 9.0 samples/s	Data 1.081s (1.081s)	Loss 1.18764 (1.18764)	Accuracy@1 75.000 (75.000)	Accuracy@5 100.000 (100.000)	Loss_A2C -2.77914 (-2.77914)	
+Epoch: [5][40/372]	Time 0.247s (0.930s)	Speed 129.4 samples/s	Data 0.000s (0.027s)	Loss 0.81260 (1.10216)	Accuracy@1 78.125 (73.933)	Accuracy@5 100.000 (95.351)	Loss_A2C -2.82724 (-2.73453)	
+Epoch: [5][80/372]	Time 1.557s (0.948s)	Speed 20.5 samples/s	Data 0.000s (0.014s)	Loss 1.23977 (1.08648)	Accuracy@1 71.875 (72.994)	Accuracy@5 90.625 (95.255)	Loss_A2C -2.76039 (-2.74471)	
+Epoch: [5][120/372]	Time 0.251s (0.878s)	Speed 127.5 samples/s	Data 0.001s (0.009s)	Loss 0.97623 (1.04946)	Accuracy@1 84.375 (74.096)	Accuracy@5 90.625 (95.532)	Loss_A2C -2.79965 (-2.74974)	
+Epoch: [5][160/372]	Time 0.248s (0.864s)	Speed 129.1 samples/s	Data 0.000s (0.007s)	Loss 0.80927 (1.04708)	Accuracy@1 81.250 (74.127)	Accuracy@5 96.875 (95.458)	Loss_A2C -2.73033 (-2.75069)	
+Epoch: [5][200/372]	Time 0.250s (0.830s)	Speed 128.0 samples/s	Data 0.000s (0.006s)	Loss 0.87342 (1.03139)	Accuracy@1 75.000 (74.720)	Accuracy@5 96.875 (95.538)	Loss_A2C -2.73147 (-2.75215)	
+Epoch: [5][240/372]	Time 1.537s (0.798s)	Speed 20.8 samples/s	Data 0.000s (0.005s)	Loss 1.25952 (1.01963)	Accuracy@1 68.750 (74.844)	Accuracy@5 84.375 (95.539)	Loss_A2C -2.65941 (-2.74658)	
+Epoch: [5][280/372]	Time 0.245s (0.812s)	Speed 130.7 samples/s	Data 0.000s (0.004s)	Loss 0.92362 (1.01455)	Accuracy@1 71.875 (74.822)	Accuracy@5 100.000 (95.552)	Loss_A2C -2.71094 (-2.73022)	
+Epoch: [5][320/372]	Time 1.123s (0.821s)	Speed 28.5 samples/s	Data 0.000s (0.004s)	Loss 1.39438 (1.00955)	Accuracy@1 75.000 (74.873)	Accuracy@5 81.250 (95.551)	Loss_A2C -2.38020 (-2.71508)	
+Epoch: [5][360/372]	Time 0.951s (0.817s)	Speed 33.7 samples/s	Data 0.000s (0.003s)	Loss 0.60341 (0.99798)	Accuracy@1 84.375 (74.853)	Accuracy@5 100.000 (95.628)	Loss_A2C -2.69638 (-2.70844)	
+Test: Time 0.137	Loss 0.5724	Error@1 15.828	Error@5 1.317	Accuracy@1 84.172	Accuracy@5 98.683	
+=> saving checkpoint to output/cub/cls_res50
+best prec is : 84.1725
+Epoch: [6][0/372]	Time 2.018s (2.018s)	Speed 15.9 samples/s	Data 1.526s (1.526s)	Loss 0.89506 (0.89506)	Accuracy@1 78.125 (78.125)	Accuracy@5 96.875 (96.875)	Loss_A2C -2.72342 (-2.72342)	
+Epoch: [6][40/372]	Time 0.244s (1.009s)	Speed 131.0 samples/s	Data 0.000s (0.038s)	Loss 0.92076 (0.93809)	Accuracy@1 75.000 (75.610)	Accuracy@5 96.875 (95.732)	Loss_A2C -2.59811 (-2.62530)	
+Epoch: [6][80/372]	Time 0.250s (0.915s)	Speed 128.0 samples/s	Data 0.000s (0.019s)	Loss 0.52653 (0.89884)	Accuracy@1 87.500 (77.006)	Accuracy@5 100.000 (96.026)	Loss_A2C -2.64997 (-2.64193)	
+Epoch: [6][120/372]	Time 0.245s (0.903s)	Speed 130.7 samples/s	Data 0.000s (0.013s)	Loss 0.68110 (0.89027)	Accuracy@1 87.500 (77.221)	Accuracy@5 96.875 (96.333)	Loss_A2C -2.72914 (-2.63997)	
+Epoch: [6][160/372]	Time 1.585s (0.870s)	Speed 20.2 samples/s	Data 0.000s (0.010s)	Loss 1.17853 (0.87789)	Accuracy@1 75.000 (77.698)	Accuracy@5 90.625 (96.390)	Loss_A2C -2.61913 (-2.63492)	
+Epoch: [6][200/372]	Time 0.245s (0.860s)	Speed 130.7 samples/s	Data 0.000s (0.008s)	Loss 0.75217 (0.87068)	Accuracy@1 78.125 (77.814)	Accuracy@5 96.875 (96.549)	Loss_A2C -2.71966 (-2.63953)	
+Epoch: [6][240/372]	Time 1.484s (0.866s)	Speed 21.6 samples/s	Data 0.000s (0.007s)	Loss 1.00059 (0.87435)	Accuracy@1 75.000 (77.710)	Accuracy@5 90.625 (96.434)	Loss_A2C -2.61429 (-2.63854)	
+Epoch: [6][280/372]	Time 0.245s (0.868s)	Speed 130.9 samples/s	Data 0.000s (0.006s)	Loss 0.64265 (0.87721)	Accuracy@1 78.125 (77.669)	Accuracy@5 100.000 (96.386)	Loss_A2C -2.58969 (-2.63817)	
+Epoch: [6][320/372]	Time 1.301s (0.852s)	Speed 24.6 samples/s	Data 0.000s (0.005s)	Loss 1.16538 (0.87602)	Accuracy@1 71.875 (77.677)	Accuracy@5 90.625 (96.369)	Loss_A2C -2.59471 (-2.63835)	
+Epoch: [6][360/372]	Time 0.251s (0.868s)	Speed 127.5 samples/s	Data 0.000s (0.005s)	Loss 0.80407 (0.87794)	Accuracy@1 75.000 (77.666)	Accuracy@5 100.000 (96.373)	Loss_A2C -2.59974 (-2.63944)	
+Test: Time 0.137	Loss 0.5704	Error@1 15.594	Error@5 1.352	Accuracy@1 84.406	Accuracy@5 98.648	
+=> saving checkpoint to output/cub/cls_res50
+best prec is : 84.4056
+Epoch: [7][0/372]	Time 3.725s (3.725s)	Speed 8.6 samples/s	Data 1.394s (1.394s)	Loss 1.05471 (1.05471)	Accuracy@1 75.000 (75.000)	Accuracy@5 93.750 (93.750)	Loss_A2C -2.63640 (-2.63640)	
+Epoch: [7][40/372]	Time 0.251s (1.083s)	Speed 127.5 samples/s	Data 0.000s (0.034s)	Loss 0.50898 (0.90318)	Accuracy@1 93.750 (77.210)	Accuracy@5 100.000 (95.732)	Loss_A2C -2.42386 (-2.56339)	
+Epoch: [7][80/372]	Time 0.245s (0.967s)	Speed 130.7 samples/s	Data 0.000s (0.018s)	Loss 0.71688 (0.88755)	Accuracy@1 75.000 (77.315)	Accuracy@5 96.875 (96.026)	Loss_A2C -2.77415 (-2.59064)	
+Epoch: [7][120/372]	Time 0.245s (0.902s)	Speed 130.5 samples/s	Data 0.000s (0.012s)	Loss 0.73926 (0.86576)	Accuracy@1 78.125 (77.712)	Accuracy@5 96.875 (96.384)	Loss_A2C -2.67050 (-2.59670)	
+Epoch: [7][160/372]	Time 1.301s (0.893s)	Speed 24.6 samples/s	Data 0.000s (0.009s)	Loss 1.00328 (0.85686)	Accuracy@1 68.750 (77.853)	Accuracy@5 100.000 (96.564)	Loss_A2C -2.57065 (-2.60722)	
+Epoch: [7][200/372]	Time 0.245s (0.870s)	Speed 130.6 samples/s	Data 0.000s (0.007s)	Loss 0.74539 (0.86210)	Accuracy@1 78.125 (77.565)	Accuracy@5 100.000 (96.533)	Loss_A2C -2.54126 (-2.60826)	
+Epoch: [7][240/372]	Time 1.404s (0.876s)	Speed 22.8 samples/s	Data 0.000s (0.006s)	Loss 1.01574 (0.86683)	Accuracy@1 75.000 (77.269)	Accuracy@5 100.000 (96.330)	Loss_A2C -2.64947 (-2.59982)	
+Epoch: [7][280/372]	Time 1.361s (0.858s)	Speed 23.5 samples/s	Data 0.000s (0.005s)	Loss 1.40967 (0.85317)	Accuracy@1 62.500 (77.725)	Accuracy@5 87.500 (96.419)	Loss_A2C -2.28224 (-2.58366)	
+Epoch: [7][320/372]	Time 0.251s (0.846s)	Speed 127.7 samples/s	Data 0.000s (0.005s)	Loss 0.48557 (0.84464)	Accuracy@1 93.750 (77.833)	Accuracy@5 100.000 (96.417)	Loss_A2C -2.49884 (-2.56936)	
+Epoch: [7][360/372]	Time 0.245s (0.835s)	Speed 130.7 samples/s	Data 0.000s (0.004s)	Loss 0.55855 (0.84622)	Accuracy@1 84.375 (77.813)	Accuracy@5 100.000 (96.226)	Loss_A2C -2.41222 (-2.55692)	
+Test: Time 0.137	Loss 0.5349	Error@1 15.839	Error@5 1.259	Accuracy@1 84.161	Accuracy@5 98.741	
+=> saving checkpoint to output/cub/cls_res50
+best prec is : 84.4056
+Epoch: [8][0/372]	Time 3.817s (3.817s)	Speed 8.4 samples/s	Data 1.299s (1.299s)	Loss 1.01851 (1.01851)	Accuracy@1 71.875 (71.875)	Accuracy@5 93.750 (93.750)	Loss_A2C -2.54485 (-2.54485)	
+Epoch: [8][40/372]	Time 1.466s (0.905s)	Speed 21.8 samples/s	Data 0.000s (0.032s)	Loss 0.56631 (0.75070)	Accuracy@1 78.125 (80.107)	Accuracy@5 100.000 (96.951)	Loss_A2C -2.58033 (-2.48647)	
+Epoch: [8][80/372]	Time 0.985s (0.911s)	Speed 32.5 samples/s	Data 0.000s (0.017s)	Loss 1.06157 (0.77976)	Accuracy@1 75.000 (78.858)	Accuracy@5 90.625 (96.759)	Loss_A2C -2.55119 (-2.48803)	
+Epoch: [8][120/372]	Time 1.388s (0.908s)	Speed 23.1 samples/s	Data 0.000s (0.011s)	Loss 0.69714 (0.78861)	Accuracy@1 81.250 (79.003)	Accuracy@5 96.875 (96.513)	Loss_A2C -2.49037 (-2.48616)	
+Epoch: [8][160/372]	Time 0.250s (0.849s)	Speed 128.1 samples/s	Data 0.000s (0.009s)	Loss 0.46999 (0.76713)	Accuracy@1 90.625 (79.833)	Accuracy@5 100.000 (96.681)	Loss_A2C -2.55544 (-2.48953)	
+Epoch: [8][200/372]	Time 1.209s (0.856s)	Speed 26.5 samples/s	Data 0.000s (0.007s)	Loss 0.68182 (0.77496)	Accuracy@1 90.625 (79.571)	Accuracy@5 96.875 (96.626)	Loss_A2C -2.58804 (-2.49211)	
+Epoch: [8][240/372]	Time 0.245s (0.821s)	Speed 130.5 samples/s	Data 0.000s (0.006s)	Loss 0.50290 (0.75845)	Accuracy@1 93.750 (79.992)	Accuracy@5 100.000 (96.797)	Loss_A2C -2.66112 (-2.49620)	
+Epoch: [8][280/372]	Time 0.245s (0.825s)	Speed 130.8 samples/s	Data 0.000s (0.005s)	Loss 0.83865 (0.76068)	Accuracy@1 87.500 (80.105)	Accuracy@5 93.750 (96.775)	Loss_A2C -2.61311 (-2.49501)	
+Epoch: [8][320/372]	Time 1.289s (0.821s)	Speed 24.8 samples/s	Data 0.000s (0.005s)	Loss 1.01858 (0.75951)	Accuracy@1 68.750 (80.179)	Accuracy@5 90.625 (96.787)	Loss_A2C -2.46704 (-2.49709)	
+Epoch: [8][360/372]	Time 0.714s (0.823s)	Speed 44.8 samples/s	Data 0.000s (0.004s)	Loss 0.56943 (0.75987)	Accuracy@1 96.875 (80.255)	Accuracy@5 100.000 (96.788)	Loss_A2C -2.44132 (-2.50017)	
+Test: Time 0.136	Loss 0.5260	Error@1 15.851	Error@5 1.329	Accuracy@1 84.149	Accuracy@5 98.671	
+=> saving checkpoint to output/cub/cls_res50
+best prec is : 84.4056
+Epoch: [9][0/372]	Time 1.942s (1.942s)	Speed 16.5 samples/s	Data 1.350s (1.350s)	Loss 0.72770 (0.72770)	Accuracy@1 87.500 (87.500)	Accuracy@5 93.750 (93.750)	Loss_A2C -2.47748 (-2.47748)	
+Epoch: [9][40/372]	Time 1.281s (0.785s)	Speed 25.0 samples/s	Data 0.000s (0.033s)	Loss 1.44582 (0.76948)	Accuracy@1 62.500 (79.192)	Accuracy@5 87.500 (97.256)	Loss_A2C -2.44432 (-2.49599)	
+Epoch: [9][80/372]	Time 0.245s (0.834s)	Speed 130.5 samples/s	Data 0.000s (0.017s)	Loss 0.34560 (0.74167)	Accuracy@1 93.750 (80.015)	Accuracy@5 100.000 (97.647)	Loss_A2C -2.56141 (-2.49372)	
+Epoch: [9][120/372]	Time 0.244s (0.866s)	Speed 130.9 samples/s	Data 0.000s (0.012s)	Loss 0.48314 (0.75830)	Accuracy@1 90.625 (79.726)	Accuracy@5 100.000 (97.159)	Loss_A2C -2.49641 (-2.48838)	
+Epoch: [9][160/372]	Time 0.245s (0.875s)	Speed 130.8 samples/s	Data 0.000s (0.009s)	Loss 0.69757 (0.75087)	Accuracy@1 81.250 (80.124)	Accuracy@5 93.750 (97.069)	Loss_A2C -2.54234 (-2.49650)	
+Epoch: [9][200/372]	Time 0.245s (0.876s)	Speed 130.8 samples/s	Data 0.000s (0.007s)	Loss 0.53895 (0.75147)	Accuracy@1 84.375 (79.913)	Accuracy@5 100.000 (97.077)	Loss_A2C -2.42682 (-2.49976)	
+Epoch: [9][240/372]	Time 1.400s (0.881s)	Speed 22.9 samples/s	Data 0.000s (0.006s)	Loss 0.85933 (0.75405)	Accuracy@1 81.250 (79.759)	Accuracy@5 90.625 (97.005)	Loss_A2C -2.35733 (-2.49327)	
+Epoch: [9][280/372]	Time 1.121s (0.874s)	Speed 28.6 samples/s	Data 0.000s (0.005s)	Loss 0.76679 (0.75128)	Accuracy@1 81.250 (79.815)	Accuracy@5 100.000 (96.997)	Loss_A2C -2.43485 (-2.48055)	
+Epoch: [9][320/372]	Time 0.245s (0.861s)	Speed 130.5 samples/s	Data 0.000s (0.005s)	Loss 0.91739 (0.75028)	Accuracy@1 75.000 (79.731)	Accuracy@5 93.750 (96.933)	Loss_A2C -2.39731 (-2.46980)	
+Epoch: [9][360/372]	Time 0.655s (0.836s)	Speed 48.8 samples/s	Data 0.000s (0.004s)	Loss 1.12491 (0.75169)	Accuracy@1 71.875 (79.657)	Accuracy@5 90.625 (96.892)	Loss_A2C -2.42145 (-2.46509)	
+Test: Time 0.137	Loss 0.5080	Error@1 15.641	Error@5 1.247	Accuracy@1 84.359	Accuracy@5 98.753	
+=> saving checkpoint to output/cub/cls_res50
+best prec is : 84.4056
+Epoch: [10][0/372]	Time 2.072s (2.072s)	Speed 15.4 samples/s	Data 1.488s (1.488s)	Loss 0.48001 (0.48001)	Accuracy@1 87.500 (87.500)	Accuracy@5 100.000 (100.000)	Loss_A2C -2.23825 (-2.23825)	
+Epoch: [10][40/372]	Time 0.248s (0.919s)	Speed 129.0 samples/s	Data 0.000s (0.037s)	Loss 0.65361 (0.67836)	Accuracy@1 84.375 (82.317)	Accuracy@5 100.000 (97.256)	Loss_A2C -2.42539 (-2.40937)	
+Epoch: [10][80/372]	Time 1.392s (0.887s)	Speed 23.0 samples/s	Data 0.000s (0.019s)	Loss 0.64711 (0.68107)	Accuracy@1 75.000 (81.944)	Accuracy@5 96.875 (97.261)	Loss_A2C -2.37782 (-2.42531)	
+Epoch: [10][120/372]	Time 0.245s (0.877s)	Speed 130.8 samples/s	Data 0.000s (0.013s)	Loss 0.24217 (0.68123)	Accuracy@1 100.000 (81.818)	Accuracy@5 100.000 (97.340)	Loss_A2C -2.23665 (-2.43589)	
+Epoch: [10][160/372]	Time 0.245s (0.844s)	Speed 130.5 samples/s	Data 0.000s (0.010s)	Loss 0.34549 (0.67682)	Accuracy@1 90.625 (81.852)	Accuracy@5 100.000 (97.399)	Loss_A2C -2.36805 (-2.42998)	
+Epoch: [10][200/372]	Time 0.245s (0.834s)	Speed 130.6 samples/s	Data 0.000s (0.008s)	Loss 0.40010 (0.66997)	Accuracy@1 96.875 (82.198)	Accuracy@5 96.875 (97.512)	Loss_A2C -2.34031 (-2.43417)	
+Epoch: [10][240/372]	Time 0.245s (0.818s)	Speed 130.7 samples/s	Data 0.000s (0.007s)	Loss 0.48846 (0.66568)	Accuracy@1 87.500 (82.287)	Accuracy@5 100.000 (97.601)	Loss_A2C -2.57858 (-2.43297)	
+Epoch: [10][280/372]	Time 1.289s (0.809s)	Speed 24.8 samples/s	Data 0.000s (0.006s)	Loss 0.60499 (0.66257)	Accuracy@1 84.375 (82.229)	Accuracy@5 100.000 (97.709)	Loss_A2C -2.59468 (-2.43251)	
+Epoch: [10][320/372]	Time 0.245s (0.806s)	Speed 130.6 samples/s	Data 0.000s (0.005s)	Loss 0.68039 (0.65971)	Accuracy@1 81.250 (82.311)	Accuracy@5 93.750 (97.664)	Loss_A2C -2.31790 (-2.43153)	
+Epoch: [10][360/372]	Time 0.245s (0.804s)	Speed 130.7 samples/s	Data 0.000s (0.005s)	Loss 0.58182 (0.66119)	Accuracy@1 71.875 (82.349)	Accuracy@5 100.000 (97.706)	Loss_A2C -2.47239 (-2.43201)	
+Test: Time 0.137	Loss 0.5058	Error@1 15.385	Error@5 1.224	Accuracy@1 84.615	Accuracy@5 98.776	
+=> saving checkpoint to output/cub/cls_res50
+best prec is : 84.6154
+Epoch: [11][0/372]	Time 1.998s (1.998s)	Speed 16.0 samples/s	Data 1.502s (1.502s)	Loss 0.50123 (0.50123)	Accuracy@1 90.625 (90.625)	Accuracy@5 93.750 (93.750)	Loss_A2C -2.39108 (-2.39108)	
+Epoch: [11][40/372]	Time 1.013s (0.957s)	Speed 31.6 samples/s	Data 0.000s (0.037s)	Loss 1.02495 (0.66818)	Accuracy@1 68.750 (82.393)	Accuracy@5 100.000 (97.332)	Loss_A2C -2.47934 (-2.44670)	
+Epoch: [11][80/372]	Time 0.245s (0.890s)	Speed 130.7 samples/s	Data 0.000s (0.019s)	Loss 0.84255 (0.67827)	Accuracy@1 78.125 (82.137)	Accuracy@5 100.000 (97.106)	Loss_A2C -2.32554 (-2.46299)	
+Epoch: [11][120/372]	Time 1.429s (0.831s)	Speed 22.4 samples/s	Data 0.000s (0.013s)	Loss 0.64687 (0.65494)	Accuracy@1 81.250 (82.412)	Accuracy@5 100.000 (97.546)	Loss_A2C -2.56263 (-2.49929)	
+Epoch: [11][160/372]	Time 0.250s (0.823s)	Speed 127.9 samples/s	Data 0.001s (0.010s)	Loss 0.50771 (0.65391)	Accuracy@1 81.250 (81.968)	Accuracy@5 100.000 (97.516)	Loss_A2C -2.81268 (-2.52433)	
+Epoch: [11][200/372]	Time 0.247s (0.801s)	Speed 129.3 samples/s	Data 0.000s (0.008s)	Loss 0.61803 (0.64747)	Accuracy@1 78.125 (82.338)	Accuracy@5 96.875 (97.559)	Loss_A2C -2.65579 (-2.54925)	
+Epoch: [11][240/372]	Time 1.405s (0.811s)	Speed 22.8 samples/s	Data 0.000s (0.007s)	Loss 0.96220 (0.64788)	Accuracy@1 71.875 (82.274)	Accuracy@5 93.750 (97.484)	Loss_A2C -2.59478 (-2.55232)	
+Epoch: [11][280/372]	Time 1.015s (0.822s)	Speed 31.5 samples/s	Data 0.000s (0.006s)	Loss 0.77639 (0.65590)	Accuracy@1 71.875 (81.939)	Accuracy@5 100.000 (97.409)	Loss_A2C -2.40764 (-2.55390)	
+Epoch: [11][320/372]	Time 0.250s (0.819s)	Speed 128.0 samples/s	Data 0.000s (0.005s)	Loss 0.56306 (0.65778)	Accuracy@1 84.375 (81.922)	Accuracy@5 96.875 (97.391)	Loss_A2C -2.71059 (-2.55578)	
+Epoch: [11][360/372]	Time 0.245s (0.806s)	Speed 130.7 samples/s	Data 0.000s (0.005s)	Loss 0.44304 (0.65784)	Accuracy@1 87.500 (81.821)	Accuracy@5 100.000 (97.360)	Loss_A2C -2.68207 (-2.55979)	
+Test: Time 0.137	Loss 0.5029	Error@1 15.571	Error@5 1.282	Accuracy@1 84.429	Accuracy@5 98.718	
+=> saving checkpoint to output/cub/cls_res50
+best prec is : 84.6154
+Epoch: [12][0/372]	Time 1.862s (1.862s)	Speed 17.2 samples/s	Data 1.375s (1.375s)	Loss 0.27952 (0.27952)	Accuracy@1 96.875 (96.875)	Accuracy@5 100.000 (100.000)	Loss_A2C -2.26587 (-2.26587)	
+Epoch: [12][40/372]	Time 0.246s (0.814s)	Speed 130.1 samples/s	Data 0.000s (0.034s)	Loss 0.47053 (0.57579)	Accuracy@1 87.500 (84.527)	Accuracy@5 100.000 (98.399)	Loss_A2C -2.48894 (-2.47495)	
+Epoch: [12][80/372]	Time 2.250s (0.801s)	Speed 14.2 samples/s	Data 0.000s (0.017s)	Loss 0.95336 (0.60389)	Accuracy@1 78.125 (83.410)	Accuracy@5 90.625 (98.071)	Loss_A2C -2.64022 (-2.46873)	
+Epoch: [12][120/372]	Time 0.246s (0.766s)	Speed 130.3 samples/s	Data 0.000s (0.012s)	Loss 0.59996 (0.59000)	Accuracy@1 84.375 (83.678)	Accuracy@5 90.625 (97.986)	Loss_A2C -2.59395 (-2.46782)	
+Epoch: [12][160/372]	Time 0.245s (0.786s)	Speed 130.7 samples/s	Data 0.000s (0.009s)	Loss 0.32443 (0.59936)	Accuracy@1 96.875 (83.637)	Accuracy@5 100.000 (97.865)	Loss_A2C -2.35668 (-2.46604)	
+Epoch: [12][200/372]	Time 0.254s (0.782s)	Speed 126.1 samples/s	Data 0.001s (0.007s)	Loss 0.32332 (0.59752)	Accuracy@1 90.625 (83.769)	Accuracy@5 96.875 (97.777)	Loss_A2C -2.36460 (-2.46753)	
+Epoch: [12][240/372]	Time 0.245s (0.784s)	Speed 130.4 samples/s	Data 0.000s (0.006s)	Loss 0.27925 (0.59893)	Accuracy@1 96.875 (83.766)	Accuracy@5 100.000 (97.770)	Loss_A2C -2.21561 (-2.46600)	
+Epoch: [12][280/372]	Time 0.248s (0.773s)	Speed 128.8 samples/s	Data 0.000s (0.005s)	Loss 0.56264 (0.59146)	Accuracy@1 81.250 (84.064)	Accuracy@5 100.000 (97.787)	Loss_A2C -2.39587 (-2.46295)	
+Epoch: [12][320/372]	Time 0.250s (0.781s)	Speed 128.1 samples/s	Data 0.000s (0.005s)	Loss 0.38813 (0.59267)	Accuracy@1 93.750 (83.986)	Accuracy@5 100.000 (97.790)	Loss_A2C -2.34911 (-2.46743)	
+Epoch: [12][360/372]	Time 0.250s (0.756s)	Speed 128.0 samples/s	Data 0.000s (0.004s)	Loss 0.62892 (0.58258)	Accuracy@1 81.250 (84.297)	Accuracy@5 93.750 (97.870)	Loss_A2C -2.50881 (-2.46125)	
+Test: Time 0.137	Loss 0.4819	Error@1 14.883	Error@5 1.177	Accuracy@1 85.117	Accuracy@5 98.823	
+=> saving checkpoint to output/cub/cls_res50
+best prec is : 85.1165
+Epoch: [13][0/372]	Time 3.885s (3.885s)	Speed 8.2 samples/s	Data 1.431s (1.431s)	Loss 0.69086 (0.69086)	Accuracy@1 87.500 (87.500)	Accuracy@5 96.875 (96.875)	Loss_A2C -2.51610 (-2.51610)	
+Epoch: [13][40/372]	Time 1.116s (0.843s)	Speed 28.7 samples/s	Data 0.003s (0.035s)	Loss 0.90410 (0.57106)	Accuracy@1 81.250 (83.918)	Accuracy@5 93.750 (97.866)	Loss_A2C -2.52349 (-2.51202)	
+Epoch: [13][80/372]	Time 1.588s (0.824s)	Speed 20.1 samples/s	Data 0.000s (0.018s)	Loss 0.95372 (0.58526)	Accuracy@1 75.000 (84.105)	Accuracy@5 96.875 (97.878)	Loss_A2C -2.62800 (-2.53978)	
+Epoch: [13][120/372]	Time 1.459s (0.855s)	Speed 21.9 samples/s	Data 0.000s (0.012s)	Loss 0.88862 (0.61556)	Accuracy@1 71.875 (83.006)	Accuracy@5 96.875 (97.521)	Loss_A2C -2.51301 (-2.54448)	
+Epoch: [13][160/372]	Time 1.564s (0.847s)	Speed 20.5 samples/s	Data 0.000s (0.010s)	Loss 0.81765 (0.60942)	Accuracy@1 71.875 (83.133)	Accuracy@5 100.000 (97.632)	Loss_A2C -2.46577 (-2.53678)	
+Epoch: [13][200/372]	Time 0.245s (0.823s)	Speed 130.7 samples/s	Data 0.000s (0.008s)	Loss 0.43839 (0.60508)	Accuracy@1 96.875 (83.162)	Accuracy@5 100.000 (97.606)	Loss_A2C -2.44169 (-2.52877)	
+Epoch: [13][240/372]	Time 0.245s (0.810s)	Speed 130.8 samples/s	Data 0.000s (0.006s)	Loss 0.31163 (0.59516)	Accuracy@1 90.625 (83.584)	Accuracy@5 100.000 (97.705)	Loss_A2C -2.55547 (-2.51709)	
+Epoch: [13][280/372]	Time 0.954s (0.799s)	Speed 33.5 samples/s	Data 0.000s (0.006s)	Loss 0.55790 (0.59465)	Accuracy@1 81.250 (83.585)	Accuracy@5 100.000 (97.709)	Loss_A2C -2.66678 (-2.51482)	
+Epoch: [13][320/372]	Time 0.250s (0.793s)	Speed 127.8 samples/s	Data 0.000s (0.005s)	Loss 0.49976 (0.59331)	Accuracy@1 90.625 (83.635)	Accuracy@5 96.875 (97.673)	Loss_A2C -2.52598 (-2.50569)	
+Epoch: [13][360/372]	Time 0.250s (0.787s)	Speed 127.9 samples/s	Data 0.000s (0.005s)	Loss 0.67152 (0.59764)	Accuracy@1 84.375 (83.492)	Accuracy@5 96.875 (97.654)	Loss_A2C -2.40919 (-2.49447)	
+Test: Time 0.137	Loss 0.4791	Error@1 14.674	Error@5 1.142	Accuracy@1 85.326	Accuracy@5 98.858	
+=> saving checkpoint to output/cub/cls_res50
+best prec is : 85.3263
+Epoch: [14][0/372]	Time 1.997s (1.997s)	Speed 16.0 samples/s	Data 1.502s (1.502s)	Loss 0.34466 (0.34466)	Accuracy@1 84.375 (84.375)	Accuracy@5 100.000 (100.000)	Loss_A2C -2.36669 (-2.36669)	
+Epoch: [14][40/372]	Time 0.245s (0.756s)	Speed 130.4 samples/s	Data 0.000s (0.037s)	Loss 0.26283 (0.46871)	Accuracy@1 93.750 (87.805)	Accuracy@5 100.000 (98.857)	Loss_A2C -2.17956 (-2.40989)	
+Epoch: [14][80/372]	Time 1.210s (0.690s)	Speed 26.4 samples/s	Data 0.000s (0.019s)	Loss 0.93582 (0.48762)	Accuracy@1 75.000 (87.269)	Accuracy@5 87.500 (98.225)	Loss_A2C -2.28960 (-2.41695)	
+Epoch: [14][120/372]	Time 0.248s (0.721s)	Speed 129.2 samples/s	Data 0.000s (0.013s)	Loss 0.41277 (0.51398)	Accuracy@1 93.750 (86.260)	Accuracy@5 100.000 (98.011)	Loss_A2C -2.46022 (-2.41385)	
+Epoch: [14][160/372]	Time 0.245s (0.732s)	Speed 130.4 samples/s	Data 0.000s (0.010s)	Loss 0.45862 (0.51387)	Accuracy@1 78.125 (85.986)	Accuracy@5 100.000 (98.214)	Loss_A2C -2.24983 (-2.41774)	
+Epoch: [14][200/372]	Time 0.245s (0.737s)	Speed 130.7 samples/s	Data 0.000s (0.008s)	Loss 0.29725 (0.51500)	Accuracy@1 90.625 (85.961)	Accuracy@5 100.000 (98.259)	Loss_A2C -2.55948 (-2.41728)	
+Epoch: [14][240/372]	Time 1.106s (0.755s)	Speed 28.9 samples/s	Data 0.000s (0.007s)	Loss 0.63013 (0.52667)	Accuracy@1 84.375 (85.659)	Accuracy@5 100.000 (98.211)	Loss_A2C -2.45321 (-2.41565)	
+Epoch: [14][280/372]	Time 1.748s (0.756s)	Speed 18.3 samples/s	Data 0.000s (0.006s)	Loss 0.85921 (0.53332)	Accuracy@1 71.875 (85.609)	Accuracy@5 93.750 (98.132)	Loss_A2C -2.34364 (-2.41582)	
+Epoch: [14][320/372]	Time 0.245s (0.763s)	Speed 130.9 samples/s	Data 0.000s (0.005s)	Loss 0.31130 (0.53184)	Accuracy@1 90.625 (85.514)	Accuracy@5 100.000 (98.199)	Loss_A2C -2.48264 (-2.41597)	
+Epoch: [14][360/372]	Time 1.009s (0.771s)	Speed 31.7 samples/s	Data 0.000s (0.005s)	Loss 0.70355 (0.54124)	Accuracy@1 81.250 (85.249)	Accuracy@5 93.750 (98.113)	Loss_A2C -2.43678 (-2.41420)	
+Test: Time 0.137	Loss 0.4807	Error@1 14.895	Error@5 1.131	Accuracy@1 85.105	Accuracy@5 98.869	
+=> saving checkpoint to output/cub/cls_res50
+best prec is : 85.3263
+Epoch: [15][0/372]	Time 1.963s (1.963s)	Speed 16.3 samples/s	Data 1.472s (1.472s)	Loss 0.37916 (0.37916)	Accuracy@1 90.625 (90.625)	Accuracy@5 100.000 (100.000)	Loss_A2C -2.62029 (-2.62029)	
+Epoch: [15][40/372]	Time 1.404s (0.922s)	Speed 22.8 samples/s	Data 0.000s (0.036s)	Loss 0.68834 (0.58119)	Accuracy@1 78.125 (83.384)	Accuracy@5 100.000 (98.095)	Loss_A2C -2.40388 (-2.39560)	
+Epoch: [15][80/372]	Time 1.500s (0.919s)	Speed 21.3 samples/s	Data 0.000s (0.019s)	Loss 0.63295 (0.59360)	Accuracy@1 84.375 (82.716)	Accuracy@5 93.750 (97.917)	Loss_A2C -2.48773 (-2.42778)	
+Epoch: [15][120/372]	Time 1.277s (0.881s)	Speed 25.1 samples/s	Data 0.000s (0.013s)	Loss 0.53617 (0.58233)	Accuracy@1 93.750 (83.342)	Accuracy@5 100.000 (97.831)	Loss_A2C -2.42111 (-2.42015)	
+Epoch: [15][160/372]	Time 0.252s (0.847s)	Speed 127.1 samples/s	Data 0.000s (0.010s)	Loss 0.47420 (0.57587)	Accuracy@1 90.625 (83.560)	Accuracy@5 93.750 (97.807)	Loss_A2C -2.30322 (-2.41690)	
+Epoch: [15][200/372]	Time 1.317s (0.832s)	Speed 24.3 samples/s	Data 0.000s (0.008s)	Loss 0.86157 (0.57282)	Accuracy@1 68.750 (83.800)	Accuracy@5 96.875 (97.792)	Loss_A2C -2.31509 (-2.41671)	
+Epoch: [15][240/372]	Time 1.309s (0.806s)	Speed 24.4 samples/s	Data 0.000s (0.007s)	Loss 0.56132 (0.56244)	Accuracy@1 81.250 (84.206)	Accuracy@5 100.000 (97.925)	Loss_A2C -2.54766 (-2.42146)	
+Epoch: [15][280/372]	Time 0.245s (0.810s)	Speed 130.7 samples/s	Data 0.000s (0.006s)	Loss 0.34285 (0.56346)	Accuracy@1 87.500 (84.164)	Accuracy@5 100.000 (97.931)	Loss_A2C -2.43708 (-2.41831)	
+Epoch: [15][320/372]	Time 1.106s (0.805s)	Speed 28.9 samples/s	Data 0.000s (0.005s)	Loss 0.83941 (0.55939)	Accuracy@1 68.750 (84.180)	Accuracy@5 96.875 (97.985)	Loss_A2C -2.30728 (-2.41459)	
+Epoch: [15][360/372]	Time 0.685s (0.810s)	Speed 46.7 samples/s	Data 0.000s (0.005s)	Loss 0.74188 (0.56050)	Accuracy@1 75.000 (84.063)	Accuracy@5 96.875 (97.966)	Loss_A2C -2.22782 (-2.40533)	
+Test: Time 0.137	Loss 0.4833	Error@1 14.802	Error@5 1.270	Accuracy@1 85.198	Accuracy@5 98.730	
+=> saving checkpoint to output/cub/cls_res50
+best prec is : 85.3263
+Epoch: [16][0/372]	Time 2.042s (2.042s)	Speed 15.7 samples/s	Data 1.551s (1.551s)	Loss 0.14093 (0.14093)	Accuracy@1 100.000 (100.000)	Accuracy@5 100.000 (100.000)	Loss_A2C -2.28611 (-2.28611)	
+Epoch: [16][40/372]	Time 1.214s (0.826s)	Speed 26.4 samples/s	Data 0.000s (0.038s)	Loss 0.60708 (0.49092)	Accuracy@1 81.250 (86.966)	Accuracy@5 96.875 (98.171)	Loss_A2C -2.37154 (-2.36523)	
+Epoch: [16][80/372]	Time 0.250s (0.778s)	Speed 127.8 samples/s	Data 0.000s (0.019s)	Loss 0.32541 (0.48106)	Accuracy@1 93.750 (87.577)	Accuracy@5 100.000 (98.302)	Loss_A2C -2.31172 (-2.36750)	
+Epoch: [16][120/372]	Time 0.245s (0.765s)	Speed 130.4 samples/s	Data 0.000s (0.013s)	Loss 0.68198 (0.48740)	Accuracy@1 87.500 (86.932)	Accuracy@5 96.875 (98.321)	Loss_A2C -2.38196 (-2.36657)	
+Epoch: [16][160/372]	Time 1.523s (0.790s)	Speed 21.0 samples/s	Data 0.000s (0.010s)	Loss 0.64837 (0.50196)	Accuracy@1 78.125 (86.374)	Accuracy@5 100.000 (98.292)	Loss_A2C -2.39831 (-2.36183)	
+Epoch: [16][200/372]	Time 0.245s (0.787s)	Speed 130.7 samples/s	Data 0.000s (0.008s)	Loss 0.24746 (0.50215)	Accuracy@1 90.625 (86.287)	Accuracy@5 100.000 (98.305)	Loss_A2C -2.34058 (-2.36106)	
+Epoch: [16][240/372]	Time 1.299s (0.803s)	Speed 24.6 samples/s	Data 0.000s (0.007s)	Loss 0.70771 (0.50575)	Accuracy@1 81.250 (86.190)	Accuracy@5 93.750 (98.301)	Loss_A2C -2.34233 (-2.35804)	
+Epoch: [16][280/372]	Time 0.251s (0.798s)	Speed 127.7 samples/s	Data 0.001s (0.006s)	Loss 0.41074 (0.51009)	Accuracy@1 90.625 (85.843)	Accuracy@5 96.875 (98.321)	Loss_A2C -2.51454 (-2.35569)	
+Epoch: [16][320/372]	Time 0.251s (0.792s)	Speed 127.7 samples/s	Data 0.001s (0.005s)	Loss 0.50901 (0.50579)	Accuracy@1 87.500 (85.972)	Accuracy@5 100.000 (98.316)	Loss_A2C -2.38280 (-2.35763)	
+Epoch: [16][360/372]	Time 0.250s (0.798s)	Speed 127.9 samples/s	Data 0.000s (0.005s)	Loss 0.50970 (0.50754)	Accuracy@1 84.375 (85.786)	Accuracy@5 100.000 (98.390)	Loss_A2C -2.31307 (-2.35792)	
+Test: Time 0.136	Loss 0.4716	Error@1 14.464	Error@5 1.305	Accuracy@1 85.536	Accuracy@5 98.695	
+=> saving checkpoint to output/cub/cls_res50
+best prec is : 85.5361
+Epoch: [17][0/372]	Time 3.992s (3.992s)	Speed 8.0 samples/s	Data 1.521s (1.521s)	Loss 0.59913 (0.59913)	Accuracy@1 87.500 (87.500)	Accuracy@5 100.000 (100.000)	Loss_A2C -2.49578 (-2.49578)	
+Epoch: [17][40/372]	Time 0.246s (0.901s)	Speed 130.3 samples/s	Data 0.000s (0.037s)	Loss 0.43848 (0.51188)	Accuracy@1 87.500 (85.899)	Accuracy@5 100.000 (98.247)	Loss_A2C -2.29885 (-2.33252)	
+Epoch: [17][80/372]	Time 0.245s (0.901s)	Speed 130.5 samples/s	Data 0.000s (0.019s)	Loss 0.46299 (0.52824)	Accuracy@1 87.500 (85.417)	Accuracy@5 100.000 (98.187)	Loss_A2C -2.35988 (-2.31116)	
+Epoch: [17][120/372]	Time 1.106s (0.895s)	Speed 28.9 samples/s	Data 0.000s (0.013s)	Loss 0.77674 (0.52972)	Accuracy@1 78.125 (85.434)	Accuracy@5 93.750 (98.218)	Loss_A2C -2.12764 (-2.29820)	
+Epoch: [17][160/372]	Time 1.049s (0.883s)	Speed 30.5 samples/s	Data 0.000s (0.010s)	Loss 0.66107 (0.51484)	Accuracy@1 84.375 (85.908)	Accuracy@5 96.875 (98.253)	Loss_A2C -2.26517 (-2.29459)	
+Epoch: [17][200/372]	Time 0.250s (0.874s)	Speed 128.1 samples/s	Data 0.000s (0.008s)	Loss 0.30209 (0.51273)	Accuracy@1 93.750 (85.883)	Accuracy@5 100.000 (98.274)	Loss_A2C -2.13578 (-2.29108)	
+Epoch: [17][240/372]	Time 0.245s (0.871s)	Speed 130.5 samples/s	Data 0.001s (0.007s)	Loss 0.40011 (0.52267)	Accuracy@1 87.500 (85.633)	Accuracy@5 100.000 (98.146)	Loss_A2C -2.25047 (-2.27317)	
+Epoch: [17][280/372]	Time 0.250s (0.857s)	Speed 127.8 samples/s	Data 0.000s (0.006s)	Loss 0.29759 (0.52097)	Accuracy@1 87.500 (85.609)	Accuracy@5 100.000 (98.143)	Loss_A2C -2.01085 (-2.26003)	
+Epoch: [17][320/372]	Time 0.250s (0.851s)	Speed 127.9 samples/s	Data 0.000s (0.005s)	Loss 0.32600 (0.52621)	Accuracy@1 93.750 (85.456)	Accuracy@5 100.000 (98.072)	Loss_A2C -2.22038 (-2.25279)	
+Epoch: [17][360/372]	Time 0.245s (0.823s)	Speed 130.8 samples/s	Data 0.000s (0.005s)	Loss 0.32597 (0.52034)	Accuracy@1 93.750 (85.622)	Accuracy@5 100.000 (98.122)	Loss_A2C -1.99454 (-2.24597)	
+Test: Time 0.137	Loss 0.4672	Error@1 14.592	Error@5 1.259	Accuracy@1 85.408	Accuracy@5 98.741	
+=> saving checkpoint to output/cub/cls_res50
+best prec is : 85.5361
+Epoch: [18][0/372]	Time 1.978s (1.978s)	Speed 16.2 samples/s	Data 1.492s (1.492s)	Loss 0.18226 (0.18226)	Accuracy@1 100.000 (100.000)	Accuracy@5 100.000 (100.000)	Loss_A2C -2.12251 (-2.12251)	
+Epoch: [18][40/372]	Time 0.245s (0.702s)	Speed 130.8 samples/s	Data 0.000s (0.037s)	Loss 0.37042 (0.44364)	Accuracy@1 87.500 (87.271)	Accuracy@5 100.000 (99.009)	Loss_A2C -2.05884 (-2.14455)	
+Epoch: [18][80/372]	Time 0.251s (0.767s)	Speed 127.5 samples/s	Data 0.000s (0.019s)	Loss 0.37581 (0.46886)	Accuracy@1 87.500 (87.191)	Accuracy@5 100.000 (98.495)	Loss_A2C -2.11078 (-2.16256)	
+Epoch: [18][120/372]	Time 1.320s (0.760s)	Speed 24.2 samples/s	Data 0.000s (0.013s)	Loss 0.72654 (0.47883)	Accuracy@1 84.375 (86.854)	Accuracy@5 96.875 (98.425)	Loss_A2C -2.14853 (-2.15219)	
+Epoch: [18][160/372]	Time 1.592s (0.765s)	Speed 20.1 samples/s	Data 0.000s (0.010s)	Loss 0.37198 (0.46840)	Accuracy@1 90.625 (87.752)	Accuracy@5 100.000 (98.389)	Loss_A2C -1.94290 (-2.14791)	
+Epoch: [18][200/372]	Time 0.247s (0.765s)	Speed 129.8 samples/s	Data 0.000s (0.008s)	Loss 0.37341 (0.47372)	Accuracy@1 84.375 (87.438)	Accuracy@5 100.000 (98.336)	Loss_A2C -2.08527 (-2.14521)	
+Epoch: [18][240/372]	Time 0.251s (0.793s)	Speed 127.7 samples/s	Data 0.000s (0.007s)	Loss 0.27249 (0.48385)	Accuracy@1 96.875 (87.033)	Accuracy@5 100.000 (98.211)	Loss_A2C -2.39108 (-2.14522)	
+Epoch: [18][280/372]	Time 0.252s (0.798s)	Speed 127.0 samples/s	Data 0.000s (0.006s)	Loss 0.52644 (0.48072)	Accuracy@1 78.125 (87.033)	Accuracy@5 100.000 (98.287)	Loss_A2C -2.15482 (-2.14327)	
+Epoch: [18][320/372]	Time 0.245s (0.784s)	Speed 130.5 samples/s	Data 0.000s (0.005s)	Loss 0.35692 (0.47699)	Accuracy@1 87.500 (87.140)	Accuracy@5 100.000 (98.364)	Loss_A2C -2.10310 (-2.14213)	
+Epoch: [18][360/372]	Time 0.995s (0.784s)	Speed 32.2 samples/s	Data 0.000s (0.005s)	Loss 0.75872 (0.47574)	Accuracy@1 87.500 (87.232)	Accuracy@5 93.750 (98.329)	Loss_A2C -2.29557 (-2.14266)	
+Test: Time 0.136	Loss 0.4638	Error@1 14.557	Error@5 1.177	Accuracy@1 85.443	Accuracy@5 98.823	
+=> saving checkpoint to output/cub/cls_res50
+best prec is : 85.5361
+Epoch: [19][0/372]	Time 3.755s (3.755s)	Speed 8.5 samples/s	Data 1.354s (1.354s)	Loss 0.62806 (0.62806)	Accuracy@1 81.250 (81.250)	Accuracy@5 100.000 (100.000)	Loss_A2C -2.20977 (-2.20977)	
+Epoch: [19][40/372]	Time 1.554s (1.041s)	Speed 20.6 samples/s	Data 0.000s (0.034s)	Loss 0.56048 (0.48132)	Accuracy@1 90.625 (87.119)	Accuracy@5 96.875 (98.247)	Loss_A2C -2.25723 (-2.15804)	
+Epoch: [19][80/372]	Time 0.245s (0.914s)	Speed 130.8 samples/s	Data 0.000s (0.017s)	Loss 0.37928 (0.49183)	Accuracy@1 87.500 (86.651)	Accuracy@5 100.000 (98.341)	Loss_A2C -2.08828 (-2.14540)	
+Epoch: [19][120/372]	Time 1.304s (0.816s)	Speed 24.5 samples/s	Data 0.000s (0.012s)	Loss 0.72012 (0.49116)	Accuracy@1 87.500 (86.441)	Accuracy@5 93.750 (98.218)	Loss_A2C -2.24909 (-2.14936)	
+Epoch: [19][160/372]	Time 0.245s (0.801s)	Speed 130.4 samples/s	Data 0.000s (0.009s)	Loss 0.43425 (0.49858)	Accuracy@1 90.625 (86.102)	Accuracy@5 100.000 (98.234)	Loss_A2C -2.19848 (-2.15097)	
+Epoch: [19][200/372]	Time 1.544s (0.774s)	Speed 20.7 samples/s	Data 0.000s (0.007s)	Loss 0.47507 (0.49075)	Accuracy@1 84.375 (86.381)	Accuracy@5 100.000 (98.368)	Loss_A2C -2.13876 (-2.15338)	
+Epoch: [19][240/372]	Time 0.251s (0.792s)	Speed 127.7 samples/s	Data 0.000s (0.006s)	Loss 0.39197 (0.49480)	Accuracy@1 84.375 (86.203)	Accuracy@5 96.875 (98.327)	Loss_A2C -2.08583 (-2.14683)	
+Epoch: [19][280/372]	Time 0.245s (0.776s)	Speed 130.8 samples/s	Data 0.000s (0.005s)	Loss 0.49150 (0.48586)	Accuracy@1 87.500 (86.621)	Accuracy@5 100.000 (98.387)	Loss_A2C -2.15927 (-2.14378)	
+Epoch: [19][320/372]	Time 0.245s (0.773s)	Speed 130.8 samples/s	Data 0.000s (0.005s)	Loss 0.19593 (0.48592)	Accuracy@1 96.875 (86.653)	Accuracy@5 100.000 (98.384)	Loss_A2C -1.95137 (-2.13718)	
+Epoch: [19][360/372]	Time 1.609s (0.783s)	Speed 19.9 samples/s	Data 0.000s (0.004s)	Loss 0.49796 (0.49097)	Accuracy@1 87.500 (86.453)	Accuracy@5 100.000 (98.303)	Loss_A2C -2.21730 (-2.13402)	
+Test: Time 0.137	Loss 0.4851	Error@1 15.047	Error@5 1.247	Accuracy@1 84.953	Accuracy@5 98.753	
+=> saving checkpoint to output/cub/cls_res50
+best prec is : 85.5361
+Epoch: [20][0/372]	Time 1.934s (1.934s)	Speed 16.5 samples/s	Data 1.443s (1.443s)	Loss 0.23697 (0.23697)	Accuracy@1 96.875 (96.875)	Accuracy@5 100.000 (100.000)	Loss_A2C -2.32499 (-2.32499)	
+Epoch: [20][40/372]	Time 1.114s (0.731s)	Speed 28.7 samples/s	Data 0.000s (0.036s)	Loss 0.37900 (0.42942)	Accuracy@1 90.625 (88.643)	Accuracy@5 100.000 (98.704)	Loss_A2C -2.28101 (-2.17217)	
+Epoch: [20][80/372]	Time 0.246s (0.737s)	Speed 130.3 samples/s	Data 0.000s (0.018s)	Loss 0.13723 (0.42705)	Accuracy@1 96.875 (89.082)	Accuracy@5 100.000 (98.534)	Loss_A2C -2.05766 (-2.16859)	
+Epoch: [20][120/372]	Time 0.246s (0.794s)	Speed 130.2 samples/s	Data 0.000s (0.013s)	Loss 0.43217 (0.45971)	Accuracy@1 81.250 (87.681)	Accuracy@5 100.000 (98.321)	Loss_A2C -2.09643 (-2.16291)	
+Epoch: [20][160/372]	Time 0.245s (0.825s)	Speed 130.4 samples/s	Data 0.000s (0.010s)	Loss 0.36680 (0.45919)	Accuracy@1 90.625 (87.655)	Accuracy@5 100.000 (98.292)	Loss_A2C -2.10168 (-2.17185)	
+Epoch: [20][200/372]	Time 1.502s (0.790s)	Speed 21.3 samples/s	Data 0.000s (0.008s)	Loss 0.73366 (0.44592)	Accuracy@1 84.375 (87.998)	Accuracy@5 100.000 (98.414)	Loss_A2C -2.18029 (-2.17377)	
+Epoch: [20][240/372]	Time 0.246s (0.804s)	Speed 130.3 samples/s	Data 0.001s (0.007s)	Loss 0.17422 (0.44821)	Accuracy@1 93.750 (87.798)	Accuracy@5 100.000 (98.366)	Loss_A2C -2.29709 (-2.17265)	
+Epoch: [20][280/372]	Time 1.564s (0.809s)	Speed 20.5 samples/s	Data 0.001s (0.006s)	Loss 0.53909 (0.44848)	Accuracy@1 84.375 (87.811)	Accuracy@5 96.875 (98.432)	Loss_A2C -2.14439 (-2.17419)	
+Epoch: [20][320/372]	Time 1.302s (0.793s)	Speed 24.6 samples/s	Data 0.000s (0.005s)	Loss 0.33644 (0.43941)	Accuracy@1 90.625 (88.055)	Accuracy@5 100.000 (98.520)	Loss_A2C -2.27989 (-2.17564)	
+Epoch: [20][360/372]	Time 0.244s (0.789s)	Speed 130.9 samples/s	Data 0.000s (0.005s)	Loss 0.19688 (0.43788)	Accuracy@1 93.750 (88.080)	Accuracy@5 100.000 (98.580)	Loss_A2C -2.25459 (-2.17627)	
+Test: Time 0.137	Loss 0.4803	Error@1 14.965	Error@5 1.282	Accuracy@1 85.035	Accuracy@5 98.718	
+=> saving checkpoint to output/cub/cls_res50
+best prec is : 85.5361
+Epoch: [21][0/372]	Time 1.901s (1.901s)	Speed 16.8 samples/s	Data 1.414s (1.414s)	Loss 0.30391 (0.30391)	Accuracy@1 90.625 (90.625)	Accuracy@5 100.000 (100.000)	Loss_A2C -2.16343 (-2.16343)	
+Epoch: [21][40/372]	Time 1.110s (0.903s)	Speed 28.8 samples/s	Data 0.000s (0.035s)	Loss 0.78581 (0.44336)	Accuracy@1 78.125 (88.415)	Accuracy@5 93.750 (98.476)	Loss_A2C -2.09909 (-2.17442)	
+Epoch: [21][80/372]	Time 1.447s (0.849s)	Speed 22.1 samples/s	Data 0.000s (0.018s)	Loss 0.84549 (0.44642)	Accuracy@1 87.500 (88.079)	Accuracy@5 87.500 (98.187)	Loss_A2C -2.03020 (-2.17786)	
+Epoch: [21][120/372]	Time 1.002s (0.812s)	Speed 31.9 samples/s	Data 0.000s (0.012s)	Loss 0.55234 (0.44460)	Accuracy@1 81.250 (88.171)	Accuracy@5 100.000 (98.450)	Loss_A2C -2.15280 (-2.17634)	
+Epoch: [21][160/372]	Time 0.245s (0.791s)	Speed 130.4 samples/s	Data 0.000s (0.009s)	Loss 0.38490 (0.44797)	Accuracy@1 90.625 (87.578)	Accuracy@5 100.000 (98.525)	Loss_A2C -2.08761 (-2.17563)	
+Epoch: [21][200/372]	Time 1.677s (0.803s)	Speed 19.1 samples/s	Data 0.000s (0.008s)	Loss 0.58215 (0.45630)	Accuracy@1 81.250 (87.329)	Accuracy@5 96.875 (98.414)	Loss_A2C -2.14446 (-2.15884)	
+Epoch: [21][240/372]	Time 0.245s (0.783s)	Speed 130.8 samples/s	Data 0.000s (0.006s)	Loss 0.23521 (0.45708)	Accuracy@1 93.750 (87.306)	Accuracy@5 100.000 (98.418)	Loss_A2C -2.02014 (-2.14702)	
+Epoch: [21][280/372]	Time 1.212s (0.783s)	Speed 26.4 samples/s	Data 0.000s (0.006s)	Loss 0.48378 (0.45797)	Accuracy@1 84.375 (87.211)	Accuracy@5 96.875 (98.454)	Loss_A2C -2.14251 (-2.14632)	
+Epoch: [21][320/372]	Time 0.245s (0.772s)	Speed 130.4 samples/s	Data 0.000s (0.005s)	Loss 0.24973 (0.45008)	Accuracy@1 93.750 (87.461)	Accuracy@5 100.000 (98.511)	Loss_A2C -2.18218 (-2.14695)	
+Epoch: [21][360/372]	Time 0.250s (0.774s)	Speed 128.1 samples/s	Data 0.000s (0.004s)	Loss 0.38208 (0.45631)	Accuracy@1 93.750 (87.275)	Accuracy@5 96.875 (98.459)	Loss_A2C -2.15833 (-2.14336)	
+Test: Time 0.137	Loss 0.4753	Error@1 14.907	Error@5 1.212	Accuracy@1 85.093	Accuracy@5 98.788	
+=> saving checkpoint to output/cub/cls_res50
+best prec is : 85.5361
+Epoch: [22][0/372]	Time 1.761s (1.761s)	Speed 18.2 samples/s	Data 1.175s (1.175s)	Loss 0.27390 (0.27390)	Accuracy@1 90.625 (90.625)	Accuracy@5 100.000 (100.000)	Loss_A2C -2.06508 (-2.06508)	
+Epoch: [22][40/372]	Time 1.365s (0.915s)	Speed 23.5 samples/s	Data 0.000s (0.029s)	Loss 0.47572 (0.40266)	Accuracy@1 84.375 (89.024)	Accuracy@5 96.875 (98.628)	Loss_A2C -2.14320 (-2.15035)	
+Epoch: [22][80/372]	Time 0.245s (0.798s)	Speed 130.6 samples/s	Data 0.000s (0.015s)	Loss 0.24916 (0.39264)	Accuracy@1 96.875 (89.506)	Accuracy@5 100.000 (98.650)	Loss_A2C -2.08878 (-2.15501)	
+Epoch: [22][120/372]	Time 0.245s (0.791s)	Speed 130.7 samples/s	Data 0.000s (0.010s)	Loss 0.33867 (0.39557)	Accuracy@1 84.375 (89.127)	Accuracy@5 100.000 (98.812)	Loss_A2C -2.06539 (-2.15028)	
+Epoch: [22][160/372]	Time 1.311s (0.776s)	Speed 24.4 samples/s	Data 0.001s (0.008s)	Loss 0.53352 (0.38943)	Accuracy@1 84.375 (89.441)	Accuracy@5 96.875 (98.894)	Loss_A2C -2.11125 (-2.14905)	
+Epoch: [22][200/372]	Time 0.245s (0.798s)	Speed 130.7 samples/s	Data 0.000s (0.006s)	Loss 0.33252 (0.39020)	Accuracy@1 87.500 (89.770)	Accuracy@5 100.000 (98.850)	Loss_A2C -2.14577 (-2.14594)	
+Epoch: [22][240/372]	Time 0.245s (0.798s)	Speed 130.7 samples/s	Data 0.000s (0.005s)	Loss 0.27058 (0.40399)	Accuracy@1 93.750 (89.406)	Accuracy@5 100.000 (98.690)	Loss_A2C -2.02885 (-2.14539)	
+Epoch: [22][280/372]	Time 0.245s (0.793s)	Speed 130.4 samples/s	Data 0.000s (0.005s)	Loss 0.35540 (0.40725)	Accuracy@1 93.750 (89.279)	Accuracy@5 100.000 (98.743)	Loss_A2C -2.25221 (-2.14607)	
+Epoch: [22][320/372]	Time 0.245s (0.798s)	Speed 130.7 samples/s	Data 0.000s (0.004s)	Loss 0.38161 (0.40564)	Accuracy@1 90.625 (89.428)	Accuracy@5 100.000 (98.764)	Loss_A2C -2.07771 (-2.14337)	
+Epoch: [22][360/372]	Time 0.697s (0.776s)	Speed 45.9 samples/s	Data 0.000s (0.004s)	Loss 1.03490 (0.40296)	Accuracy@1 65.625 (89.474)	Accuracy@5 93.750 (98.788)	Loss_A2C -2.02387 (-2.14505)	
+Test: Time 0.138	Loss 0.4753	Error@1 15.000	Error@5 1.247	Accuracy@1 85.000	Accuracy@5 98.753	
+=> saving checkpoint to output/cub/cls_res50
+best prec is : 85.5361
+Epoch: [23][0/372]	Time 2.054s (2.054s)	Speed 15.6 samples/s	Data 1.565s (1.565s)	Loss 0.21552 (0.21552)	Accuracy@1 96.875 (96.875)	Accuracy@5 100.000 (100.000)	Loss_A2C -2.16000 (-2.16000)	
+Epoch: [23][40/372]	Time 1.700s (0.990s)	Speed 18.8 samples/s	Data 0.000s (0.039s)	Loss 0.35506 (0.43851)	Accuracy@1 78.125 (88.262)	Accuracy@5 100.000 (98.399)	Loss_A2C -2.02308 (-2.12840)	
+Epoch: [23][80/372]	Time 1.272s (0.951s)	Speed 25.2 samples/s	Data 0.000s (0.020s)	Loss 0.47346 (0.42430)	Accuracy@1 90.625 (88.850)	Accuracy@5 96.875 (98.650)	Loss_A2C -2.10486 (-2.13344)	
+Epoch: [23][120/372]	Time 1.400s (0.897s)	Speed 22.9 samples/s	Data 0.000s (0.013s)	Loss 0.81825 (0.43458)	Accuracy@1 68.750 (88.120)	Accuracy@5 96.875 (98.554)	Loss_A2C -2.13881 (-2.14961)	
+Epoch: [23][160/372]	Time 1.535s (0.857s)	Speed 20.8 samples/s	Data 0.000s (0.010s)	Loss 0.60041 (0.42528)	Accuracy@1 84.375 (88.296)	Accuracy@5 100.000 (98.583)	Loss_A2C -2.26287 (-2.17159)	
+Epoch: [23][200/372]	Time 1.386s (0.857s)	Speed 23.1 samples/s	Data 0.000s (0.008s)	Loss 0.65138 (0.42560)	Accuracy@1 81.250 (88.308)	Accuracy@5 100.000 (98.632)	Loss_A2C -2.11248 (-2.18769)	
+Epoch: [23][240/372]	Time 0.250s (0.838s)	Speed 127.8 samples/s	Data 0.000s (0.007s)	Loss 0.25638 (0.42582)	Accuracy@1 93.750 (88.226)	Accuracy@5 100.000 (98.664)	Loss_A2C -2.48734 (-2.19951)	
+Epoch: [23][280/372]	Time 0.246s (0.826s)	Speed 130.2 samples/s	Data 0.000s (0.006s)	Loss 0.31253 (0.42308)	Accuracy@1 96.875 (88.490)	Accuracy@5 100.000 (98.632)	Loss_A2C -2.26944 (-2.20620)	
+Epoch: [23][320/372]	Time 1.519s (0.821s)	Speed 21.1 samples/s	Data 0.000s (0.005s)	Loss 0.62340 (0.42075)	Accuracy@1 84.375 (88.600)	Accuracy@5 93.750 (98.608)	Loss_A2C -2.15445 (-2.21438)	
+Epoch: [23][360/372]	Time 0.811s (0.822s)	Speed 39.5 samples/s	Data 0.000s (0.005s)	Loss 0.64417 (0.42421)	Accuracy@1 78.125 (88.409)	Accuracy@5 96.875 (98.554)	Loss_A2C -2.29644 (-2.22022)	
+Test: Time 0.137	Loss 0.4881	Error@1 15.210	Error@5 1.434	Accuracy@1 84.790	Accuracy@5 98.566	
+=> saving checkpoint to output/cub/cls_res50
+best prec is : 85.5361
+Epoch: [24][0/372]	Time 3.820s (3.820s)	Speed 8.4 samples/s	Data 1.343s (1.343s)	Loss 0.49098 (0.49098)	Accuracy@1 87.500 (87.500)	Accuracy@5 96.875 (96.875)	Loss_A2C -2.40214 (-2.40214)	
+Epoch: [24][40/372]	Time 1.011s (0.975s)	Speed 31.7 samples/s	Data 0.000s (0.033s)	Loss 0.48520 (0.36769)	Accuracy@1 84.375 (89.863)	Accuracy@5 100.000 (99.009)	Loss_A2C -2.39565 (-2.35260)	
+Epoch: [24][80/372]	Time 1.502s (0.844s)	Speed 21.3 samples/s	Data 0.000s (0.017s)	Loss 0.41148 (0.34713)	Accuracy@1 90.625 (90.008)	Accuracy@5 100.000 (99.190)	Loss_A2C -2.35267 (-2.34158)	
+Epoch: [24][120/372]	Time 1.330s (0.826s)	Speed 24.1 samples/s	Data 0.000s (0.011s)	Loss 0.53299 (0.35920)	Accuracy@1 90.625 (89.721)	Accuracy@5 100.000 (99.148)	Loss_A2C -2.49360 (-2.33846)	
+Epoch: [24][160/372]	Time 0.245s (0.786s)	Speed 130.8 samples/s	Data 0.000s (0.009s)	Loss 0.16303 (0.34759)	Accuracy@1 96.875 (90.179)	Accuracy@5 100.000 (99.243)	Loss_A2C -2.37562 (-2.33567)	
+Epoch: [24][200/372]	Time 0.245s (0.779s)	Speed 130.4 samples/s	Data 0.000s (0.007s)	Loss 0.43152 (0.35472)	Accuracy@1 84.375 (90.096)	Accuracy@5 100.000 (99.114)	Loss_A2C -2.34868 (-2.33965)	
+Epoch: [24][240/372]	Time 1.287s (0.778s)	Speed 24.9 samples/s	Data 0.000s (0.006s)	Loss 0.70432 (0.36346)	Accuracy@1 75.000 (89.951)	Accuracy@5 96.875 (99.027)	Loss_A2C -2.29449 (-2.33668)	
+Epoch: [24][280/372]	Time 1.089s (0.761s)	Speed 29.4 samples/s	Data 0.000s (0.005s)	Loss 0.64095 (0.36633)	Accuracy@1 87.500 (89.980)	Accuracy@5 96.875 (98.932)	Loss_A2C -2.41376 (-2.33576)	
+Epoch: [24][320/372]	Time 1.487s (0.762s)	Speed 21.5 samples/s	Data 0.000s (0.005s)	Loss 0.39918 (0.36769)	Accuracy@1 90.625 (89.944)	Accuracy@5 96.875 (98.910)	Loss_A2C -2.31081 (-2.33709)	
+Epoch: [24][360/372]	Time 1.204s (0.773s)	Speed 26.6 samples/s	Data 0.000s (0.004s)	Loss 0.47333 (0.37559)	Accuracy@1 93.750 (89.785)	Accuracy@5 96.875 (98.797)	Loss_A2C -2.32210 (-2.33411)	
+Test: Time 0.138	Loss 0.4819	Error@1 15.256	Error@5 1.270	Accuracy@1 84.744	Accuracy@5 98.730	
+=> saving checkpoint to output/cub/cls_res50
+best prec is : 85.5361
+Epoch: [25][0/372]	Time 3.685s (3.685s)	Speed 8.7 samples/s	Data 1.343s (1.343s)	Loss 0.60942 (0.60942)	Accuracy@1 87.500 (87.500)	Accuracy@5 96.875 (96.875)	Loss_A2C -2.26559 (-2.26559)	
+Epoch: [25][40/372]	Time 0.246s (0.738s)	Speed 130.1 samples/s	Data 0.000s (0.033s)	Loss 0.11671 (0.32784)	Accuracy@1 100.000 (91.387)	Accuracy@5 100.000 (99.238)	Loss_A2C -2.41580 (-2.32850)	
+Epoch: [25][80/372]	Time 1.106s (0.739s)	Speed 28.9 samples/s	Data 0.000s (0.017s)	Loss 0.52599 (0.33713)	Accuracy@1 84.375 (90.972)	Accuracy@5 93.750 (99.190)	Loss_A2C -2.44879 (-2.35885)	
+Epoch: [25][120/372]	Time 1.187s (0.744s)	Speed 27.0 samples/s	Data 0.000s (0.012s)	Loss 0.75151 (0.35867)	Accuracy@1 78.125 (90.238)	Accuracy@5 93.750 (98.967)	Loss_A2C -2.17883 (-2.35421)	
+Epoch: [25][160/372]	Time 0.245s (0.728s)	Speed 130.6 samples/s	Data 0.000s (0.009s)	Loss 0.24113 (0.36957)	Accuracy@1 87.500 (89.790)	Accuracy@5 100.000 (98.835)	Loss_A2C -2.39297 (-2.36470)	
+Epoch: [25][200/372]	Time 0.250s (0.740s)	Speed 127.8 samples/s	Data 0.000s (0.007s)	Loss 0.41025 (0.37739)	Accuracy@1 87.500 (89.226)	Accuracy@5 100.000 (98.943)	Loss_A2C -2.48330 (-2.37827)	
+Epoch: [25][240/372]	Time 1.387s (0.756s)	Speed 23.1 samples/s	Data 0.000s (0.006s)	Loss 0.43460 (0.38333)	Accuracy@1 90.625 (89.147)	Accuracy@5 100.000 (98.859)	Loss_A2C -2.40909 (-2.37860)	
+Epoch: [25][280/372]	Time 0.996s (0.753s)	Speed 32.1 samples/s	Data 0.000s (0.005s)	Loss 0.66639 (0.38328)	Accuracy@1 81.250 (89.146)	Accuracy@5 100.000 (98.866)	Loss_A2C -2.41468 (-2.37524)	
+Epoch: [25][320/372]	Time 1.202s (0.760s)	Speed 26.6 samples/s	Data 0.000s (0.005s)	Loss 0.49776 (0.38818)	Accuracy@1 87.500 (89.019)	Accuracy@5 96.875 (98.803)	Loss_A2C -2.21866 (-2.37477)	
+Epoch: [25][360/372]	Time 0.832s (0.771s)	Speed 38.5 samples/s	Data 0.000s (0.004s)	Loss 0.62846 (0.39198)	Accuracy@1 87.500 (88.963)	Accuracy@5 100.000 (98.779)	Loss_A2C -2.43967 (-2.37451)	
+Test: Time 0.137	Loss 0.4806	Error@1 14.930	Error@5 1.294	Accuracy@1 85.070	Accuracy@5 98.706	
+=> saving checkpoint to output/cub/cls_res50
+best prec is : 85.5361
+Epoch: [26][0/372]	Time 4.063s (4.063s)	Speed 7.9 samples/s	Data 1.167s (1.167s)	Loss 0.58131 (0.58131)	Accuracy@1 81.250 (81.250)	Accuracy@5 100.000 (100.000)	Loss_A2C -2.40437 (-2.40437)	
+Epoch: [26][40/372]	Time 0.245s (0.942s)	Speed 130.6 samples/s	Data 0.000s (0.029s)	Loss 0.15180 (0.35612)	Accuracy@1 100.000 (89.787)	Accuracy@5 100.000 (99.238)	Loss_A2C -2.42406 (-2.41210)	
+Epoch: [26][80/372]	Time 0.245s (0.889s)	Speed 130.4 samples/s	Data 0.000s (0.015s)	Loss 0.22620 (0.36639)	Accuracy@1 96.875 (90.085)	Accuracy@5 100.000 (98.958)	Loss_A2C -2.53339 (-2.41206)	
+Epoch: [26][120/372]	Time 0.245s (0.839s)	Speed 130.5 samples/s	Data 0.000s (0.010s)	Loss 0.15010 (0.36416)	Accuracy@1 93.750 (90.134)	Accuracy@5 100.000 (99.019)	Loss_A2C -2.47559 (-2.41294)	
+Epoch: [26][160/372]	Time 1.305s (0.853s)	Speed 24.5 samples/s	Data 0.000s (0.008s)	Loss 0.40424 (0.36018)	Accuracy@1 87.500 (90.237)	Accuracy@5 100.000 (99.049)	Loss_A2C -2.50347 (-2.41269)	
+Epoch: [26][200/372]	Time 1.046s (0.823s)	Speed 30.6 samples/s	Data 0.000s (0.006s)	Loss 0.67895 (0.35289)	Accuracy@1 78.125 (90.609)	Accuracy@5 93.750 (99.036)	Loss_A2C -2.32584 (-2.41016)	
+Epoch: [26][240/372]	Time 1.209s (0.826s)	Speed 26.5 samples/s	Data 0.000s (0.005s)	Loss 0.82138 (0.35396)	Accuracy@1 71.875 (90.508)	Accuracy@5 96.875 (99.027)	Loss_A2C -2.25582 (-2.41065)	
+Epoch: [26][280/372]	Time 0.245s (0.814s)	Speed 130.5 samples/s	Data 0.000s (0.005s)	Loss 0.39727 (0.35952)	Accuracy@1 84.375 (90.403)	Accuracy@5 96.875 (98.877)	Loss_A2C -2.44766 (-2.40742)	
+Epoch: [26][320/372]	Time 1.357s (0.801s)	Speed 23.6 samples/s	Data 0.000s (0.004s)	Loss 0.69484 (0.35662)	Accuracy@1 78.125 (90.508)	Accuracy@5 100.000 (98.919)	Loss_A2C -2.35673 (-2.40910)	
+Epoch: [26][360/372]	Time 0.579s (0.793s)	Speed 55.2 samples/s	Data 0.000s (0.004s)	Loss 0.35528 (0.35322)	Accuracy@1 87.500 (90.538)	Accuracy@5 100.000 (98.935)	Loss_A2C -2.51430 (-2.41123)	
+Test: Time 0.138	Loss 0.4841	Error@1 15.128	Error@5 1.317	Accuracy@1 84.872	Accuracy@5 98.683	
+=> saving checkpoint to output/cub/cls_res50
+best prec is : 85.5361
+Epoch: [27][0/372]	Time 3.824s (3.824s)	Speed 8.4 samples/s	Data 1.387s (1.387s)	Loss 0.38673 (0.38673)	Accuracy@1 90.625 (90.625)	Accuracy@5 100.000 (100.000)	Loss_A2C -2.48106 (-2.48106)	
+Epoch: [27][40/372]	Time 1.393s (0.898s)	Speed 23.0 samples/s	Data 0.000s (0.034s)	Loss 0.70432 (0.34579)	Accuracy@1 75.000 (90.549)	Accuracy@5 96.875 (98.933)	Loss_A2C -2.44912 (-2.42652)	
+Epoch: [27][80/372]	Time 0.258s (0.812s)	Speed 124.1 samples/s	Data 0.000s (0.018s)	Loss 0.53439 (0.34765)	Accuracy@1 87.500 (90.702)	Accuracy@5 96.875 (98.804)	Loss_A2C -2.42925 (-2.42761)	
+Epoch: [27][120/372]	Time 0.245s (0.734s)	Speed 130.6 samples/s	Data 0.000s (0.012s)	Loss 0.16448 (0.33052)	Accuracy@1 96.875 (91.296)	Accuracy@5 100.000 (98.889)	Loss_A2C -2.37367 (-2.43177)	
+Epoch: [27][160/372]	Time 0.245s (0.774s)	Speed 130.8 samples/s	Data 0.000s (0.009s)	Loss 0.51892 (0.34274)	Accuracy@1 93.750 (91.071)	Accuracy@5 96.875 (98.777)	Loss_A2C -2.46453 (-2.42753)	
+Epoch: [27][200/372]	Time 1.302s (0.779s)	Speed 24.6 samples/s	Data 0.000s (0.007s)	Loss 0.47646 (0.35194)	Accuracy@1 90.625 (90.625)	Accuracy@5 100.000 (98.772)	Loss_A2C -2.42113 (-2.42405)	
+Epoch: [27][240/372]	Time 0.245s (0.762s)	Speed 130.5 samples/s	Data 0.000s (0.006s)	Loss 0.30470 (0.34578)	Accuracy@1 93.750 (90.716)	Accuracy@5 96.875 (98.846)	Loss_A2C -2.47938 (-2.42418)	
+Epoch: [27][280/372]	Time 0.254s (0.767s)	Speed 125.9 samples/s	Data 0.000s (0.005s)	Loss 0.22039 (0.34630)	Accuracy@1 93.750 (90.725)	Accuracy@5 100.000 (98.899)	Loss_A2C -2.39472 (-2.42045)	
+Epoch: [27][320/372]	Time 1.309s (0.764s)	Speed 24.4 samples/s	Data 0.000s (0.005s)	Loss 0.40088 (0.34866)	Accuracy@1 90.625 (90.654)	Accuracy@5 100.000 (98.871)	Loss_A2C -2.34946 (-2.40932)	
+Epoch: [27][360/372]	Time 1.117s (0.779s)	Speed 28.7 samples/s	Data 0.000s (0.004s)	Loss 0.80671 (0.35448)	Accuracy@1 71.875 (90.426)	Accuracy@5 100.000 (98.875)	Loss_A2C -2.29074 (-2.40024)	
+Test: Time 0.137	Loss 0.4999	Error@1 15.839	Error@5 1.515	Accuracy@1 84.161	Accuracy@5 98.485	
+=> saving checkpoint to output/cub/cls_res50
+best prec is : 85.5361
+Epoch: [28][0/372]	Time 1.866s (1.866s)	Speed 17.1 samples/s	Data 1.188s (1.188s)	Loss 0.31466 (0.31466)	Accuracy@1 87.500 (87.500)	Accuracy@5 100.000 (100.000)	Loss_A2C -2.31058 (-2.31058)	
+Epoch: [28][40/372]	Time 1.399s (0.991s)	Speed 22.9 samples/s	Data 0.000s (0.029s)	Loss 0.48515 (0.37333)	Accuracy@1 84.375 (89.482)	Accuracy@5 96.875 (98.552)	Loss_A2C -2.38932 (-2.36114)	
+Epoch: [28][80/372]	Time 1.301s (1.001s)	Speed 24.6 samples/s	Data 0.000s (0.015s)	Loss 0.71036 (0.37257)	Accuracy@1 78.125 (89.429)	Accuracy@5 96.875 (98.688)	Loss_A2C -2.26963 (-2.36707)	
+Epoch: [28][120/372]	Time 1.606s (0.979s)	Speed 19.9 samples/s	Data 0.000s (0.010s)	Loss 0.33493 (0.36056)	Accuracy@1 90.625 (90.031)	Accuracy@5 100.000 (98.812)	Loss_A2C -2.39032 (-2.36645)	
+Epoch: [28][160/372]	Time 0.245s (0.921s)	Speed 130.6 samples/s	Data 0.000s (0.008s)	Loss 0.19296 (0.34225)	Accuracy@1 93.750 (90.644)	Accuracy@5 100.000 (98.894)	Loss_A2C -2.46412 (-2.35477)	
+Epoch: [28][200/372]	Time 1.379s (0.898s)	Speed 23.2 samples/s	Data 0.000s (0.006s)	Loss 0.20944 (0.32985)	Accuracy@1 93.750 (91.014)	Accuracy@5 100.000 (99.005)	Loss_A2C -2.50930 (-2.34817)	
+Epoch: [28][240/372]	Time 1.311s (0.870s)	Speed 24.4 samples/s	Data 0.000s (0.005s)	Loss 0.35135 (0.33204)	Accuracy@1 90.625 (90.807)	Accuracy@5 100.000 (99.053)	Loss_A2C -2.35387 (-2.33933)	
+Epoch: [28][280/372]	Time 0.245s (0.858s)	Speed 130.6 samples/s	Data 0.000s (0.005s)	Loss 0.16737 (0.32872)	Accuracy@1 90.625 (90.970)	Accuracy@5 100.000 (99.088)	Loss_A2C -2.14038 (-2.34128)	
+Epoch: [28][320/372]	Time 1.664s (0.838s)	Speed 19.2 samples/s	Data 0.000s (0.004s)	Loss 0.17393 (0.32570)	Accuracy@1 100.000 (91.044)	Accuracy@5 100.000 (99.104)	Loss_A2C -2.30852 (-2.33786)	
+Epoch: [28][360/372]	Time 1.552s (0.846s)	Speed 20.6 samples/s	Data 0.000s (0.004s)	Loss 0.85453 (0.32797)	Accuracy@1 90.625 (91.006)	Accuracy@5 90.625 (99.100)	Loss_A2C -2.41323 (-2.33661)	
+Test: Time 0.137	Loss 0.4736	Error@1 14.895	Error@5 1.317	Accuracy@1 85.105	Accuracy@5 98.683	
+=> saving checkpoint to output/cub/cls_res50
+best prec is : 85.5361
+Epoch: [29][0/372]	Time 3.859s (3.859s)	Speed 8.3 samples/s	Data 1.564s (1.564s)	Loss 0.70563 (0.70563)	Accuracy@1 84.375 (84.375)	Accuracy@5 93.750 (93.750)	Loss_A2C -2.30988 (-2.30988)	
+Epoch: [29][40/372]	Time 0.245s (0.918s)	Speed 130.8 samples/s	Data 0.000s (0.038s)	Loss 0.37474 (0.29808)	Accuracy@1 87.500 (91.692)	Accuracy@5 100.000 (99.162)	Loss_A2C -2.35670 (-2.34085)	
+Epoch: [29][80/372]	Time 1.389s (0.879s)	Speed 23.0 samples/s	Data 0.000s (0.020s)	Loss 0.31333 (0.32465)	Accuracy@1 90.625 (91.242)	Accuracy@5 100.000 (99.228)	Loss_A2C -2.38287 (-2.36336)	
+Epoch: [29][120/372]	Time 0.245s (0.848s)	Speed 130.7 samples/s	Data 0.000s (0.013s)	Loss 0.26527 (0.32828)	Accuracy@1 90.625 (91.038)	Accuracy@5 100.000 (99.122)	Loss_A2C -2.21692 (-2.35666)	
+Epoch: [29][160/372]	Time 1.379s (0.845s)	Speed 23.2 samples/s	Data 0.000s (0.010s)	Loss 0.42185 (0.32802)	Accuracy@1 90.625 (91.149)	Accuracy@5 100.000 (99.030)	Loss_A2C -2.39201 (-2.35848)	
+Epoch: [29][200/372]	Time 1.226s (0.825s)	Speed 26.1 samples/s	Data 0.000s (0.008s)	Loss 0.51018 (0.32554)	Accuracy@1 87.500 (91.216)	Accuracy@5 100.000 (99.083)	Loss_A2C -2.26361 (-2.35035)	
+Epoch: [29][240/372]	Time 0.972s (0.833s)	Speed 32.9 samples/s	Data 0.000s (0.007s)	Loss 0.66460 (0.33085)	Accuracy@1 81.250 (91.118)	Accuracy@5 100.000 (99.027)	Loss_A2C -2.36254 (-2.34355)	
+Epoch: [29][280/372]	Time 1.301s (0.823s)	Speed 24.6 samples/s	Data 0.000s (0.006s)	Loss 0.49871 (0.33022)	Accuracy@1 90.625 (91.248)	Accuracy@5 96.875 (98.955)	Loss_A2C -2.33598 (-2.33690)	
+Epoch: [29][320/372]	Time 1.766s (0.814s)	Speed 18.1 samples/s	Data 0.000s (0.005s)	Loss 0.41803 (0.32773)	Accuracy@1 87.500 (91.268)	Accuracy@5 100.000 (98.997)	Loss_A2C -2.35717 (-2.33658)	
+Epoch: [29][360/372]	Time 0.245s (0.804s)	Speed 130.8 samples/s	Data 0.000s (0.005s)	Loss 0.14546 (0.32771)	Accuracy@1 96.875 (91.283)	Accuracy@5 100.000 (98.996)	Loss_A2C -2.25291 (-2.33115)	
+Test: Time 0.136	Loss 0.4990	Error@1 15.280	Error@5 1.457	Accuracy@1 84.720	Accuracy@5 98.543	
+=> saving checkpoint to output/cub/cls_res50
+best prec is : 85.5361
+Epoch: [30][0/372]	Time 4.183s (4.183s)	Speed 7.7 samples/s	Data 1.260s (1.260s)	Loss 0.51559 (0.51559)	Accuracy@1 87.500 (87.500)	Accuracy@5 93.750 (93.750)	Loss_A2C -2.32178 (-2.32178)	
+Epoch: [30][40/372]	Time 1.164s (1.021s)	Speed 27.5 samples/s	Data 0.000s (0.031s)	Loss 0.26332 (0.28927)	Accuracy@1 93.750 (91.616)	Accuracy@5 100.000 (99.162)	Loss_A2C -2.32448 (-2.31768)	
+Epoch: [30][80/372]	Time 1.511s (0.864s)	Speed 21.2 samples/s	Data 0.000s (0.016s)	Loss 0.39805 (0.27277)	Accuracy@1 90.625 (92.323)	Accuracy@5 100.000 (99.267)	Loss_A2C -2.32106 (-2.32629)	
+Epoch: [30][120/372]	Time 1.655s (0.840s)	Speed 19.3 samples/s	Data 0.001s (0.011s)	Loss 0.44005 (0.26617)	Accuracy@1 87.500 (92.794)	Accuracy@5 100.000 (99.251)	Loss_A2C -2.42124 (-2.33393)	
+Epoch: [30][160/372]	Time 0.925s (0.816s)	Speed 34.6 samples/s	Data 0.000s (0.008s)	Loss 0.27713 (0.27272)	Accuracy@1 90.625 (92.682)	Accuracy@5 100.000 (99.224)	Loss_A2C -2.34871 (-2.33106)	
+Epoch: [30][200/372]	Time 0.246s (0.814s)	Speed 130.3 samples/s	Data 0.001s (0.007s)	Loss 0.16040 (0.27527)	Accuracy@1 93.750 (92.615)	Accuracy@5 100.000 (99.316)	Loss_A2C -2.22923 (-2.32926)	
+Epoch: [30][240/372]	Time 0.246s (0.792s)	Speed 130.3 samples/s	Data 0.000s (0.006s)	Loss 0.18948 (0.27408)	Accuracy@1 93.750 (92.777)	Accuracy@5 100.000 (99.339)	Loss_A2C -2.38450 (-2.32971)	
+Epoch: [30][280/372]	Time 1.295s (0.772s)	Speed 24.7 samples/s	Data 0.001s (0.005s)	Loss 0.38579 (0.26999)	Accuracy@1 93.750 (92.927)	Accuracy@5 100.000 (99.344)	Loss_A2C -2.32358 (-2.32861)	
+Epoch: [30][320/372]	Time 0.250s (0.774s)	Speed 127.9 samples/s	Data 0.000s (0.004s)	Loss 0.20515 (0.27522)	Accuracy@1 96.875 (92.689)	Accuracy@5 96.875 (99.348)	Loss_A2C -2.34675 (-2.32712)	
+Epoch: [30][360/372]	Time 0.250s (0.765s)	Speed 128.1 samples/s	Data 0.000s (0.004s)	Loss 0.15919 (0.27595)	Accuracy@1 96.875 (92.677)	Accuracy@5 100.000 (99.342)	Loss_A2C -2.42588 (-2.32831)	
+Test: Time 0.138	Loss 0.4901	Error@1 15.070	Error@5 1.503	Accuracy@1 84.930	Accuracy@5 98.497	
+=> saving checkpoint to output/cub/cls_res50
+best prec is : 85.5361
+Epoch: [31][0/372]	Time 1.880s (1.880s)	Speed 17.0 samples/s	Data 1.301s (1.301s)	Loss 0.20484 (0.20484)	Accuracy@1 96.875 (96.875)	Accuracy@5 100.000 (100.000)	Loss_A2C -2.26767 (-2.26767)	
+Epoch: [31][40/372]	Time 0.245s (0.886s)	Speed 130.7 samples/s	Data 0.000s (0.032s)	Loss 0.18378 (0.30487)	Accuracy@1 93.750 (92.073)	Accuracy@5 100.000 (99.162)	Loss_A2C -2.29100 (-2.32676)	
+Epoch: [31][80/372]	Time 0.245s (0.825s)	Speed 130.6 samples/s	Data 0.000s (0.017s)	Loss 0.07524 (0.30113)	Accuracy@1 100.000 (92.207)	Accuracy@5 100.000 (99.151)	Loss_A2C -2.39825 (-2.33033)	
+Epoch: [31][120/372]	Time 0.244s (0.816s)	Speed 130.9 samples/s	Data 0.000s (0.011s)	Loss 0.21763 (0.29591)	Accuracy@1 90.625 (92.330)	Accuracy@5 100.000 (99.277)	Loss_A2C -2.31393 (-2.34153)	
+Epoch: [31][160/372]	Time 1.347s (0.802s)	Speed 23.8 samples/s	Data 0.000s (0.008s)	Loss 0.23545 (0.29961)	Accuracy@1 93.750 (92.023)	Accuracy@5 100.000 (99.243)	Loss_A2C -2.34136 (-2.34310)	
+Epoch: [31][200/372]	Time 0.251s (0.814s)	Speed 127.7 samples/s	Data 0.000s (0.007s)	Loss 0.16812 (0.30678)	Accuracy@1 96.875 (91.760)	Accuracy@5 100.000 (99.269)	Loss_A2C -2.27481 (-2.34053)	
+Epoch: [31][240/372]	Time 1.232s (0.816s)	Speed 26.0 samples/s	Data 0.000s (0.006s)	Loss 0.56321 (0.31525)	Accuracy@1 87.500 (91.481)	Accuracy@5 100.000 (99.222)	Loss_A2C -2.19691 (-2.32965)	
+Epoch: [31][280/372]	Time 0.250s (0.779s)	Speed 127.9 samples/s	Data 0.000s (0.005s)	Loss 0.16577 (0.30701)	Accuracy@1 93.750 (91.659)	Accuracy@5 100.000 (99.277)	Loss_A2C -2.24424 (-2.31605)	
+Epoch: [31][320/372]	Time 1.287s (0.757s)	Speed 24.9 samples/s	Data 0.000s (0.004s)	Loss 0.40057 (0.30401)	Accuracy@1 96.875 (91.735)	Accuracy@5 100.000 (99.309)	Loss_A2C -2.24185 (-2.31005)	
+Epoch: [31][360/372]	Time 0.690s (0.764s)	Speed 46.4 samples/s	Data 0.000s (0.004s)	Loss 0.24077 (0.30887)	Accuracy@1 96.875 (91.612)	Accuracy@5 96.875 (99.238)	Loss_A2C -2.22617 (-2.30216)	
+Test: Time 0.137	Loss 0.5216	Error@1 15.921	Error@5 1.807	Accuracy@1 84.079	Accuracy@5 98.193	
+=> saving checkpoint to output/cub/cls_res50
+best prec is : 85.5361
+Epoch: [32][0/372]	Time 1.844s (1.844s)	Speed 17.4 samples/s	Data 1.157s (1.157s)	Loss 0.14617 (0.14617)	Accuracy@1 100.000 (100.000)	Accuracy@5 100.000 (100.000)	Loss_A2C -2.18148 (-2.18148)	
+Epoch: [32][40/372]	Time 0.245s (0.870s)	Speed 130.5 samples/s	Data 0.000s (0.029s)	Loss 0.10890 (0.29395)	Accuracy@1 100.000 (92.149)	Accuracy@5 100.000 (99.009)	Loss_A2C -2.17667 (-2.26316)	
+Epoch: [32][80/372]	Time 0.246s (0.860s)	Speed 130.3 samples/s	Data 0.000s (0.015s)	Loss 0.07540 (0.31262)	Accuracy@1 100.000 (91.744)	Accuracy@5 100.000 (98.727)	Loss_A2C -2.30848 (-2.26538)	
+Epoch: [32][120/372]	Time 0.245s (0.849s)	Speed 130.8 samples/s	Data 0.000s (0.010s)	Loss 0.24698 (0.30863)	Accuracy@1 90.625 (91.632)	Accuracy@5 100.000 (98.889)	Loss_A2C -2.08987 (-2.26725)	
+Epoch: [32][160/372]	Time 1.379s (0.841s)	Speed 23.2 samples/s	Data 0.000s (0.008s)	Loss 0.52435 (0.29934)	Accuracy@1 81.250 (91.906)	Accuracy@5 96.875 (99.030)	Loss_A2C -2.26707 (-2.26078)	
+Epoch: [32][200/372]	Time 1.113s (0.854s)	Speed 28.8 samples/s	Data 0.000s (0.006s)	Loss 0.41772 (0.30311)	Accuracy@1 84.375 (91.775)	Accuracy@5 100.000 (99.036)	Loss_A2C -2.27893 (-2.25998)	
+Epoch: [32][240/372]	Time 0.245s (0.859s)	Speed 130.7 samples/s	Data 0.000s (0.005s)	Loss 0.09134 (0.30742)	Accuracy@1 100.000 (91.766)	Accuracy@5 100.000 (99.002)	Loss_A2C -2.22478 (-2.26091)	
+Epoch: [32][280/372]	Time 1.236s (0.829s)	Speed 25.9 samples/s	Data 0.000s (0.005s)	Loss 0.47375 (0.30335)	Accuracy@1 90.625 (91.960)	Accuracy@5 100.000 (99.066)	Loss_A2C -2.23692 (-2.26166)	
+Epoch: [32][320/372]	Time 0.245s (0.824s)	Speed 130.4 samples/s	Data 0.001s (0.004s)	Loss 0.11340 (0.30171)	Accuracy@1 100.000 (91.920)	Accuracy@5 100.000 (99.124)	Loss_A2C -2.28160 (-2.26627)	
+Epoch: [32][360/372]	Time 0.802s (0.824s)	Speed 39.9 samples/s	Data 0.000s (0.004s)	Loss 0.42965 (0.30296)	Accuracy@1 87.500 (91.949)	Accuracy@5 100.000 (99.126)	Loss_A2C -2.44960 (-2.26751)	
+Test: Time 0.137	Loss 0.5013	Error@1 15.478	Error@5 1.632	Accuracy@1 84.522	Accuracy@5 98.368	
+=> saving checkpoint to output/cub/cls_res50
+best prec is : 85.5361
+Epoch: [33][0/372]	Time 1.787s (1.787s)	Speed 17.9 samples/s	Data 1.207s (1.207s)	Loss 0.11025 (0.11025)	Accuracy@1 96.875 (96.875)	Accuracy@5 100.000 (100.000)	Loss_A2C -2.16788 (-2.16788)	
+Epoch: [33][40/372]	Time 1.254s (0.732s)	Speed 25.5 samples/s	Data 0.000s (0.030s)	Loss 0.25891 (0.22126)	Accuracy@1 90.625 (94.665)	Accuracy@5 100.000 (99.848)	Loss_A2C -2.12414 (-2.23262)	
+Epoch: [33][80/372]	Time 1.233s (0.756s)	Speed 26.0 samples/s	Data 0.000s (0.016s)	Loss 0.23559 (0.25499)	Accuracy@1 96.875 (93.673)	Accuracy@5 100.000 (99.576)	Loss_A2C -2.31098 (-2.22630)	
+Epoch: [33][120/372]	Time 1.265s (0.796s)	Speed 25.3 samples/s	Data 0.000s (0.011s)	Loss 0.18029 (0.26512)	Accuracy@1 96.875 (93.337)	Accuracy@5 100.000 (99.432)	Loss_A2C -2.19296 (-2.22420)	
+Epoch: [33][160/372]	Time 1.198s (0.796s)	Speed 26.7 samples/s	Data 0.000s (0.008s)	Loss 0.36414 (0.28173)	Accuracy@1 90.625 (92.547)	Accuracy@5 100.000 (99.282)	Loss_A2C -2.27822 (-2.22689)	
+Epoch: [33][200/372]	Time 1.745s (0.785s)	Speed 18.3 samples/s	Data 0.000s (0.007s)	Loss 0.34205 (0.28768)	Accuracy@1 84.375 (92.335)	Accuracy@5 100.000 (99.223)	Loss_A2C -2.47670 (-2.24031)	
+Epoch: [33][240/372]	Time 0.250s (0.768s)	Speed 128.2 samples/s	Data 0.000s (0.006s)	Loss 0.26406 (0.28869)	Accuracy@1 90.625 (92.103)	Accuracy@5 96.875 (99.222)	Loss_A2C -2.21020 (-2.25390)	
+Epoch: [33][280/372]	Time 0.245s (0.804s)	Speed 130.8 samples/s	Data 0.000s (0.005s)	Loss 0.32598 (0.29606)	Accuracy@1 93.750 (91.893)	Accuracy@5 96.875 (99.199)	Loss_A2C -2.31641 (-2.25882)	
+Epoch: [33][320/372]	Time 1.234s (0.814s)	Speed 25.9 samples/s	Data 0.000s (0.004s)	Loss 0.26394 (0.30085)	Accuracy@1 93.750 (91.735)	Accuracy@5 100.000 (99.211)	Loss_A2C -2.30773 (-2.26470)	
+Epoch: [33][360/372]	Time 1.073s (0.810s)	Speed 29.8 samples/s	Data 0.000s (0.004s)	Loss 0.60431 (0.30670)	Accuracy@1 84.375 (91.595)	Accuracy@5 100.000 (99.169)	Loss_A2C -2.21067 (-2.26506)	
+Test: Time 0.137	Loss 0.5125	Error@1 15.723	Error@5 1.457	Accuracy@1 84.277	Accuracy@5 98.543	
+=> saving checkpoint to output/cub/cls_res50
+best prec is : 85.5361
+Epoch: [34][0/372]	Time 1.905s (1.905s)	Speed 16.8 samples/s	Data 1.417s (1.417s)	Loss 0.22421 (0.22421)	Accuracy@1 90.625 (90.625)	Accuracy@5 100.000 (100.000)	Loss_A2C -2.31917 (-2.31917)	
+Epoch: [34][40/372]	Time 1.552s (0.879s)	Speed 20.6 samples/s	Data 0.000s (0.035s)	Loss 0.27962 (0.27475)	Accuracy@1 93.750 (92.149)	Accuracy@5 100.000 (99.695)	Loss_A2C -2.31479 (-2.29533)	
+Epoch: [34][80/372]	Time 0.245s (0.857s)	Speed 130.8 samples/s	Data 0.000s (0.018s)	Loss 0.10398 (0.26891)	Accuracy@1 100.000 (92.747)	Accuracy@5 100.000 (99.383)	Loss_A2C -2.23355 (-2.29920)	
+Epoch: [34][120/372]	Time 1.288s (0.842s)	Speed 24.8 samples/s	Data 0.000s (0.012s)	Loss 0.35140 (0.27864)	Accuracy@1 93.750 (92.639)	Accuracy@5 93.750 (99.251)	Loss_A2C -2.30877 (-2.29660)	
+Epoch: [34][160/372]	Time 0.250s (0.823s)	Speed 127.9 samples/s	Data 0.000s (0.009s)	Loss 0.14271 (0.28120)	Accuracy@1 96.875 (92.508)	Accuracy@5 100.000 (99.340)	Loss_A2C -2.25821 (-2.29903)	
+Epoch: [34][200/372]	Time 1.562s (0.817s)	Speed 20.5 samples/s	Data 0.000s (0.007s)	Loss 0.31109 (0.28305)	Accuracy@1 90.625 (92.397)	Accuracy@5 100.000 (99.254)	Loss_A2C -2.42403 (-2.29959)	
+Epoch: [34][240/372]	Time 1.439s (0.803s)	Speed 22.2 samples/s	Data 0.000s (0.006s)	Loss 0.46200 (0.28513)	Accuracy@1 87.500 (92.311)	Accuracy@5 96.875 (99.235)	Loss_A2C -2.31151 (-2.29550)	
+Epoch: [34][280/372]	Time 1.477s (0.783s)	Speed 21.7 samples/s	Data 0.000s (0.005s)	Loss 0.25712 (0.28125)	Accuracy@1 87.500 (92.427)	Accuracy@5 100.000 (99.288)	Loss_A2C -2.29831 (-2.29314)	
+Epoch: [34][320/372]	Time 1.360s (0.784s)	Speed 23.5 samples/s	Data 0.000s (0.005s)	Loss 0.66329 (0.28074)	Accuracy@1 87.500 (92.562)	Accuracy@5 90.625 (99.270)	Loss_A2C -2.17214 (-2.29266)	
+Epoch: [34][360/372]	Time 1.071s (0.779s)	Speed 29.9 samples/s	Data 0.000s (0.004s)	Loss 0.44540 (0.28123)	Accuracy@1 90.625 (92.616)	Accuracy@5 96.875 (99.247)	Loss_A2C -2.25794 (-2.29095)	
+Test: Time 0.137	Loss 0.5144	Error@1 15.781	Error@5 1.457	Accuracy@1 84.219	Accuracy@5 98.543	
+=> saving checkpoint to output/cub/cls_res50
+best prec is : 85.5361
+Epoch: [35][0/372]	Time 1.983s (1.983s)	Speed 16.1 samples/s	Data 1.402s (1.402s)	Loss 0.14885 (0.14885)	Accuracy@1 100.000 (100.000)	Accuracy@5 100.000 (100.000)	Loss_A2C -2.47375 (-2.47375)	
+Epoch: [35][40/372]	Time 1.285s (0.817s)	Speed 24.9 samples/s	Data 0.000s (0.035s)	Loss 0.47409 (0.29491)	Accuracy@1 87.500 (92.988)	Accuracy@5 100.000 (98.780)	Loss_A2C -2.34620 (-2.26024)	
+Epoch: [35][80/372]	Time 1.190s (0.829s)	Speed 26.9 samples/s	Data 0.000s (0.018s)	Loss 0.51365 (0.28060)	Accuracy@1 81.250 (92.863)	Accuracy@5 100.000 (98.997)	Loss_A2C -2.22526 (-2.29096)	
+Epoch: [35][120/372]	Time 1.314s (0.789s)	Speed 24.4 samples/s	Data 0.000s (0.012s)	Loss 0.19144 (0.26928)	Accuracy@1 93.750 (93.053)	Accuracy@5 100.000 (99.122)	Loss_A2C -2.38595 (-2.28908)	
+Epoch: [35][160/372]	Time 1.454s (0.752s)	Speed 22.0 samples/s	Data 0.000s (0.009s)	Loss 0.25669 (0.26327)	Accuracy@1 93.750 (93.148)	Accuracy@5 100.000 (99.204)	Loss_A2C -2.32088 (-2.29780)	
+Epoch: [35][200/372]	Time 0.978s (0.745s)	Speed 32.7 samples/s	Data 0.000s (0.008s)	Loss 0.39234 (0.26600)	Accuracy@1 87.500 (92.942)	Accuracy@5 96.875 (99.207)	Loss_A2C -2.43725 (-2.31428)	
+Epoch: [35][240/372]	Time 0.248s (0.771s)	Speed 129.1 samples/s	Data 0.000s (0.006s)	Loss 0.17261 (0.27877)	Accuracy@1 96.875 (92.518)	Accuracy@5 100.000 (99.131)	Loss_A2C -2.30994 (-2.32409)	
+Epoch: [35][280/372]	Time 0.251s (0.759s)	Speed 127.4 samples/s	Data 0.000s (0.006s)	Loss 0.15448 (0.27608)	Accuracy@1 93.750 (92.504)	Accuracy@5 100.000 (99.210)	Loss_A2C -2.40084 (-2.33622)	
+Epoch: [35][320/372]	Time 0.245s (0.766s)	Speed 130.6 samples/s	Data 0.000s (0.005s)	Loss 0.19578 (0.28235)	Accuracy@1 90.625 (92.290)	Accuracy@5 100.000 (99.231)	Loss_A2C -2.61548 (-2.34518)	
+Epoch: [35][360/372]	Time 0.245s (0.767s)	Speed 130.7 samples/s	Data 0.000s (0.004s)	Loss 0.17015 (0.28164)	Accuracy@1 96.875 (92.261)	Accuracy@5 100.000 (99.212)	Loss_A2C -2.58250 (-2.35610)	
+Test: Time 0.137	Loss 0.5158	Error@1 15.909	Error@5 1.585	Accuracy@1 84.091	Accuracy@5 98.415	
+=> saving checkpoint to output/cub/cls_res50
+best prec is : 85.5361
+Epoch: [36][0/372]	Time 1.934s (1.934s)	Speed 16.5 samples/s	Data 1.340s (1.340s)	Loss 0.09705 (0.09705)	Accuracy@1 100.000 (100.000)	Accuracy@5 100.000 (100.000)	Loss_A2C -2.40593 (-2.40593)	
+Epoch: [36][40/372]	Time 0.248s (0.767s)	Speed 128.8 samples/s	Data 0.000s (0.033s)	Loss 0.15518 (0.26192)	Accuracy@1 96.875 (93.140)	Accuracy@5 100.000 (99.466)	Loss_A2C -2.40373 (-2.43233)	
+Epoch: [36][80/372]	Time 0.250s (0.695s)	Speed 128.0 samples/s	Data 0.000s (0.017s)	Loss 0.23537 (0.24939)	Accuracy@1 93.750 (93.634)	Accuracy@5 100.000 (99.421)	Loss_A2C -2.39545 (-2.43929)	
+Epoch: [36][120/372]	Time 1.274s (0.713s)	Speed 25.1 samples/s	Data 0.001s (0.012s)	Loss 0.41746 (0.24547)	Accuracy@1 90.625 (93.802)	Accuracy@5 96.875 (99.483)	Loss_A2C -2.46833 (-2.44117)	
+Epoch: [36][160/372]	Time 0.245s (0.746s)	Speed 130.7 samples/s	Data 0.000s (0.009s)	Loss 0.21933 (0.24611)	Accuracy@1 93.750 (93.944)	Accuracy@5 100.000 (99.457)	Loss_A2C -2.28510 (-2.43771)	
+Epoch: [36][200/372]	Time 1.344s (0.757s)	Speed 23.8 samples/s	Data 0.000s (0.007s)	Loss 0.39261 (0.24875)	Accuracy@1 90.625 (93.672)	Accuracy@5 100.000 (99.471)	Loss_A2C -2.45077 (-2.44052)	
+Epoch: [36][240/372]	Time 0.244s (0.743s)	Speed 130.9 samples/s	Data 0.000s (0.006s)	Loss 0.12127 (0.24857)	Accuracy@1 100.000 (93.854)	Accuracy@5 100.000 (99.404)	Loss_A2C -2.31949 (-2.43266)	
+Epoch: [36][280/372]	Time 1.214s (0.738s)	Speed 26.4 samples/s	Data 0.000s (0.005s)	Loss 0.54353 (0.24554)	Accuracy@1 84.375 (93.961)	Accuracy@5 100.000 (99.422)	Loss_A2C -2.32014 (-2.43350)	
+Epoch: [36][320/372]	Time 0.250s (0.741s)	Speed 127.8 samples/s	Data 0.000s (0.005s)	Loss 0.07625 (0.24840)	Accuracy@1 100.000 (93.886)	Accuracy@5 100.000 (99.396)	Loss_A2C -2.52749 (-2.43570)	
+Epoch: [36][360/372]	Time 0.245s (0.750s)	Speed 130.7 samples/s	Data 0.000s (0.004s)	Loss 0.11256 (0.24980)	Accuracy@1 96.875 (93.750)	Accuracy@5 100.000 (99.420)	Loss_A2C -2.32231 (-2.43421)	
+Test: Time 0.137	Loss 0.5061	Error@1 15.851	Error@5 1.492	Accuracy@1 84.149	Accuracy@5 98.508	
+=> saving checkpoint to output/cub/cls_res50
+best prec is : 85.5361
+Epoch: [37][0/372]	Time 3.218s (3.218s)	Speed 9.9 samples/s	Data 1.213s (1.213s)	Loss 0.61987 (0.61987)	Accuracy@1 78.125 (78.125)	Accuracy@5 96.875 (96.875)	Loss_A2C -2.40198 (-2.40198)	
+Epoch: [37][40/372]	Time 0.252s (0.873s)	Speed 126.9 samples/s	Data 0.000s (0.030s)	Loss 0.03239 (0.24215)	Accuracy@1 100.000 (93.140)	Accuracy@5 100.000 (99.466)	Loss_A2C -2.52930 (-2.44407)	
+Epoch: [37][80/372]	Time 1.053s (0.841s)	Speed 30.4 samples/s	Data 0.000s (0.015s)	Loss 0.45103 (0.25561)	Accuracy@1 84.375 (93.133)	Accuracy@5 100.000 (99.421)	Loss_A2C -2.46181 (-2.45408)	
+Epoch: [37][120/372]	Time 0.250s (0.823s)	Speed 128.0 samples/s	Data 0.000s (0.010s)	Loss 0.16271 (0.25900)	Accuracy@1 96.875 (93.208)	Accuracy@5 100.000 (99.380)	Loss_A2C -2.38261 (-2.45296)	
+Epoch: [37][160/372]	Time 0.250s (0.797s)	Speed 127.9 samples/s	Data 0.000s (0.008s)	Loss 0.22216 (0.26062)	Accuracy@1 93.750 (93.012)	Accuracy@5 100.000 (99.340)	Loss_A2C -2.45236 (-2.44243)	
+Epoch: [37][200/372]	Time 0.250s (0.795s)	Speed 128.1 samples/s	Data 0.000s (0.007s)	Loss 0.12461 (0.26045)	Accuracy@1 100.000 (92.942)	Accuracy@5 100.000 (99.238)	Loss_A2C -2.44083 (-2.43819)	
+Epoch: [37][240/372]	Time 0.869s (0.800s)	Speed 36.8 samples/s	Data 0.000s (0.006s)	Loss 0.22949 (0.26757)	Accuracy@1 96.875 (92.674)	Accuracy@5 100.000 (99.222)	Loss_A2C -2.36992 (-2.43328)	
+Epoch: [37][280/372]	Time 1.519s (0.811s)	Speed 21.1 samples/s	Data 0.000s (0.005s)	Loss 0.19031 (0.27218)	Accuracy@1 100.000 (92.504)	Accuracy@5 100.000 (99.188)	Loss_A2C -2.46058 (-2.42735)	
+Epoch: [37][320/372]	Time 1.197s (0.821s)	Speed 26.7 samples/s	Data 0.000s (0.004s)	Loss 0.35366 (0.27657)	Accuracy@1 93.750 (92.416)	Accuracy@5 96.875 (99.202)	Loss_A2C -2.52710 (-2.42487)	
+Epoch: [37][360/372]	Time 0.685s (0.809s)	Speed 46.7 samples/s	Data 0.000s (0.004s)	Loss 0.52321 (0.27600)	Accuracy@1 84.375 (92.434)	Accuracy@5 96.875 (99.204)	Loss_A2C -2.27725 (-2.42024)	
+Test: Time 0.137	Loss 0.5353	Error@1 16.364	Error@5 1.737	Accuracy@1 83.636	Accuracy@5 98.263	
+=> saving checkpoint to output/cub/cls_res50
+best prec is : 85.5361
+Epoch: [38][0/372]	Time 3.720s (3.720s)	Speed 8.6 samples/s	Data 1.434s (1.434s)	Loss 0.25663 (0.25663)	Accuracy@1 96.875 (96.875)	Accuracy@5 100.000 (100.000)	Loss_A2C -2.52079 (-2.52079)	
+Epoch: [38][40/372]	Time 1.563s (0.926s)	Speed 20.5 samples/s	Data 0.000s (0.035s)	Loss 0.32904 (0.27511)	Accuracy@1 90.625 (92.912)	Accuracy@5 96.875 (99.390)	Loss_A2C -2.54133 (-2.36365)	
+Epoch: [38][80/372]	Time 0.250s (0.784s)	Speed 128.0 samples/s	Data 0.000s (0.018s)	Loss 0.16130 (0.25702)	Accuracy@1 93.750 (93.210)	Accuracy@5 100.000 (99.421)	Loss_A2C -2.35307 (-2.36002)	
+Epoch: [38][120/372]	Time 1.347s (0.785s)	Speed 23.8 samples/s	Data 0.000s (0.012s)	Loss 0.11624 (0.25529)	Accuracy@1 100.000 (93.104)	Accuracy@5 100.000 (99.483)	Loss_A2C -2.38659 (-2.36314)	
+Epoch: [38][160/372]	Time 1.629s (0.789s)	Speed 19.6 samples/s	Data 0.000s (0.009s)	Loss 0.23159 (0.24719)	Accuracy@1 90.625 (93.323)	Accuracy@5 100.000 (99.437)	Loss_A2C -2.45997 (-2.36727)	
+Epoch: [38][200/372]	Time 1.125s (0.812s)	Speed 28.5 samples/s	Data 0.000s (0.008s)	Loss 0.42819 (0.25176)	Accuracy@1 84.375 (93.144)	Accuracy@5 100.000 (99.394)	Loss_A2C -2.27644 (-2.37210)	
+Epoch: [38][240/372]	Time 1.328s (0.802s)	Speed 24.1 samples/s	Data 0.000s (0.006s)	Loss 0.48844 (0.25159)	Accuracy@1 84.375 (93.128)	Accuracy@5 96.875 (99.339)	Loss_A2C -2.39501 (-2.38087)	
+Epoch: [38][280/372]	Time 0.245s (0.791s)	Speed 130.4 samples/s	Data 0.000s (0.006s)	Loss 0.13533 (0.24680)	Accuracy@1 100.000 (93.361)	Accuracy@5 100.000 (99.322)	Loss_A2C -2.41946 (-2.38182)	
+Epoch: [38][320/372]	Time 0.250s (0.771s)	Speed 128.0 samples/s	Data 0.000s (0.005s)	Loss 0.11182 (0.24281)	Accuracy@1 96.875 (93.565)	Accuracy@5 100.000 (99.338)	Loss_A2C -2.32628 (-2.38707)	
+Epoch: [38][360/372]	Time 0.987s (0.767s)	Speed 32.4 samples/s	Data 0.000s (0.004s)	Loss 0.48200 (0.24442)	Accuracy@1 93.750 (93.499)	Accuracy@5 96.875 (99.342)	Loss_A2C -2.55103 (-2.38577)	
+Test: Time 0.137	Loss 0.5197	Error@1 15.897	Error@5 1.643	Accuracy@1 84.103	Accuracy@5 98.357	
+=> saving checkpoint to output/cub/cls_res50
+best prec is : 85.5361
+Epoch: [39][0/372]	Time 4.013s (4.013s)	Speed 8.0 samples/s	Data 1.557s (1.557s)	Loss 0.26745 (0.26745)	Accuracy@1 90.625 (90.625)	Accuracy@5 100.000 (100.000)	Loss_A2C -2.49820 (-2.49820)	
+Epoch: [39][40/372]	Time 1.509s (0.836s)	Speed 21.2 samples/s	Data 0.000s (0.038s)	Loss 0.31136 (0.22386)	Accuracy@1 93.750 (94.207)	Accuracy@5 100.000 (99.466)	Loss_A2C -2.35887 (-2.37408)	
+Epoch: [39][80/372]	Time 1.290s (0.845s)	Speed 24.8 samples/s	Data 0.001s (0.020s)	Loss 0.25628 (0.24258)	Accuracy@1 93.750 (93.403)	Accuracy@5 100.000 (99.498)	Loss_A2C -2.36260 (-2.38450)	
+Epoch: [39][120/372]	Time 0.244s (0.798s)	Speed 131.0 samples/s	Data 0.000s (0.013s)	Loss 0.14102 (0.24368)	Accuracy@1 100.000 (93.492)	Accuracy@5 100.000 (99.380)	Loss_A2C -2.43314 (-2.38174)	
+Epoch: [39][160/372]	Time 0.244s (0.789s)	Speed 131.0 samples/s	Data 0.000s (0.010s)	Loss 0.06688 (0.23913)	Accuracy@1 100.000 (93.420)	Accuracy@5 100.000 (99.398)	Loss_A2C -2.22934 (-2.39212)	
+Epoch: [39][200/372]	Time 1.329s (0.772s)	Speed 24.1 samples/s	Data 0.000s (0.008s)	Loss 0.22582 (0.24280)	Accuracy@1 96.875 (93.175)	Accuracy@5 100.000 (99.378)	Loss_A2C -2.35347 (-2.38298)	
+Epoch: [39][240/372]	Time 1.317s (0.761s)	Speed 24.3 samples/s	Data 0.000s (0.007s)	Loss 0.09403 (0.24112)	Accuracy@1 100.000 (93.283)	Accuracy@5 100.000 (99.326)	Loss_A2C -2.35094 (-2.38199)	
+Epoch: [39][280/372]	Time 1.168s (0.757s)	Speed 27.4 samples/s	Data 0.000s (0.006s)	Loss 0.43214 (0.24165)	Accuracy@1 87.500 (93.416)	Accuracy@5 100.000 (99.355)	Loss_A2C -2.29460 (-2.37834)	
+Epoch: [39][320/372]	Time 0.245s (0.749s)	Speed 130.8 samples/s	Data 0.000s (0.005s)	Loss 0.21798 (0.24268)	Accuracy@1 90.625 (93.390)	Accuracy@5 100.000 (99.348)	Loss_A2C -2.19188 (-2.37388)	
+Epoch: [39][360/372]	Time 1.259s (0.743s)	Speed 25.4 samples/s	Data 0.000s (0.005s)	Loss 0.48913 (0.24333)	Accuracy@1 87.500 (93.430)	Accuracy@5 93.750 (99.273)	Loss_A2C -2.18334 (-2.36260)	
+Test: Time 0.137	Loss 0.5350	Error@1 16.445	Error@5 1.655	Accuracy@1 83.555	Accuracy@5 98.345	
+=> saving checkpoint to output/cub/cls_res50
+best prec is : 85.5361
+Epoch: [40][0/372]	Time 2.060s (2.060s)	Speed 15.5 samples/s	Data 1.476s (1.476s)	Loss 0.06701 (0.06701)	Accuracy@1 96.875 (96.875)	Accuracy@5 100.000 (100.000)	Loss_A2C -2.14306 (-2.14306)	
+Epoch: [40][40/372]	Time 0.244s (0.669s)	Speed 131.1 samples/s	Data 0.001s (0.036s)	Loss 0.04051 (0.17086)	Accuracy@1 100.000 (95.884)	Accuracy@5 100.000 (99.695)	Loss_A2C -2.32908 (-2.28388)	
+Epoch: [40][80/372]	Time 0.245s (0.649s)	Speed 130.9 samples/s	Data 0.000s (0.019s)	Loss 0.12669 (0.17965)	Accuracy@1 96.875 (95.718)	Accuracy@5 100.000 (99.769)	Loss_A2C -2.29914 (-2.28792)	
+Epoch: [40][120/372]	Time 1.388s (0.761s)	Speed 23.1 samples/s	Data 0.000s (0.013s)	Loss 0.30637 (0.21189)	Accuracy@1 96.875 (94.602)	Accuracy@5 96.875 (99.664)	Loss_A2C -2.26886 (-2.28357)	
+Epoch: [40][160/372]	Time 1.123s (0.745s)	Speed 28.5 samples/s	Data 0.000s (0.010s)	Loss 0.24358 (0.20884)	Accuracy@1 93.750 (94.740)	Accuracy@5 100.000 (99.631)	Loss_A2C -2.44732 (-2.28482)	
+Epoch: [40][200/372]	Time 1.169s (0.750s)	Speed 27.4 samples/s	Data 0.000s (0.008s)	Loss 0.65561 (0.21380)	Accuracy@1 75.000 (94.714)	Accuracy@5 96.875 (99.627)	Loss_A2C -2.26070 (-2.28891)	
+Epoch: [40][240/372]	Time 0.245s (0.751s)	Speed 130.8 samples/s	Data 0.001s (0.007s)	Loss 0.12999 (0.21675)	Accuracy@1 90.625 (94.645)	Accuracy@5 100.000 (99.585)	Loss_A2C -2.16432 (-2.28727)	
+Epoch: [40][280/372]	Time 1.326s (0.783s)	Speed 24.1 samples/s	Data 0.000s (0.006s)	Loss 0.42611 (0.22588)	Accuracy@1 90.625 (94.417)	Accuracy@5 96.875 (99.477)	Loss_A2C -2.23487 (-2.28514)	
+Epoch: [40][320/372]	Time 1.283s (0.788s)	Speed 24.9 samples/s	Data 0.000s (0.005s)	Loss 0.19755 (0.22704)	Accuracy@1 96.875 (94.373)	Accuracy@5 100.000 (99.465)	Loss_A2C -2.29451 (-2.28335)	
+Epoch: [40][360/372]	Time 0.843s (0.787s)	Speed 38.0 samples/s	Data 0.000s (0.005s)	Loss 0.29347 (0.22677)	Accuracy@1 93.750 (94.356)	Accuracy@5 100.000 (99.498)	Loss_A2C -2.25971 (-2.28491)	
+Test: Time 0.138	Loss 0.5202	Error@1 15.804	Error@5 1.713	Accuracy@1 84.196	Accuracy@5 98.287	
+=> saving checkpoint to output/cub/cls_res50
+best prec is : 85.5361
+Epoch: [41][0/372]	Time 1.822s (1.822s)	Speed 17.6 samples/s	Data 1.325s (1.325s)	Loss 0.06449 (0.06449)	Accuracy@1 96.875 (96.875)	Accuracy@5 100.000 (100.000)	Loss_A2C -2.42802 (-2.42802)	
+Epoch: [41][40/372]	Time 0.245s (0.772s)	Speed 130.4 samples/s	Data 0.000s (0.033s)	Loss 0.06748 (0.24703)	Accuracy@1 100.000 (93.064)	Accuracy@5 100.000 (99.085)	Loss_A2C -2.21170 (-2.26761)	
+Epoch: [41][80/372]	Time 0.750s (0.797s)	Speed 42.7 samples/s	Data 0.000s (0.017s)	Loss 0.26160 (0.24458)	Accuracy@1 93.750 (93.519)	Accuracy@5 100.000 (99.228)	Loss_A2C -2.14099 (-2.25207)	
+Epoch: [41][120/372]	Time 0.250s (0.788s)	Speed 128.1 samples/s	Data 0.000s (0.011s)	Loss 0.09614 (0.24776)	Accuracy@1 96.875 (93.363)	Accuracy@5 100.000 (99.199)	Loss_A2C -2.29245 (-2.24113)	
+Epoch: [41][160/372]	Time 0.245s (0.784s)	Speed 130.6 samples/s	Data 0.000s (0.009s)	Loss 0.08740 (0.24507)	Accuracy@1 100.000 (93.439)	Accuracy@5 100.000 (99.243)	Loss_A2C -2.23351 (-2.23318)	
+Epoch: [41][200/372]	Time 1.544s (0.797s)	Speed 20.7 samples/s	Data 0.000s (0.007s)	Loss 0.29669 (0.25244)	Accuracy@1 96.875 (93.392)	Accuracy@5 96.875 (99.207)	Loss_A2C -1.99407 (-2.22429)	
+Epoch: [41][240/372]	Time 0.245s (0.762s)	Speed 130.8 samples/s	Data 0.000s (0.006s)	Loss 0.07730 (0.24380)	Accuracy@1 100.000 (93.685)	Accuracy@5 100.000 (99.261)	Loss_A2C -2.08653 (-2.22174)	
+Epoch: [41][280/372]	Time 1.427s (0.744s)	Speed 22.4 samples/s	Data 0.000s (0.005s)	Loss 0.21664 (0.24328)	Accuracy@1 93.750 (93.661)	Accuracy@5 96.875 (99.266)	Loss_A2C -2.22002 (-2.21772)	
+Epoch: [41][320/372]	Time 1.190s (0.728s)	Speed 26.9 samples/s	Data 0.000s (0.004s)	Loss 0.33168 (0.23964)	Accuracy@1 93.750 (93.838)	Accuracy@5 96.875 (99.289)	Loss_A2C -2.28058 (-2.21927)	
+Epoch: [41][360/372]	Time 1.218s (0.730s)	Speed 26.3 samples/s	Data 0.000s (0.004s)	Loss 0.39296 (0.24420)	Accuracy@1 87.500 (93.689)	Accuracy@5 100.000 (99.307)	Loss_A2C -2.38629 (-2.22053)	
+Test: Time 0.136	Loss 0.5250	Error@1 16.037	Error@5 1.515	Accuracy@1 83.963	Accuracy@5 98.485	
+=> saving checkpoint to output/cub/cls_res50
+best prec is : 85.5361
+Epoch: [42][0/372]	Time 1.766s (1.766s)	Speed 18.1 samples/s	Data 1.175s (1.175s)	Loss 0.10251 (0.10251)	Accuracy@1 96.875 (96.875)	Accuracy@5 100.000 (100.000)	Loss_A2C -2.18194 (-2.18194)	
+Epoch: [42][40/372]	Time 1.393s (0.731s)	Speed 23.0 samples/s	Data 0.000s (0.029s)	Loss 0.38653 (0.21328)	Accuracy@1 93.750 (94.512)	Accuracy@5 96.875 (99.390)	Loss_A2C -2.34258 (-2.22519)	
+Epoch: [42][80/372]	Time 0.245s (0.725s)	Speed 130.9 samples/s	Data 0.000s (0.015s)	Loss 0.05095 (0.21307)	Accuracy@1 100.000 (94.522)	Accuracy@5 100.000 (99.344)	Loss_A2C -2.11555 (-2.22461)	
+Epoch: [42][120/372]	Time 1.117s (0.769s)	Speed 28.7 samples/s	Data 0.000s (0.010s)	Loss 0.26926 (0.22420)	Accuracy@1 96.875 (93.957)	Accuracy@5 96.875 (99.354)	Loss_A2C -2.23560 (-2.22217)	
+Epoch: [42][160/372]	Time 0.245s (0.769s)	Speed 130.7 samples/s	Data 0.000s (0.008s)	Loss 0.12704 (0.22492)	Accuracy@1 96.875 (93.964)	Accuracy@5 100.000 (99.321)	Loss_A2C -2.09166 (-2.22587)	
+Epoch: [42][200/372]	Time 0.245s (0.740s)	Speed 130.7 samples/s	Data 0.000s (0.006s)	Loss 0.09752 (0.21729)	Accuracy@1 96.875 (94.139)	Accuracy@5 100.000 (99.378)	Loss_A2C -2.01433 (-2.22673)	
+Epoch: [42][240/372]	Time 0.250s (0.746s)	Speed 128.1 samples/s	Data 0.000s (0.005s)	Loss 0.09853 (0.21769)	Accuracy@1 96.875 (94.165)	Accuracy@5 100.000 (99.404)	Loss_A2C -2.34600 (-2.22639)	
+Epoch: [42][280/372]	Time 0.250s (0.752s)	Speed 128.1 samples/s	Data 0.000s (0.005s)	Loss 0.09617 (0.21997)	Accuracy@1 100.000 (94.228)	Accuracy@5 100.000 (99.355)	Loss_A2C -2.25297 (-2.22877)	
+Epoch: [42][320/372]	Time 0.245s (0.759s)	Speed 130.8 samples/s	Data 0.000s (0.004s)	Loss 0.16097 (0.22167)	Accuracy@1 93.750 (94.149)	Accuracy@5 100.000 (99.338)	Loss_A2C -2.21251 (-2.22782)	
+Epoch: [42][360/372]	Time 0.245s (0.747s)	Speed 130.8 samples/s	Data 0.000s (0.004s)	Loss 0.04718 (0.21931)	Accuracy@1 100.000 (94.217)	Accuracy@5 100.000 (99.351)	Loss_A2C -2.34261 (-2.23137)	
+Test: Time 0.138	Loss 0.5312	Error@1 16.189	Error@5 1.492	Accuracy@1 83.811	Accuracy@5 98.508	
+=> saving checkpoint to output/cub/cls_res50
+best prec is : 85.5361
+Epoch: [43][0/372]	Time 1.949s (1.949s)	Speed 16.4 samples/s	Data 1.550s (1.550s)	Loss 0.09952 (0.09952)	Accuracy@1 96.875 (96.875)	Accuracy@5 100.000 (100.000)	Loss_A2C -2.19399 (-2.19399)	
+Epoch: [43][40/372]	Time 1.147s (0.792s)	Speed 27.9 samples/s	Data 0.000s (0.038s)	Loss 0.30065 (0.19206)	Accuracy@1 93.750 (95.274)	Accuracy@5 96.875 (99.390)	Loss_A2C -2.37867 (-2.20716)	
+Epoch: [43][80/372]	Time 1.363s (0.724s)	Speed 23.5 samples/s	Data 0.000s (0.019s)	Loss 0.17921 (0.18310)	Accuracy@1 93.750 (95.602)	Accuracy@5 100.000 (99.460)	Loss_A2C -2.26509 (-2.24635)	
+Epoch: [43][120/372]	Time 1.449s (0.782s)	Speed 22.1 samples/s	Data 0.000s (0.013s)	Loss 0.30905 (0.19851)	Accuracy@1 90.625 (95.015)	Accuracy@5 100.000 (99.483)	Loss_A2C -2.25286 (-2.26964)	
+Epoch: [43][160/372]	Time 1.189s (0.794s)	Speed 26.9 samples/s	Data 0.000s (0.010s)	Loss 0.33881 (0.20696)	Accuracy@1 90.625 (94.740)	Accuracy@5 100.000 (99.476)	Loss_A2C -2.25467 (-2.26878)	
+Epoch: [43][200/372]	Time 0.251s (0.756s)	Speed 127.7 samples/s	Data 0.001s (0.008s)	Loss 0.04296 (0.20947)	Accuracy@1 100.000 (94.636)	Accuracy@5 100.000 (99.440)	Loss_A2C -2.47458 (-2.27014)	
+Epoch: [43][240/372]	Time 1.505s (0.774s)	Speed 21.3 samples/s	Data 0.000s (0.007s)	Loss 0.27327 (0.21950)	Accuracy@1 96.875 (94.424)	Accuracy@5 96.875 (99.378)	Loss_A2C -2.20473 (-2.27521)	
+Epoch: [43][280/372]	Time 0.244s (0.774s)	Speed 131.0 samples/s	Data 0.000s (0.006s)	Loss 0.21052 (0.22366)	Accuracy@1 90.625 (94.250)	Accuracy@5 100.000 (99.377)	Loss_A2C -2.46768 (-2.27891)	
+Epoch: [43][320/372]	Time 0.245s (0.775s)	Speed 130.7 samples/s	Data 0.000s (0.005s)	Loss 0.16241 (0.22680)	Accuracy@1 96.875 (94.139)	Accuracy@5 100.000 (99.396)	Loss_A2C -2.42870 (-2.27426)	
+Epoch: [43][360/372]	Time 0.706s (0.771s)	Speed 45.3 samples/s	Data 0.000s (0.005s)	Loss 0.62051 (0.23091)	Accuracy@1 84.375 (93.958)	Accuracy@5 93.750 (99.351)	Loss_A2C -2.32313 (-2.26961)	
+Test: Time 0.137	Loss 0.5361	Error@1 16.375	Error@5 1.737	Accuracy@1 83.625	Accuracy@5 98.263	
+=> saving checkpoint to output/cub/cls_res50
+best prec is : 85.5361
+Epoch: [44][0/372]	Time 2.074s (2.074s)	Speed 15.4 samples/s	Data 1.594s (1.594s)	Loss 0.08157 (0.08157)	Accuracy@1 100.000 (100.000)	Accuracy@5 100.000 (100.000)	Loss_A2C -2.28213 (-2.28213)	
+Epoch: [44][40/372]	Time 0.250s (0.626s)	Speed 127.8 samples/s	Data 0.001s (0.039s)	Loss 0.13590 (0.19729)	Accuracy@1 96.875 (95.351)	Accuracy@5 100.000 (99.314)	Loss_A2C -2.09308 (-2.18252)	
+Epoch: [44][80/372]	Time 1.211s (0.696s)	Speed 26.4 samples/s	Data 0.000s (0.020s)	Loss 0.43119 (0.21816)	Accuracy@1 87.500 (94.329)	Accuracy@5 96.875 (99.421)	Loss_A2C -2.20112 (-2.17684)	
+Epoch: [44][120/372]	Time 1.191s (0.698s)	Speed 26.9 samples/s	Data 0.000s (0.014s)	Loss 0.28165 (0.20962)	Accuracy@1 93.750 (94.499)	Accuracy@5 96.875 (99.483)	Loss_A2C -2.30138 (-2.17236)	
+Epoch: [44][160/372]	Time 1.275s (0.709s)	Speed 25.1 samples/s	Data 0.000s (0.010s)	Loss 0.54186 (0.21351)	Accuracy@1 84.375 (94.410)	Accuracy@5 100.000 (99.418)	Loss_A2C -2.25229 (-2.16585)	
+Epoch: [44][200/372]	Time 1.247s (0.721s)	Speed 25.7 samples/s	Data 0.000s (0.008s)	Loss 0.26506 (0.21711)	Accuracy@1 93.750 (94.450)	Accuracy@5 100.000 (99.394)	Loss_A2C -2.31804 (-2.16568)	
+Epoch: [44][240/372]	Time 1.269s (0.738s)	Speed 25.2 samples/s	Data 0.000s (0.007s)	Loss 0.47161 (0.21559)	Accuracy@1 81.250 (94.567)	Accuracy@5 100.000 (99.416)	Loss_A2C -2.11567 (-2.16362)	
+Epoch: [44][280/372]	Time 1.105s (0.772s)	Speed 29.0 samples/s	Data 0.000s (0.006s)	Loss 0.25536 (0.21568)	Accuracy@1 87.500 (94.584)	Accuracy@5 100.000 (99.422)	Loss_A2C -1.95674 (-2.16837)	
+Epoch: [44][320/372]	Time 0.245s (0.773s)	Speed 130.7 samples/s	Data 0.000s (0.005s)	Loss 0.09956 (0.21426)	Accuracy@1 96.875 (94.724)	Accuracy@5 100.000 (99.426)	Loss_A2C -2.17801 (-2.16972)	
+Epoch: [44][360/372]	Time 1.000s (0.780s)	Speed 32.0 samples/s	Data 0.000s (0.005s)	Loss 0.19576 (0.21374)	Accuracy@1 96.875 (94.685)	Accuracy@5 100.000 (99.429)	Loss_A2C -2.24995 (-2.16946)	
+Test: Time 0.137	Loss 0.5295	Error@1 15.979	Error@5 1.713	Accuracy@1 84.021	Accuracy@5 98.287	
+=> saving checkpoint to output/cub/cls_res50
+best prec is : 85.5361
+Epoch: [45][0/372]	Time 3.883s (3.883s)	Speed 8.2 samples/s	Data 1.488s (1.488s)	Loss 0.31207 (0.31207)	Accuracy@1 90.625 (90.625)	Accuracy@5 100.000 (100.000)	Loss_A2C -2.33379 (-2.33379)	
+Epoch: [45][40/372]	Time 1.254s (0.859s)	Speed 25.5 samples/s	Data 0.000s (0.037s)	Loss 0.20428 (0.21426)	Accuracy@1 93.750 (94.284)	Accuracy@5 100.000 (99.619)	Loss_A2C -2.25403 (-2.15812)	
+Epoch: [45][80/372]	Time 0.245s (0.768s)	Speed 130.7 samples/s	Data 0.000s (0.019s)	Loss 0.06242 (0.20554)	Accuracy@1 100.000 (94.637)	Accuracy@5 100.000 (99.614)	Loss_A2C -2.34183 (-2.18057)	
+Epoch: [45][120/372]	Time 1.375s (0.741s)	Speed 23.3 samples/s	Data 0.000s (0.013s)	Loss 0.20895 (0.21131)	Accuracy@1 100.000 (94.447)	Accuracy@5 100.000 (99.535)	Loss_A2C -2.14241 (-2.18359)	
+Epoch: [45][160/372]	Time 0.250s (0.703s)	Speed 127.8 samples/s	Data 0.000s (0.010s)	Loss 0.05250 (0.19939)	Accuracy@1 100.000 (94.895)	Accuracy@5 100.000 (99.631)	Loss_A2C -2.30601 (-2.20099)	
+Epoch: [45][200/372]	Time 0.897s (0.704s)	Speed 35.7 samples/s	Data 0.000s (0.008s)	Loss 0.57674 (0.20155)	Accuracy@1 84.375 (94.745)	Accuracy@5 93.750 (99.611)	Loss_A2C -2.18780 (-2.20802)	
+Epoch: [45][240/372]	Time 0.249s (0.720s)	Speed 128.3 samples/s	Data 0.000s (0.007s)	Loss 0.22255 (0.20494)	Accuracy@1 96.875 (94.723)	Accuracy@5 96.875 (99.546)	Loss_A2C -2.45817 (-2.21698)	
+Epoch: [45][280/372]	Time 0.246s (0.716s)	Speed 130.2 samples/s	Data 0.000s (0.006s)	Loss 0.12366 (0.21033)	Accuracy@1 96.875 (94.551)	Accuracy@5 100.000 (99.477)	Loss_A2C -2.13751 (-2.21950)	
+Epoch: [45][320/372]	Time 1.205s (0.708s)	Speed 26.6 samples/s	Data 0.000s (0.005s)	Loss 0.28957 (0.21149)	Accuracy@1 87.500 (94.500)	Accuracy@5 100.000 (99.455)	Loss_A2C -2.28127 (-2.22317)	
+Epoch: [45][360/372]	Time 1.148s (0.706s)	Speed 27.9 samples/s	Data 0.000s (0.005s)	Loss 0.27641 (0.21078)	Accuracy@1 93.750 (94.572)	Accuracy@5 100.000 (99.498)	Loss_A2C -2.39713 (-2.22923)	
+Test: Time 0.137	Loss 0.5429	Error@1 15.991	Error@5 1.702	Accuracy@1 84.009	Accuracy@5 98.298	
+=> saving checkpoint to output/cub/cls_res50
+best prec is : 85.5361
+Epoch: [46][0/372]	Time 3.285s (3.285s)	Speed 9.7 samples/s	Data 1.629s (1.629s)	Loss 0.18429 (0.18429)	Accuracy@1 93.750 (93.750)	Accuracy@5 100.000 (100.000)	Loss_A2C -2.14959 (-2.14959)	
+Epoch: [46][40/372]	Time 1.397s (1.004s)	Speed 22.9 samples/s	Data 0.000s (0.040s)	Loss 0.44186 (0.26166)	Accuracy@1 87.500 (93.521)	Accuracy@5 96.875 (99.009)	Loss_A2C -2.29315 (-2.24521)	
+Epoch: [46][80/372]	Time 1.195s (0.943s)	Speed 26.8 samples/s	Data 0.000s (0.021s)	Loss 0.36104 (0.24498)	Accuracy@1 90.625 (93.634)	Accuracy@5 96.875 (99.344)	Loss_A2C -2.19004 (-2.24938)	
+Epoch: [46][120/372]	Time 1.316s (0.925s)	Speed 24.3 samples/s	Data 0.000s (0.014s)	Loss 0.38130 (0.23903)	Accuracy@1 87.500 (93.802)	Accuracy@5 100.000 (99.406)	Loss_A2C -2.18973 (-2.24743)	
+Epoch: [46][160/372]	Time 0.602s (0.874s)	Speed 53.1 samples/s	Data 0.000s (0.011s)	Loss 0.15721 (0.22663)	Accuracy@1 96.875 (94.099)	Accuracy@5 100.000 (99.476)	Loss_A2C -2.25998 (-2.25177)	
+Epoch: [46][200/372]	Time 0.810s (0.851s)	Speed 39.5 samples/s	Data 0.000s (0.009s)	Loss 0.14851 (0.22113)	Accuracy@1 96.875 (94.310)	Accuracy@5 100.000 (99.471)	Loss_A2C -2.39034 (-2.25125)	
+Epoch: [46][240/372]	Time 0.822s (0.838s)	Speed 38.9 samples/s	Data 0.000s (0.007s)	Loss 0.28757 (0.21827)	Accuracy@1 93.750 (94.450)	Accuracy@5 100.000 (99.507)	Loss_A2C -2.23309 (-2.25076)	
+Epoch: [46][280/372]	Time 1.333s (0.800s)	Speed 24.0 samples/s	Data 0.000s (0.006s)	Loss 0.29908 (0.21422)	Accuracy@1 90.625 (94.517)	Accuracy@5 96.875 (99.444)	Loss_A2C -2.28945 (-2.25187)	
+Epoch: [46][320/372]	Time 0.245s (0.784s)	Speed 130.5 samples/s	Data 0.001s (0.006s)	Loss 0.09365 (0.21114)	Accuracy@1 100.000 (94.558)	Accuracy@5 100.000 (99.445)	Loss_A2C -2.12190 (-2.25147)	
+Epoch: [46][360/372]	Time 0.249s (0.772s)	Speed 128.3 samples/s	Data 0.000s (0.005s)	Loss 0.04990 (0.21072)	Accuracy@1 100.000 (94.555)	Accuracy@5 100.000 (99.446)	Loss_A2C -2.38491 (-2.24933)	
+Test: Time 0.137	Loss 0.5199	Error@1 15.548	Error@5 1.527	Accuracy@1 84.452	Accuracy@5 98.473	
+=> saving checkpoint to output/cub/cls_res50
+best prec is : 85.5361
+Epoch: [47][0/372]	Time 1.848s (1.848s)	Speed 17.3 samples/s	Data 1.170s (1.170s)	Loss 0.05545 (0.05545)	Accuracy@1 100.000 (100.000)	Accuracy@5 100.000 (100.000)	Loss_A2C -2.19750 (-2.19750)	
+Epoch: [47][40/372]	Time 1.226s (0.739s)	Speed 26.1 samples/s	Data 0.000s (0.029s)	Loss 0.03822 (0.16277)	Accuracy@1 100.000 (96.341)	Accuracy@5 100.000 (99.466)	Loss_A2C -2.45077 (-2.26462)	
+Epoch: [47][80/372]	Time 1.116s (0.763s)	Speed 28.7 samples/s	Data 0.000s (0.015s)	Loss 0.42078 (0.18239)	Accuracy@1 90.625 (95.486)	Accuracy@5 93.750 (99.576)	Loss_A2C -2.31432 (-2.24384)	
+Epoch: [47][120/372]	Time 0.245s (0.718s)	Speed 130.5 samples/s	Data 0.000s (0.010s)	Loss 0.06477 (0.18763)	Accuracy@1 100.000 (95.325)	Accuracy@5 100.000 (99.458)	Loss_A2C -2.32409 (-2.24257)	
+Epoch: [47][160/372]	Time 1.212s (0.738s)	Speed 26.4 samples/s	Data 0.000s (0.008s)	Loss 0.16576 (0.19357)	Accuracy@1 93.750 (95.070)	Accuracy@5 100.000 (99.515)	Loss_A2C -2.05319 (-2.22456)	
+Epoch: [47][200/372]	Time 1.269s (0.740s)	Speed 25.2 samples/s	Data 0.000s (0.006s)	Loss 0.22855 (0.19179)	Accuracy@1 93.750 (94.994)	Accuracy@5 100.000 (99.502)	Loss_A2C -2.20213 (-2.21654)	
+Epoch: [47][240/372]	Time 0.245s (0.773s)	Speed 130.6 samples/s	Data 0.000s (0.005s)	Loss 0.13603 (0.19739)	Accuracy@1 96.875 (94.813)	Accuracy@5 100.000 (99.533)	Loss_A2C -2.26030 (-2.20638)	
+Epoch: [47][280/372]	Time 1.478s (0.779s)	Speed 21.7 samples/s	Data 0.000s (0.005s)	Loss 0.35041 (0.20204)	Accuracy@1 93.750 (94.718)	Accuracy@5 96.875 (99.466)	Loss_A2C -2.13797 (-2.20568)	
+Epoch: [47][320/372]	Time 0.249s (0.773s)	Speed 128.3 samples/s	Data 0.000s (0.004s)	Loss 0.03929 (0.20070)	Accuracy@1 100.000 (94.733)	Accuracy@5 100.000 (99.504)	Loss_A2C -2.16644 (-2.20503)	
+Epoch: [47][360/372]	Time 0.784s (0.772s)	Speed 40.8 samples/s	Data 0.000s (0.004s)	Loss 0.19551 (0.20204)	Accuracy@1 90.625 (94.711)	Accuracy@5 100.000 (99.524)	Loss_A2C -2.02108 (-2.19585)	
+Test: Time 0.146	Loss 0.5317	Error@1 15.921	Error@5 1.608	Accuracy@1 84.079	Accuracy@5 98.392	
+=> saving checkpoint to output/cub/cls_res50
+best prec is : 85.5361
+Epoch: [48][0/372]	Time 3.659s (3.659s)	Speed 8.7 samples/s	Data 1.081s (1.081s)	Loss 0.26334 (0.26334)	Accuracy@1 90.625 (90.625)	Accuracy@5 100.000 (100.000)	Loss_A2C -2.16141 (-2.16141)	
+Epoch: [48][40/372]	Time 1.343s (0.741s)	Speed 23.8 samples/s	Data 0.001s (0.027s)	Loss 0.22657 (0.16549)	Accuracy@1 90.625 (95.274)	Accuracy@5 100.000 (99.543)	Loss_A2C -2.17854 (-2.09604)	
+Epoch: [48][80/372]	Time 0.250s (0.802s)	Speed 128.0 samples/s	Data 0.000s (0.014s)	Loss 0.06397 (0.18003)	Accuracy@1 96.875 (95.216)	Accuracy@5 100.000 (99.421)	Loss_A2C -1.99934 (-2.11840)	
+Epoch: [48][120/372]	Time 1.265s (0.768s)	Speed 25.3 samples/s	Data 0.000s (0.010s)	Loss 0.40338 (0.18257)	Accuracy@1 87.500 (95.015)	Accuracy@5 96.875 (99.483)	Loss_A2C -2.16125 (-2.12129)	
+Epoch: [48][160/372]	Time 0.890s (0.741s)	Speed 36.0 samples/s	Data 0.001s (0.007s)	Loss 0.21847 (0.17778)	Accuracy@1 90.625 (95.283)	Accuracy@5 100.000 (99.534)	Loss_A2C -2.12131 (-2.12337)	
+Epoch: [48][200/372]	Time 0.915s (0.743s)	Speed 35.0 samples/s	Data 0.000s (0.006s)	Loss 0.43283 (0.18153)	Accuracy@1 84.375 (95.087)	Accuracy@5 96.875 (99.534)	Loss_A2C -2.21324 (-2.12761)	
+Epoch: [48][240/372]	Time 1.015s (0.746s)	Speed 31.5 samples/s	Data 0.000s (0.005s)	Loss 0.25247 (0.18518)	Accuracy@1 93.750 (94.865)	Accuracy@5 100.000 (99.559)	Loss_A2C -2.19003 (-2.13335)	
+Epoch: [48][280/372]	Time 1.245s (0.749s)	Speed 25.7 samples/s	Data 0.000s (0.004s)	Loss 0.33382 (0.19069)	Accuracy@1 90.625 (94.729)	Accuracy@5 96.875 (99.511)	Loss_A2C -2.19159 (-2.13376)	
+Epoch: [48][320/372]	Time 0.244s (0.747s)	Speed 131.1 samples/s	Data 0.000s (0.004s)	Loss 0.06370 (0.19036)	Accuracy@1 96.875 (94.762)	Accuracy@5 100.000 (99.494)	Loss_A2C -2.26694 (-2.13457)	
+Epoch: [48][360/372]	Time 0.244s (0.730s)	Speed 131.0 samples/s	Data 0.000s (0.004s)	Loss 0.08728 (0.18581)	Accuracy@1 100.000 (94.971)	Accuracy@5 100.000 (99.541)	Loss_A2C -2.21946 (-2.13605)	
+Test: Time 0.137	Loss 0.5255	Error@1 15.303	Error@5 1.597	Accuracy@1 84.697	Accuracy@5 98.403	
+=> saving checkpoint to output/cub/cls_res50
+best prec is : 85.5361
+Epoch: [49][0/372]	Time 3.767s (3.767s)	Speed 8.5 samples/s	Data 1.271s (1.271s)	Loss 0.46204 (0.46204)	Accuracy@1 87.500 (87.500)	Accuracy@5 100.000 (100.000)	Loss_A2C -2.12968 (-2.12968)	
+Epoch: [49][40/372]	Time 0.870s (0.722s)	Speed 36.8 samples/s	Data 0.000s (0.031s)	Loss 0.26717 (0.17608)	Accuracy@1 93.750 (95.351)	Accuracy@5 100.000 (99.543)	Loss_A2C -2.01537 (-2.16732)	
+Epoch: [49][80/372]	Time 0.244s (0.719s)	Speed 130.9 samples/s	Data 0.000s (0.016s)	Loss 0.14156 (0.17668)	Accuracy@1 96.875 (95.525)	Accuracy@5 100.000 (99.498)	Loss_A2C -1.99190 (-2.15892)	
+Epoch: [49][120/372]	Time 1.412s (0.764s)	Speed 22.7 samples/s	Data 0.000s (0.011s)	Loss 0.28705 (0.18581)	Accuracy@1 93.750 (95.248)	Accuracy@5 100.000 (99.587)	Loss_A2C -2.08418 (-2.15241)	
+Epoch: [49][160/372]	Time 0.245s (0.776s)	Speed 130.8 samples/s	Data 0.000s (0.008s)	Loss 0.23982 (0.18902)	Accuracy@1 93.750 (95.050)	Accuracy@5 96.875 (99.592)	Loss_A2C -1.94532 (-2.13886)	
+Epoch: [49][200/372]	Time 1.209s (0.757s)	Speed 26.5 samples/s	Data 0.000s (0.007s)	Loss 0.34395 (0.17959)	Accuracy@1 87.500 (95.445)	Accuracy@5 96.875 (99.596)	Loss_A2C -2.17279 (-2.15286)	
+Epoch: [49][240/372]	Time 0.246s (0.730s)	Speed 130.3 samples/s	Data 0.000s (0.006s)	Loss 0.16548 (0.17426)	Accuracy@1 96.875 (95.578)	Accuracy@5 100.000 (99.624)	Loss_A2C -2.34620 (-2.16067)	
+Epoch: [49][280/372]	Time 1.379s (0.704s)	Speed 23.2 samples/s	Data 0.000s (0.005s)	Loss 0.20991 (0.16939)	Accuracy@1 96.875 (95.774)	Accuracy@5 100.000 (99.677)	Loss_A2C -2.27848 (-2.16781)	
+Epoch: [49][320/372]	Time 0.245s (0.695s)	Speed 130.7 samples/s	Data 0.000s (0.004s)	Loss 0.11204 (0.17015)	Accuracy@1 100.000 (95.678)	Accuracy@5 100.000 (99.708)	Loss_A2C -2.32893 (-2.17553)	
+Epoch: [49][360/372]	Time 0.250s (0.693s)	Speed 128.1 samples/s	Data 0.000s (0.004s)	Loss 0.09141 (0.17093)	Accuracy@1 100.000 (95.741)	Accuracy@5 100.000 (99.697)	Loss_A2C -2.10384 (-2.18208)	
+Test: Time 0.136	Loss 0.5578	Error@1 16.364	Error@5 1.678	Accuracy@1 83.636	Accuracy@5 98.322	
+=> saving checkpoint to output/cub/cls_res50
+best prec is : 85.5361
+saving final model state to output/cub/cls_res50/final_state.pth.tar
+best prec is : 85.5361
+best prec is : 85.5361
+[INFO] USER COMMAND END
+[DEBUG] EXIT signal received in docker container, exiting ...
+pid:6 finished
