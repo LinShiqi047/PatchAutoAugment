@@ -34,8 +34,8 @@ from model.shake_pyramidnet import ShakePyramidNet
 # ***** # 
 # import PAA module
 # ***** # 
-from model.PAA import *   
-from model.A2Cmodel import ActorCritic
+from augs.PAA import *   
+from augs.A2Cmodel import ActorCritic
 
 # used for logging to TensorBoard
 from collections import OrderedDict
