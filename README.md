@@ -94,7 +94,7 @@ Some available options:
 - ```--BATCH_SIZE```: Batch size.
 
 ### Example - Kornia PatchSequential
-Further, we use the patchSequential module of the container in Kornia to implement PAA.
+Further, we use the [PatchSequential](https://github.com/kornia/kornia/blob/master/kornia/augmentation/container/patch.py) in [Kornia](https://github.com/kornia/kornia) to implement PAA.
 ```
 python /code/Kornia_PAA/tools/train.py --cfg /code/DOG/experiments/cls_res50.yaml --AUG PAA --N_GRID 4 --DATASET dog --IMAGE_SIZE 224 --EPOCHS 50 --BATCH_SIZE 32
 ```
