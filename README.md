@@ -98,7 +98,7 @@ Some available options:
 ### Example - Kornia PatchSequential
 Further, we use the [PatchSequential](https://github.com/kornia/kornia/blob/master/kornia/augmentation/container/patch.py) in [Kornia](https://github.com/kornia/kornia) to implement PAA.
 ```
-python /code/Kornia_PAA/tools/train.py --cfg /code/DOG/experiments/cls_res50.yaml --AUG PAA --N_GRID 4 --DATASET dog --IMAGE_SIZE 224 --EPOCHS 50 --BATCH_SIZE 32
+python /code/Kornia_PAA/tools/train.py --cfg /code/DOG/experiments/cls_res50.yaml --AUG PAA --N_GRID 2 --DATASET dog --IMAGE_SIZE 224 --EPOCHS 50 --BATCH_SIZE 32
 ```
 
 The Kornia-build-in PAA is coming soon.
