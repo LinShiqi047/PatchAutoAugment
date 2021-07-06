@@ -16,9 +16,6 @@ You can download [dockerfile](https://github.com/LinShiqi047/PatchAutoAugment/bl
 We use [Kornia](https://github.com/kornia/kornia), a differentiable computer vision library that can be used to accelerate augmentation operations on tensors.
 We are jointly exploring the more convenient invocation of PatchAutoAugment, and the library is coming soon.
 
-### Data preparation
-Here, we take CIFAR and fine-grained datasets [CUB-200-2011](http://www.vision.caltech.edu/visipedia/CUB-200-2011.html), [Stanford dog](http://vision.stanford.edu/aditya86/ImageNetDogs/) to illustrate how to use our PatchAutoAugment.
-
 ## Example
 First, import PAA module.
 ```
@@ -77,19 +74,6 @@ Some available options:
 - ```--SS_w_base```: ShakeShake (26 2x32d) | SS (26 2x96d) | SS (26 2x112d)
 - ```--aug```: Augmentation method, support baseline (base), Cutout (cutout), AutoAugment+Cutout (AA), AutoAugment (onlyAA), PatchAutoAugment (PAA)
 - ```--lr_a2c```: PAA learning rate, default = 1e-3
-
-### Example - Fine-grained dataset
-For example, train ResNet-50 (pretrained) on CUB-200-2011
-```
-python /code/FRY_CUBDOG/tools/train.py --cfg /code/FRY_CUBDOG/experiments/cls_res50.yaml --AUG PAA --N_GRID 4 --DATASET dog --IMAGE_SIZE 224 --EPOCHS 150 --BATCH_SIZE 32
-```
-Some available options:
-- ```--AUG```: Augmentation method, support baseline (base), AutoAugment (AA), PatchAutoAugment (PAA)
-- ```--N_GRID```: Number of patches, support 1 | 2 | 4 | 7 | 14.
-- ```--DATASET```: Training and testing dataset, CUB-200-2011 (cub) | Stanford Dogs (dog).
-- ```--IMAGE_SIZE```: Image size, support 224 | 448.
-- ```--EPOCHS```: Training epochs.
-- ```--BATCH_SIZE```: Batch size.
 
 ## Cite Us
 Please cite us if you find this work helps.
