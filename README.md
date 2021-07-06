@@ -84,7 +84,6 @@ Some available options:
 For example, train ResNet-50 (pretrained) on CUB-200-2011
 ```
 python /code/Fine_grained_dataset/tools/train.py --cfg /code/DOG/experiments/cls_res50.yaml --AUG PAA --N_GRID 4 --DATASET dog --IMAGE_SIZE 224 --EPOCHS 50 --BATCH_SIZE 32
-
 ```
 Some available options:
 - ```--AUG```: Augmentation method, support baseline (base), AutoAugment (AA), PatchAutoAugment (PAA)
