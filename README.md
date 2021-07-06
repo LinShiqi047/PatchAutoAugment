@@ -16,7 +16,7 @@ You can download [dockerfile](https://github.com/LinShiqi047/PatchAutoAugment/bl
 
 We use [Kornia](https://github.com/kornia/kornia), a differentiable computer vision library that can be used to accelerate augmentation operations on tensors.
 
-We are working with the official [Kornia](https://github.com/kornia/kornia)team to integrate PAA into Kornia package. The Kornia-build-in PAA is coming soon.
+We are working with the official [Kornia](https://github.com/kornia/kornia) team to integrate PAA into Kornia package. The Kornia-build-in PAA is coming soon.
 
 ## Example
 First, import PAA module.
