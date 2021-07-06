@@ -26,7 +26,6 @@ import torchvision.transforms as transforms
 from tensorboardX import SummaryWriter
 
 import _init_paths
-import models
 from config import config
 from config import update_config
 from core.function import train
