@@ -24,7 +24,7 @@ import torch.utils.data.distributed
 import torchvision.datasets as datasets
 import torchvision.transforms as transforms
 from tensorboardX import SummaryWriter
-
+import models
 import _init_paths
 from config import config
 from config import update_config
