@@ -81,7 +81,7 @@ Some available options:
 - ```--lr_a2c```: PAA learning rate, default = 1e-3
 
 ### Example - Fine-grained dataset
-For example, train ResNet-50 (pretrained) on CUB-200-2011
+For example, train ResNet-50 (pretrained) on Stanford Dogs
 ```
 python /code/Fine_grained_dataset/tools/train.py --cfg /code/DOG/experiments/cls_res50.yaml --AUG PAA --N_GRID 4 --DATASET dog --IMAGE_SIZE 224 --EPOCHS 50 --BATCH_SIZE 32
 ```
@@ -92,6 +92,14 @@ Some available options:
 - ```--IMAGE_SIZE```: Image size, support 224 | 448.
 - ```--EPOCHS```: Training epochs.
 - ```--BATCH_SIZE```: Batch size.
+
+### Example - Kornia PatchSequential
+Further, we use the patchSequential module of the container in Kornia to implement PAA.
+```
+python /code/Kornia_PAA/tools/train.py --cfg /code/DOG/experiments/cls_res50.yaml --AUG PAA --N_GRID 4 --DATASET dog --IMAGE_SIZE 224 --EPOCHS 50 --BATCH_SIZE 32
+```
+
+The Kornia-build-in PAA is coming soon.
 
 ## Cite Us
 Please cite us if you find this work helps.
