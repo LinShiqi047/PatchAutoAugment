@@ -19,19 +19,6 @@ import time
 normalize_mean = torch.tensor((125.3, 123.0, 113.9))/255.0
 normalize_std = torch.tensor((63.0, 62.1, 66.7))/255.0
 
-# randomerasing = RandomErasing(p=1., scale=(0.09, 0.36), ratio=(0.5, 1/0.5), same_on_batch=False)
-# sharpness = RandomSharpness(sharpness=0.5, same_on_batch=False)
-# # randomerasing = RandomErasing(p=1., scale=(.2, .4), ratio=(.1, 1/.3), same_on_batch=False)
-# # sharpness = RandomSharpness(sharpness=1., same_on_batch=False)
-# posterize = RandomPosterize(bits=3, same_on_batch=False)
-# equalize = RandomEqualize()
-# shear = RandomAffine(degrees=0., shear=(10, 20))
-# translate = RandomAffine(degrees=0.,translate=(0.3, 0.4), same_on_batch = False)
-# brightness = ColorJitter(brightness=(0.5, 0.9))
-# contrast = ColorJitter(contrast=(0.5, 0.9))
-# color = ColorJitter(hue=(-0.3, 0.3)) # time consuming but feel useful
-# rotation= RandomRotation(degrees=60.0)
-# gray = RandomGrayscale(p=1.0)
 
 # normal
 randomerasing = RandomErasing(p=1., scale=(0.09, 0.36), ratio=(0.5, 1/0.5), same_on_batch=False)
@@ -167,22 +154,8 @@ def patch_auto_augment(image, operations, batch_size, size=2, patch_size=16, epo
                         Then if act , RL select operation
                     '''
                     # probability = 1.0
-                    probability = random.random()
-                    # thres_prob = 0
-                    # thres_prob = 0.5
-                    # thres_prob = 0.7
-                    # thres_prob = 0.75
-                    # thres_prob = 0.8
-                    # thres_prob = 0.9
-                    # thres_prob = 0.95
-                    # thres_prob = 1.0
-                    # thres_prob = linear_change(0.99, 0.5, epochs, epoch)
+                    probability = random.random()                 
                     thres_prob = linear_change(0.5, 0.99, epochs, epoch)
-                    # thres_prob = linear_change(0, 0.99, epochs, epoch)
-                    # thres_prob = linear_change(0.25, 0.99, epochs, epoch)
-
-                    # thres_prob = random.random()
-
                     operation = operations[i,j,k].item() #0-13 include 13 ,14 in total
                     
                     if probability > thres_prob:
@@ -192,10 +165,6 @@ def patch_auto_augment(image, operations, batch_size, size=2, patch_size=16, epo
     output = image.clone().detach()
 
     thres = 0.5
-    # thres = linear_change(0.75, 0.25, epochs, epoch)
-    # thres = linear_change(1, 0, epochs, epoch)
-    # thres = linear_change(0.25, 0.75, epochs, epoch)
-    # thres = linear_change(0, 1, epochs, epoch)
     if random.random() > thres:
         output = Normalize(normalize_mean, normalize_std)(output)
         return output
@@ -354,7 +323,5 @@ def patch_kornia(image, operations, batch_size, size=2, patch_size=16, epochs=No
     
 
     output = Normalize(normalize_mean, normalize_std)(image)
-    # output = RandomErasing(p=1.0, scale=(0.09, 0.36), ratio=(0.5, 1/0.5), same_on_batch=False)(output)
-    # output = RandomErasing(p=1., scale=(.2, .4), ratio=(.1, 1/.3), same_on_batch=False)(output)
-    # output = cutout_tensor(output)    
+  
     return output
