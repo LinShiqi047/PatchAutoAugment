@@ -1,5 +1,5 @@
 # Patch AutoAugment
-Learning the optimal augmentation policies for different regions of an image and achieving the joint optimal on the whole image.
+Learning the optimal augmentation policies for different regions of an image and achieving the joint optimal on the whole image. We are working with the official [Kornia](https://github.com/kornia/kornia) team to integrate PAA into Kornia package. The Kornia-build-in PAA is coming soon.
 
 ## Introduction
 Patch AutoAugment implementation in PyTorch.
@@ -15,10 +15,7 @@ Data augmentation (DA) plays a critical role in training deep neural networks fo
 This project is run on GPU (NVIDIA 2TX 2080Ti).
 We conduct experiments under python 3.8, pytorch 1.6.0, cuda 10.1 and cudnn7. 
 You can download [dockerfile](https://github.com/LinShiqi047/PatchAutoAugment/blob/main/Dockerfile).
-
 We use [Kornia](https://github.com/kornia/kornia), a differentiable computer vision library that can be used to accelerate augmentation operations on tensors.
-
-We are working with the official [Kornia](https://github.com/kornia/kornia) team to integrate PAA into Kornia package. The Kornia-build-in PAA is coming soon.
 
 ### Data preparation
 Here, we take CIFAR and fine-grained datasets [CUB-200-2011](http://www.vision.caltech.edu/visipedia/CUB-200-2011.html), [Stanford Dogs](http://vision.stanford.edu/aditya86/ImageNetDogs/) to illustrate how to use our PatchAutoAugment.
