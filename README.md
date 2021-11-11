@@ -1,14 +1,12 @@
-# Patch AutoAugment
-Learning the optimal augmentation policies for different regions of an image and achieving the joint optimal on the whole image. We are working with the official [Kornia](https://github.com/kornia/kornia) team to integrate PAA into Kornia package. The Kornia-build-in PAA is coming soon.
+# Local Patch AutoAugment with Multi-Agent Collaboration
+This is the official implementation of [_Local Patch AutoAugment with Multi-Agent Collaboration_](https://arxiv.org/abs/2103.11099).
+Patch AutoAugment (PAA) learns the optimal augmentation policies for different regions of an image and achieving the joint optimal on the whole image. We are working with the official [Kornia](https://github.com/kornia/kornia) team to integrate PAA into Kornia package. The Kornia-build-in PAA is coming soon.
 
 ## Introduction
-Patch AutoAugment implementation in PyTorch.
-The paper can be found [here](https://arxiv.org/abs/2103.11099).
-
-Data augmentation (DA) plays a critical role in training deep neural networks for improving the generalization of models. Recent work has shown that automatic DA policy, such as AutoAugment (AA), significantly improves model performance. However, most automatic DA methods search for DA policies at the image-level without considering that the optimal policies for different regions in an image may be diverse. In this paper, we propose a patch-level automatic DA algorithm called Patch AutoAugment (PAA). PAA divides an image into a grid of patches and searches for the optimal DA policy of each patch. Specifically, PAA allows each patch DA operation to be controlled by an agent and models it as a Multi-Agent Reinforcement Learning (MARL) problem. At each step, PAA samples the most effective operation for each patch based on its content and the semantics of the whole image. The agents cooperate as a team and share a unified team reward for achieving the joint optimal DA policy of the whole image.
+Data augmentation (DA) plays a critical role in improving the generalization of deep learning models. Recent works on automatically searching for DA policies from data have achieved great success. However, existing automated DA methods generally perform the search at the image level, which limits the exploration of diversity in local regions. In this paper, we propose a more fine-grained automated DA approach, dubbed Patch AutoAugment, to divide an image into a grid of patches and search for the joint optimal augmentation policies for the patches. We formulate it as a multi-agent reinforcement learning (MARL) problem, where each agent learns an augmentation policy for each patch based on its content together with the semantics of the whole image. The agents cooperate with each other to achieve the optimal augmentation effect of the entire image by sharing a team reward. We show the effectiveness of our method on multiple benchmark datasets of image classification and fine-grained image recognition (e.g., CIFAR-10, CIFAR-100, ImageNet, CUB-200-2011, Stanford Cars and FGVC-Aircraft). Extensive experiments demonstrate that our method outperforms the state-of-the-art DA methods while requiring fewer computational resources.
 
 <img src=https://github.com/LinShiqi047/PatchAutoAugment/blob/main/figure/imagelevel_v.s_patchlevel.jpg width=600 height=350 />
-<img src=https://github.com/LinShiqi047/PatchAutoAugment/blob/main/figure/framework.jpg />
+<img src=https://github.com/LinShiqi047/PatchAutoAugment/blob/main/figure/PAA.png />
 
 ## Preparation
 ### Install
