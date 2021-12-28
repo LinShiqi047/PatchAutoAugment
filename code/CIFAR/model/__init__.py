@@ -1,1 +1,0 @@
-from model.shake_pyramidnet import ShakePyramidNet
