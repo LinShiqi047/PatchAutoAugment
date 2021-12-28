@@ -1,3 +1,4 @@
+The code is being upgraded. . .
 # Local Patch AutoAugment with Multi-Agent Collaboration
 This is the official implementation of [_Local Patch AutoAugment with Multi-Agent Collaboration_](https://arxiv.org/abs/2103.11099).
 Patch AutoAugment (PAA) learns the optimal augmentation policies for different regions of an image and achieving the joint optimal on the whole image. We are working with the official [Kornia](https://github.com/kornia/kornia) team to integrate PAA into Kornia package. The Kornia-build-in PAA is coming soon.
